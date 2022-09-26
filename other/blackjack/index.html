@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>A simple blackjack game in JavaScript</title>
+    <link href="https://fonts.googleapis.com/css?family=Arbutus+Slab" rel="stylesheet">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+
+    <div id="table">
+      <div id="dealer-score" class="score">Dealer score: <span>0</span></div>
+      <div id="deck">
+        <div class="back"></div>
+      </div>
+      <div class="container" id="dealer">
+      </div>
+
+      <div class="border-line"></div>
+
+      <div id="player-score" class="score">Your score: <span>0</span></div>
+      <div class="container" id="player">
+      </div>
+    </div>
+
+    <div id="panel">
+      <div id="status">Press Deal to start game</div>
+
+      <button id="deal" class="blue" type="button">DEAL</button>
+      <button id="hit" class="green" type="button" disabled>HIT</button>
+      <button id="stand" class="red" type="button" disabled>STAND</button>
+
+    </div>
+
+    <script type="text/javascript" src="blackjack.js"></script>
+    <script type="text/javascript">
+      //initialise the game
+      BlackjackJS.init();
+    </script>
+  </body>
+</html>

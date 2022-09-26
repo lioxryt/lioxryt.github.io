@@ -1,0 +1,220 @@
+/*
+  BlackjackJS CSS
+
+  @author Stayko Chalakov
+	@version 1.0
+	@date 29.06.2017
+*/
+html {
+  height: 100%;
+}
+
+body {
+  background: rgba(30,66,0,1);
+  background: -moz-linear-gradient(top, rgba(30,66,0,1) 0%, rgba(35,161,16,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(30,66,0,1)), color-stop(100%, rgba(35,161,16,1)));
+  background: -webkit-linear-gradient(top, rgba(30,66,0,1) 0%, rgba(35,161,16,1) 100%);
+  background: -o-linear-gradient(top, rgba(30,66,0,1) 0%, rgba(35,161,16,1) 100%);
+  background: -ms-linear-gradient(top, rgba(30,66,0,1) 0%, rgba(35,161,16,1) 100%);
+  background: linear-gradient(to bottom, rgba(30,66,0,1) 0%, rgba(35,161,16,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e4200', endColorstr='#23a110', GradientType=0 );
+  min-height: 100%;
+}
+
+#table {
+  position: relative;
+  padding-top: 20px;
+}
+
+#dealer{
+  box-sizing: border-box;
+  padding-left:154px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  height: 214px;
+  position: relative;
+  width:100%;
+}
+
+#deck{
+  top:55px;
+  left:15px;
+  z-index: 10;
+  position: absolute;
+  width: 120px;
+  height: 180px;
+  border-radius: 5px;
+  padding:2px;
+  background-color: #F6F7EB;
+  display: block;
+  -webkit-box-shadow: 2px -2px 9px -1px rgba(0,0,0,1);
+  -moz-box-shadow: 2px -2px 9px -1px rgba(0,0,0,1);
+  box-shadow: 2px -2px 9px -1px rgba(0,0,0,1);
+}
+
+.card {
+  font-family: 'Arbutus Slab', serif;
+  position: relative;
+  width: 120px;
+  height: 180px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 28px;
+  padding:2px;
+  background-color: #F6F7EB;
+  display: flex;
+  -webkit-box-shadow: 2px -2px 9px -1px rgba(0,0,0,1);
+  -moz-box-shadow: 2px -2px 9px -1px rgba(0,0,0,1);
+  box-shadow: 2px -2px 9px -1px rgba(0,0,0,1);
+  margin:15px;
+}
+
+.back {
+  background: #36c;
+  background:
+  linear-gradient(115deg, transparent 75%, rgba(255,255,255,.8) 75%) 0 0,
+  linear-gradient(245deg, transparent 75%, rgba(255,255,255,.8) 75%) 0 0,
+  linear-gradient(115deg, transparent 75%, rgba(255,255,255,.8) 75%) 7px -15px,
+  linear-gradient(245deg, transparent 75%, rgba(255,255,255,.8) 75%) 7px -15px,
+  #36c;
+  background-size: 15px 30px;
+  width:96%;
+  height: 98%;
+  margin: 1% auto;
+  border-radius: 5px;
+}
+
+.diamonds, .hearts {
+  color:#E94F37;
+}
+
+.spades, .clubs {
+  color:#393E41;
+}
+
+.rank {
+  position: absolute;
+  width:30px;
+  height: 28px;
+}
+
+.top {
+  top: 2px;
+  left: 2px;
+}
+
+.bottom {
+  bottom:0;
+  right: 2px;
+  text-align: right;
+}
+
+.suit {
+  margin:auto;
+  font-size: 60px;
+}
+
+.border-line {
+  border:4px dashed #F6F7EB;
+  opacity: 0.4;
+  margin: 20px 0;
+}
+
+.score {
+  position: relative;
+  text-align: center;
+  font-family: Gill Sans;
+  color: #F6F7EB;
+  opacity: 0.7;
+  font-size: 20px;
+  z-index:10;
+  text-shadow: 1px 1px 2px rgba(10, 10, 10, 1);
+}
+
+/* footer */
+#panel {
+  text-align: center;
+  background-color: #40434E;
+  border-top: 1px solid #070707;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding-top: 10px;
+}
+
+#status {
+  font-family: Gill Sans;
+  text-shadow: 1px 1px 2px rgba(10, 10, 10, 1);
+  color: #55acee;
+  position: relative;
+  opacity: 0.7;
+  font-size: 20px;
+}
+
+/* buttons */
+button {
+  border:none;
+  border-radius: 5px;
+  padding: 15px 25px;
+  font-size: 20px;
+  text-decoration: none;
+  margin: 20px;
+  color: #F6F7EB;
+  position: relative;
+  display: inline-block;
+  font-family: Gill Sans;
+  text-shadow: 1px 1px 2px rgba(10, 10, 10, 1);
+}
+
+button:active {
+  transform: translate(0px, 5px);
+  -webkit-transform: translate(0px, 5px);
+  box-shadow: 0px .5px 0px 0px;
+}
+
+.blue {
+  background-color: #55acee;
+  box-shadow: 0px 5px 0px 0px #3C93D5;
+}
+
+.blue:hover {
+  background-color: #6FC6FF;
+}
+
+.green {
+  background-color: #2ecc71;
+  box-shadow: 0px 5px 0px 0px #15B358;
+}
+
+.green:hover {
+  background-color: #48E68B;
+}
+
+.red {
+  background-color: #e74c3c;
+  box-shadow: 0px 5px 0px 0px #CE3323;
+}
+
+.red:hover {
+  background-color: #FF6656;
+}
+
+button:disabled {
+  background-color: #999;
+  box-shadow: 0px 5px 0px 0px #AAA;
+}
+
+button:disabled:hover {
+  background-color: #999;
+}
+
+button:disabled:active {
+  transform: translate(0px, 0px);
+  -webkit-transform: translate(0px, 0px);
+  box-shadow: 0px 5px 0px 0px #AAA;
+}
