@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
+    <link rel="stylesheet" href="assets/css/app.css" type="text/css" />
+    <title>
+        MotoX3M
+    </title>
+
+</head>
+
+<body>
+    <div id="content"></div>
+    <div id="orientation"></div>
+    <div id="loader">Loading ...</div>
+    <script type="text/javascript" src="https://imasdk.googleapis.com/js/sdkloader/ima3.js"></script>
+    <script type="text/javascript" src="assets/box2dweb/nape.min.js">
+        var nape = "nape.min.js";
+    </script>
+    <script type="text/javascript" src="assets/box2dweb/nape-debug-draw.min.js"></script>
+    <script type="text/javascript" src="assets/box2dweb/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="assets/box2dweb/easeljs-0.8.2.combined.js"></script>
+    <script type="text/javascript" src="assets/box2dweb/bluebird.min.js"></script>
+
+
+    <script type="text/javascript">
+        var notIE11 = (typeof(Event) === 'function');
+
+        window["GD_OPTIONS"] = {
+            "gameId": "5b0abd4c0faa4f5eb190a9a16d5a1b4c",
+            "onEvent": function(event) {
+                switch (event.name) {
+                    case "SDK_GAME_START":
+                        // advertisement done, resume game logic and unmute audio
+                        var event;
+                        if (notIE11) {
+                            event = new Event("SDK_GAME_START");
+                        } else {
+                            event = document.createEvent('Event');
+                            event.initEvent('SDK_GAME_START', true, true);
+                        }
+                        document.getElementById("content").dispatchEvent(event);
+                        break;
+                    case "SDK_GAME_PAUSE":
+                        // pause game logic / mute audio
+                        var event;
+                        if (notIE11) {
+                            event = new Event("SDK_GAME_PAUSE");
+                        } else {
+                            event = document.createEvent('Event');
+                            event.initEvent('SDK_GAME_PAUSE', true, true);
+                        }
+                        document.getElementById("content").dispatchEvent(event);
+                        break;
+                    case "SDK_GDPR_TRACKING":
+                        // this event is triggered when your user doesn't want to be tracked
+                        console.log("SDK_GDPR_TRACKING");
+                        break;
+                    case "SDK_GDPR_TARGETING":
+                        // this event is triggered when your user doesn't want personalised targeting of ads and such
+                        console.log("SDK_GDPR_TARGETING");
+                        break;
+                    case "SDK_READY":
+                        // this event is triggered when your user doesn't want personalised targeting of ads and such
+                        console.log("SDK_READY");
+                        break;
+                }
+            },
+        };
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-60415712-15"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-60415712-15');
+    </script>
+    <script type="text/javascript" src="motox3m4.min.js?30ce0fae5b364628ca27"></script>
+</body>
+
+</html>
