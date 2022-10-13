@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+body {
+    background: #f5f5f5;
+    color: #303030;
+    font-family: 'Roboto', sans-serif;
+}
+label {
+    width: 5%;
+    display: inline-block;
+    text-align: right;
+  font-family: 'Roboto', sans-serif;
+}
+input {
+  background: #e5e5e5;
+  color: #303030;
+  font-size: 120%;
+  border: none;
+  font-family: 'Roboto', sans-serif;
+}
+button {
+  background: #e5e5e5;
+  color: #303030;
+  font-size: 120%;
+  border: none;
+  font-family: 'Roboto', sans-serif;
+}
+.Message {
+  color: #a0a0a0;
+  font-family: 'Roboto', sans-serif;
+}
+#Main {
+    background: #a0a0a0;
+    border-radius: 1%;
+    padding-left: 1%;
+  font-family: 'Roboto', sans-serif;
+}
+#Title {
+    font-size: 300%;
+  font-family: 'Roboto', sans-serif;
+}

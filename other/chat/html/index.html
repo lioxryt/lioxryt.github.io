@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chatroom | 3kh0</title>
+    <meta name="charset" charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="script.js"></script>
+    <script src="socket.io/socket.io.js"></script>
+  </head>
+  <body onload="onload()">
+    <div id="Main">
+      <audio id="Ding" src="Ding.mp3"></audio>
+      <h1 id="Title">Chatroom</h1>
+      <div id="AccessPort">
+        <label id="NameLabel">Username: </label>
+        <input id="NameInput" type="text" />
+        <br />
+        <br />
+        <label id="IDLabel">Chatroom: </label>
+        <input id="IDInput" value="Default" type="text" />
+        <input id="ConnectButton" class="Button" type="submit" value="Connect" onclick="Connect()" />
+      </div>
+      <h2 id="RoomID">Chatroom : None</h2>
+      <div id="Chat">
+        <p id="Message0" class="Message">-</p>
+        <p id="Message1" class="Message">-</p>
+        <p id="Message2" class="Message">-</p>
+        <p id="Message3" class="Message">-</p>
+        <p id="Message4" class="Message">-</p>
+        <p id="Message5" class="Message">-</p>
+        <p id="Message6" class="Message">-</p>
+        <p id="Message7" class="Message">-</p>
+        <p id="Message8" class="Message">-</p>
+        <p id="Message9" class="Message">-</p>
+        <label id="MessageLabel">Message: </label>
+        <input id="ComposedMessage" onkeydown="if (event.keyCode == 13) document.getElementById('SendMessage').click()" type="text" value="" />
+        <button id="SendMessage" class="Button" onclick="Send()">Send</button>
+      </div>
+      <br />
+      <br />
+    </div>
+  </body>
+</html>
