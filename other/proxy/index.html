@@ -1,0 +1,337 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!-- saved from url=(0033)https://unblocker.whitespider.gq/ -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta http-equiv="Referrer-Policy" content="no-referrer">
+<meta name="referrer" content="no-referrer">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1">
+<meta name="description" content="Unblock websites through a proxy server, bypass the restrictions of local network and browser extensions.">
+<meta name="keywords" content="whitespider,unblock,unblocked,proxy,open-source,free,no ads,adless">
+<!--<base href="/">--><base href=".">
+<link rel="icon" type="image/x-icon" href="https://unblocker.whitespider.gq/favicon.ico">
+<link rel="manifest" type="text/plain" href="https://unblocker.whitespider.gq/manifest.json">
+<link rel="canonical" href="https://unblocker.whitespider.gq/">
+<script type="text/javascript" src="./assets/webalert.js.download"></script>
+<script type="text/javascript" src="./assets/app.js.download"></script>
+<title>WhiteSpider Unblocker</title>
+<style type="text/css">
+@import url("standard.css");
+
+body {
+	overflow-y: auto;
+}
+
+#noscript-screen {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0px;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	color: #ffffff;
+	background-color: #001a1a;
+}
+
+#noscript-screen {
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+#logo {
+	position: relative;
+	display: block;
+	width: 512px;
+	height: fit-content;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 100px;
+	margin-bottom: 20px;
+	user-select: none;
+}
+
+#logo-ws {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 128px;
+	background-image: url("res/logo.svg");
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+#logo-text {
+	position: relative;
+	display: block;
+	width: 75%;
+	height: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+	color: #808080;
+	line-height: 20px;
+	font-size: 18px;
+	font-style: italic;
+	font-weight: 600;
+	text-align: end;
+	text-decoration: none;
+	user-select: none;
+}
+
+#input {
+	position: relative;
+	display: block;
+	width: calc(100% - 50px);
+	height: 25px;
+	margin: auto;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 25px;
+	padding-right: 25px;
+	outline: none;
+	font-size: 16px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #808080;
+	border-radius: 25px;
+	background-color: rgba(0, 0, 0, 0);
+}
+
+@media all and (max-width: 512px) {
+	#logo {
+		width: 100%;
+	}
+
+	#input {
+		width: calc(90% - 50px);
+	}
+}
+
+#settings {
+	position: absolute;
+	display: block;
+	width: 20px;
+	height: 20px;
+	right: 15px;
+	top: 15px;
+	cursor: pointer;
+	background-image: url("res/settings.svg");
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+#input:focus {
+	border-color: #ffffff;
+}
+
+#button-bar {
+	position: relative;
+	display: flex;
+	width: fit-content;
+	height: fit-content;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	margin-bottom: 50px;
+}
+
+#button-bar div {
+	position: relative;
+	display: block;
+	width: fit-content;
+	height: fit-content;
+	padding: 10px;
+	cursor: pointer;
+	margin-left: 10px;
+	margin-right: 10px;
+	color: #ffffff;
+	background-color: #005050;
+	user-select: none;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 25px;
+	border-top-color: #00a0a0;
+	border-left-color: #00a0a0;
+	border-bottom-color: #000a0a;
+	border-right-color: #000a0a;
+}
+
+#button-bar div:active {
+	border-top-color: #000a0a;
+	border-left-color: #000a0a;
+	border-bottom-color: #00a0a0;
+	border-right-color: #00a0a0;
+}
+
+#shortcut-bar {
+	position: relative;
+	display: grid;
+	width: fit-content;
+	height: fit-content;
+	margin: auto;
+	column-gap: 10px;
+	row-gap: 10px;
+	grid-template-columns: auto auto auto auto;
+}
+
+.shortcut-item {
+	position: relative;
+	display: block;
+	width: 100px;
+	height: 100px;
+	padding: 10px;
+	cursor: pointer;
+	user-select: none;
+	border-style: dotted;
+	border-width: 1px;
+	border-color: rgba(0, 0, 0, 0);
+	border-radius: 25px;
+}
+
+.shortcut-item:hover {
+	border-color: #003a3a;
+	background-color: #005a5a;
+}
+
+.shortcut-item:active {
+	border-color: #003a3a;
+	background-color: #005f5f;
+}
+
+.shortcut-item-icon {
+	position: relative;
+	display: block;
+	width: 50px;
+	height: 50px;
+	margin: auto;
+}
+
+.shortcut-item-text {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 30px;
+	margin-top: 20px;
+	text-align: center;
+	text-overflow: ellipsis; 
+	overflow: hidden;
+	line-height: 15px;
+	font-size: 12px;
+}
+
+#err-msg, #noscript-msg {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: fit-content;
+	margin-top: 15px;
+	color: #ff8080;
+	font-size: 12px;
+	font-weight: 600;
+	text-align: center;
+}
+
+#footer {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 20px;
+	line-height: 20px;
+	margin-top: 50px;
+	color: #b0b0b0;
+	font-size: 12px;
+	font-weight: 400;
+	text-align: center;
+	text-decoration: none;
+}
+
+a {
+	position: relative;
+	width: fit-content;
+	height: fit-content;
+	color: inherit;
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+.text, #settings-menu input, #settings-menu label {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 18px;
+	line-height: 18px;
+	font-size: 14px;
+	text-align: start;
+	text-decoration: none;
+}
+
+.context-menu {
+	position: absolute;
+	display: none;
+	width: fit-content;
+	height: fit-content;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #ffffff;
+	color: #303030;
+	background-color: #f0f0f0;
+}
+
+.context-menu div {
+	position: relative;
+	width: auto;
+	height: 14px;
+	padding: 10px;
+	line-height: 14px;
+	font-size: 14px;
+	font-weight: 500;
+	cursor: pointer;
+	user-select: none;
+}
+
+.context-menu div:hover {
+	color: #ffffff;
+	background-color: #001a1a;
+}
+
+.context-menu div:active {
+	color: #ffffff;
+	background-color: #002a2a;
+}
+		</style>
+</head>
+<body>
+<div id="logo">
+<a id="logo-ws" href="https://whitespider.gq/" target="_blank"></a>
+<div id="logo-text">Unblocker</div>
+<input id="input" type="text" value="" placeholder="Search or Type a URL">
+</div>
+<div id="settings"></div>
+<div id="button-bar">
+<div id="search-button">Unblocked Search</div>
+<div id="random-button">I'm Feeling Lucky</div>
+</div>
+<div id="shortcut-bar"><div class="shortcut-item"><img class="shortcut-item-icon" width="60" height="60" src="./assets/google.svg"><text class="shortcut-item-text">Google</text></div><div class="shortcut-item"><img class="shortcut-item-icon" width="60" height="60" src="./assets/youtube.svg"><text class="shortcut-item-text">YouTube</text></div><div class="shortcut-item"><img class="shortcut-item-icon" width="60" height="60" src="./assets/facebook.svg"><text class="shortcut-item-text">Facebook</text></div><div class="shortcut-item"><img class="shortcut-item-icon" width="60" height="60" src="./assets/instagram.svg"><text class="shortcut-item-text">Instagram</text></div><div class="shortcut-item"><img class="shortcut-item-icon" width="60" height="60" src="./assets/tiktok.svg"><text class="shortcut-item-text">TikTok</text></div><div class="shortcut-item"><img class="shortcut-item-icon" width="60" height="60" src="./assets/y8.svg"><text class="shortcut-item-text">Y8</text></div><div id="add-shortcut" class="shortcut-item">
+<img class="shortcut-item-icon" width="60" height="60" src="./assets/add.svg">
+<div class="shortcut-item-text">Add shortcut</div>
+</div></div>
+<div id="footer">WhiteSpider Unblocker v<span id="version">0.5.0</span> | Created by <a href="https://github.com/ruochenjia" target="_blank">Ruochen Jia</a> | Open source on <a href="https://github.com/ruochenjia/whitespider-unblocker" target="_blank">GitHub</a></div>
+<div id="context-menu" class="context-menu">
+<div id="clear-site-data">Clear site data</div>
+<div id="clear-cache">Clear cache</div>
+<div id="leave-without-history">Leave without history</div>
+</div>
+<div id="shortcut-context-menu" class="context-menu">
+<div id="edit-shortcut">Edit</div>
+<div id="delete-shortcut">Delete</div>
+</div>
+<noscript>
+			<div id="noscript-screen">
+				<div id="noscript-msg">Please enable JavaScript and refresh this page to continue.</div>
+			</div>
+		</noscript>
+<script type="text/javascript" src="./assets/uv.config.js.download"></script>
+<script type="text/javascript" src="./assets/main.js.download"></script>
+<script type="text/javascript" src="./assets/inject.js.download"></script>
+
+</body></html>
