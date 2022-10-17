@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <meta name="description" content="An unof&#173;fici&#173;al Fo&#173;g Ne&#173;twork pr&#173;oxy site, made to acc&#173;ess the bl&#173;oc&#173;ked we&#173;b">
+    <meta name="author" content="F&#173;og Netwo&#173;rk">
+    <meta property="og:image" content="/assets/icon.png">
+    <title>A&#173;pps</title>
+    <script async src="https://arc.io/widget.min.js#n2Wgjzok"></script>
+    <link rel="shortcut icon" type="image/png" href="/assets/icon.png">
+    <link rel="icon" type="image/png" href="/assets/icon.png">
+    <link rel="stylesheet" href="/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta name="theme-color" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <style>
+        
+      ::-webkit-scrollbar {
+    display: none;
+}
+       
+    
+.apps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    /* position: absolute; */
+    /* transform: translateY(-50%); */
+}
+    .appimg {
+        width: 150px;
+        height: 150px;
+        }
+        
+        .appinfo {
+        width: 100%;
+        text-align: center;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: var(--light-text);
+        font-size: 16px;
+        line-height: 35px;
+        }
+
+        #closeapp {
+            display: none;
+            position: fixed;
+            top: 10px; 
+            right: 10px; 
+            background-color: var(--highlight);
+            border-radius: 2.5px;
+            height: 40px;
+            width: 40px;
+            text-align: center;
+            z-index: 11;
+            cursor: pointer;
+            }
+        
+            #reloadapp {
+            display: none;
+            position: absolute;
+            top: 10px; 
+            right: 60px; 
+            background-color: var(--highlight);
+            border-radius: 2.5px;
+            height: 40px;
+            width: 40px;
+            text-align: center;
+            z-index: 11;
+            cursor: pointer;
+            }
+
+            #appframe {
+                position: fixed;
+                top: 60px; 
+                left: 0; 
+                right: 0; 
+                bottom: 0;
+                border: none;
+                z-index: 10;
+                display: none;
+                background: var(--bg);
+                width: 100%;
+                height: calc(100% - 60px);
+                }
+                
+
+                #noapp {
+                    font-size: 20px;
+                    text-align: center;
+                    margin-top: 7px;
+                    color: var(--light-text);
+                    display: none;
+                    }
+                    .chooseappflex {
+width: 470px;
+flex-wrap: wrap;
+margin-bottom: 1px;
+}
+
+.appflex {
+margin-bottom: 5px;
+}
+
+#controls {
+    justify-content: flex-end;
+height: 60px;
+width: 100%;
+position: fixed;
+top: 0;
+right: 0;
+left: 0;
+background: var(--bg);
+display: flex;
+align-items: center;
+flex-direction: row;
+display: none;
+z-index: 100;
+}
+.nav-icon {
+margin: 0 5px 0 10px;
+height: 38px;
+width: 38px;
+border-radius: 5px;
+user-select: none;
+}
+iframe {
+    overflow:hidden;
+}
+
+.nav-title {
+color: var(--light-text);
+flex-grow: 1;
+margin: 0 10px 0 5px;
+padding: 7px;
+user-select: none;
+font-size: 20px;
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: pre;
+}
+
+.nav-button {
+font-family: Material Icons;
+color: var(--highlight);
+font-size: 25px;
+cursor: pointer;
+padding: 7px;
+margin: 5px;
+user-select: none;
+}
+* {
+font-family: var(--font);
+}
+
+body {
+background: var(--bg-main);
+margin: 0;
+}
+.logo-wrapper {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 10%;
+}
+    </style>
+</head>
+<body>
+
+
+    <div style="text-align:center;display: flex;flex-direction: column;align-items: center;">
+        <div id=sec10 class=logo-wrapper></div>
+        <strong class="neon"style="font-size: 2.5em;font-weight: bold;" style=font-family:verdana>Apps</strong><div>
+     
+    </div>
+    <div class="apps"></div>
+
+<iframe src="" id="appframe"></iframe>
+
+<div id="controls">
+
+<div class="nav-button" onclick="opentab()">launch</div>
+<div class="nav-button" onclick="fullapp()">fullscreen</div>
+
+<div class="nav-button" onclick="reloadapp()">refresh</div>
+
+<div class="nav-button" onclick="closeapp()">close</div>
+</div>
+
+<div id="particles-js"></div>
+<div id="squares"></div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="/main.js"></script>
+
+<script src="/assets/js/apps.js"></script>
+<script src="/particle.js"></script>
+
+</body>
+</html>

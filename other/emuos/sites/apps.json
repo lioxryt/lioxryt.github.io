@@ -1,0 +1,78 @@
+[
+  {
+    "title": "YouTube",
+    "image": "/img/youtube.webp",
+    "location": "/apps/apps.html#youtube.com"
+  },
+  {
+    "title": "Spotify",
+    "image": "/img/spotify.webp",
+    "location": "/apps/apps.html#spotify.com"
+  },
+  {
+    "title": "Reddit",
+    "image": "/img/reddit.webp",
+    "location": "/apps/apps.html#reddit.com"
+  },
+  {
+    "title": "Twitch",
+    "image": "/img/13-twitch-is-rebranding-for-the-first-time-1.webp",
+    "location": "/apps/apps.html#twitch.com"
+  },
+  {
+    "title": "Discord",
+    "image": "/img/discord.webp",
+    "location": "/apps/apps.html#https://discord.com/login"
+  },
+  {
+    "title": "Tik Tok",
+    "image": "/img/tiktok.webp",
+    "location": "/apps/apps.html#tiktok.com"
+  },
+
+  {
+    "title": "Geforce Now",
+    "image": "/img/geforce.webp",
+    "location": "/apps/apps.html#https://play.geforcenow.com/mall/"
+  },
+  {
+    "title": "Y8",
+    "image": "/img/y8.webp",
+    "location": "/apps/apps.html#y8.com"
+  },
+  {
+    "title": "Netflix",
+    "image": "/img/netflix.webp",
+    "location": "/apps/apps.html#netflix.com"
+  },
+  {
+    "title": "Instagram",
+    "image": "/img/Instagram_logo_2016.webp",
+    "location": "/apps/apps.html#instagram.com"
+  },
+  {
+    "title": "HBO Max",
+    "image": "/img/square%20social%20logo%20400%20x%20400_0.webp",
+    "location": "/apps/apps.html#www.hbomax.com"
+  },
+  {
+    "title": "Facebook",
+    "image": "/img/768px-Facebook-icon-1.webp",
+    "location": "/apps/apps.html#https://www.facebook.com/"
+  },
+  {
+    "title": "Hulu",
+    "image": "/img/hulu-logo-2019.webp",
+    "location": "/apps/apps.html#hulu.com"
+  },
+  {
+    "title": "Poki",
+    "image": "/img/poki.webp",
+    "location": "/apps/apps.html#poki.com"
+  },
+  {
+    "title": "Disney+",
+    "image": "/img/disney+.webp",
+    "location": "/apps/apps.html#disneyplus.com"
+  }
+]

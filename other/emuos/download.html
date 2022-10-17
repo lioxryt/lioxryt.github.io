@@ -1,0 +1,157 @@
+<html>
+<head>
+<meta charset="UTF-8">
+        <title>Game Data</title>
+        <script async src="https://arc.io/widget.min.js#n2Wgjzok"></script>
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="icon" type="image/png" href="/assets/icon.png">
+        <link rel="stylesheet" href="/main.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <script type='text/javascript' src="scripts/jquery.min.js"></script>
+        <script type='text/javascript' src="scripts/popper.min.js"></script>
+        <script type='text/javascript' src="scripts/bootstrap.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+     html { 
+  scroll-behavior: smooth; 
+}
+      	body {
+        	font-family: 'Syne', sans-serif;
+          background-color: #000000;
+                    color: inherit;
+                    width: 100%;
+    padding: 0;
+    display: table;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+      }
+      .main {
+        padding: 0;
+    vertical-align: middle;
+    display: table-cell;
+    margin: 0;
+}
+  </style>
+</head>
+<body>
+<script src="scripts/dexie.min.js"></script>
+        <script src="scripts/dexie-export-import.js"></script>
+        <script src="scripts/jszip.min.js" type="text/javascript"></script>
+        <script src="scripts/download.min.js"></script>
+        <script src="scripts/saveandexport.js"></script>
+        <div class="modal hide fade" id="downloadModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Before downloading...</h4>
+                        <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        Remember to refresh the page to get the latest data after playing.<br />
+                        Depending on the amount of the data, this may take a while.
+                    </div>
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-custom" id="downloadZIP" data-bs-dismiss="modal">Download</button>
+                        <button type="button" class="btn btn-outline-secondary" onclick="window.location.reload();" data-bs-dismiss="modal">Refresh page</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal hide fade" id="progressModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Status</h4>
+                        <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        Data exported. Check the download popup to get the file.
+                    </div>
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-custom" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal hide fade" id="importModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Status</h4>
+                        <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        Sucessfully imported game data.<br />
+                        Refreshing in 3 seconds.
+                    </div>
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-custom" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal hide fade" id="importFailedModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Status</h4>
+                        <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        Failed to import data.
+                    </div>
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-custom" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal hide fade" id="confirmModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Confirm importing?</h4>
+                        <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        This will overwrite the current game data. Continue?
+                    </div>
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-warning" onclick="importZIP.click();" data-bs-dismiss="modal">Yes</button>
+                        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">No</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+  <div class="main">
+  
+  
+
+<p class="aa-nav-item"style="margin:10px;text-align:center;">
+<a style="color: var(--link);"data-bs-toggle="modal" data-bs-target="#downloadModal" href="javascript:void(0);">Download game data</a> <br>
+<a style="color: var(--link);" data-bs-toggle="modal" data-bs-target="#confirmModal" href="javascript:void(0);">Import game data</a>
+</p>
+</div>
+
+   <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js></script>
+    <script src=/main.js></script>
+</body>
+</html>

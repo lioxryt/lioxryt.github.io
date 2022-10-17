@@ -1,0 +1,437 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="title" content="UBG100">
+  <meta name="description" content="Play your favorite online games free now!">
+  <meta name="language" content="English">
+  <title>Tests</title>
+  <link rel="icon" type="image/x-icon" href="/assets/img/socials/ubg100.png" />
+  <link rel="mask-icon" type="" href="/assets/img/socials/ubg100.png" color="#111" />
+  <link rel="stylesheet" href="/contentpage.css">
+  <link id="maincss" rel="stylesheet" href="/main.css">
+  <link href=/form.css rel=stylesheet />
+  <link rel="stylesheet" href="/assets/css/home.css">
+  
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
+  
+  <noscript>Your browser doesn't have JavaScript enabled. Please enable JavaScript or switch to a browser that
+    supports it.</noscript>
+  <style>
+    
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Syne', sans-serif;
+    }
+
+    container {
+      width: 100%;
+      padding-right: 15px;
+      padding-left: 15px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    .container {
+      display: flex;
+    }
+
+    .image-container {
+      text-align: center;
+      width: 100%;
+    }
+
+    .links-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .text-container {
+      display: grid;
+      flex-direction: column;
+      align-items: start;
+      gap: 5px;
+      grid-template-columns: 1fr 1fr;
+      vertical-align: top;
+    }
+
+    footer {
+      border-style: solid;
+      border-width: 2px;
+    }
+
+    .footer {
+      border-style: solid;
+      border-width: 2px;
+      padding-bottom: 310px;
+    }
+
+    .footer1 {
+      border-style: solid;
+      border-width: 2px;
+      padding-bottom: 90px;
+    }
+
+    body {
+      margin: 0;
+      background: #111;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .navbar {
+      width: 85%;
+      margin: auto;
+      padding: 35px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 10%;
+    }
+
+    .overlay {
+      opacity: 0.8;
+      background-color: #ccc;
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0px;
+      left: 0px;
+      z-index: 1000;
+    }
+
+    .logo-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      margin-top: 13%;
+    }
+
+    img+button {
+      float: right;
+    }
+
+    button {
+      width: 180px;
+      margin-left: 25%;
+      margin-right: 25%;
+      padding: 15px 0;
+      text-align: center;
+      margin: 20px 10px;
+      border-radius: 25px;
+      font-weight: bold;
+      border: 2px solid #009688;
+      background: transparent;
+      color: white;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .logo {
+      width: 150px;
+    }
+
+    .logo-wrapper .text {
+      font-size: 75px;
+      font-family: "Roboto";
+      color: #FFFFFF;
+    }
+
+    .main-input-button {
+      padding: 10px;
+      background: none;
+      margin-left: 1px;
+      margin-right: 1px;
+      outline: none;
+      margin-top: 2px;
+      color: white;
+      border: #fff solid 3px;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: 0.25s ease;
+      z-index: 10;
+      position: relative;
+    }
+
+    .exploits {
+      display: flex;
+      columns: auto auto;
+      padding: 20px;
+      column-gap: 25px;
+      margin-top: 0;
+      flex-wrap: wrap;
+      height: 50%;
+      justify-content: center;
+    }
+
+    footer a {
+      cursor: pointer;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    form {
+      display: flex;
+      justify-content: center;
+    }
+
+    form input {
+      background: none;
+      font-family: inherit;
+      padding: 0px 17px;
+      height: 48px;
+      border: 1px solid rgb(255, 255, 255, .2);
+      color: var(--text-color);
+      border-radius: 3px;
+      outline: none;
+      width: 350px;
+      margin-top: 5px;
+      border-radius: 50px;
+      color: #FFFFFF;
+    }
+  </style>
+  <style>
+    h1 {
+      text-align: center;
+    }
+
+    a {
+      text-align: center;
+    }
+    .input {
+    height: 3rem;
+    border-width: 1px;
+    border-color: hsl(var(--bc)/var(--tw-border-opacity));
+    --tw-border-opacity: 0;
+    --tw-bg-opacity: 1;
+    background-color: hsl(var(--b1)/var(--tw-bg-opacity));
+    border-radius: var(--rounded-btn, .5rem);
+    flex-shrink: 1;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: .875rem;
+    line-height: 2;
+    transition-property: color, background-color, border-color, -webkit-text-decoration-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+    transition-duration: .2s;
+    transition-timing-function: cubic-bezier(.4, 0, .2, 1)
+}
+.input-bordered {
+    --tw-border-opacity: .2
+}
+
+.input:focus {
+    outline: 2px solid hsla(var(--bc)/.2);
+    outline-offset: 2px
+}
+.form-index {
+    position: relative;
+    z-index: 2;
+    background: 0 0;
+    font-family: inherit;
+    padding: 24px 17px;
+    height: 48px;
+    border: 1px solid rgb(255,255,255,.2);
+    color: var(--text-color);
+    border-radius: 3px;
+    margin-bottom: 10px;
+    outline: 0;
+    width: 350px;
+    margin-top: 5px;
+    border-radius: 50px;
+    color: #fff;
+}
+  </style>
+</head>
+
+<body>
+
+  <body>
+    <div class="form-popup" id="myForm">
+      <h2 class="text-3xl font-semibold text-center text-gray-200 dark:text-white">Game Request</h2>
+        
+        
+     <form id="my-form" method="POST" class="form-container" action="https://script.google.com/macros/s/AKfycbzc4UgrVIBGXxaFoB2R-K53qH5lAM6x4xWAGaakuW9IvvkFCb_Es-N6xR-Sy31du6b6/exec"><br>
+    
+    
+    <div class="items-center -mx-2 md:flex">
+      <label style="margin-bottom: -20px;" class="text-center block mb-2 text-sm font-medium text-gray-200">Type Of Game<span class="text-red-500">*</span></label>
+    <div class="w-full mx-2 mt-4 md:mt-0 switch-field" style="margin-bottom: -40px;">
+       <input onclick="hideQuestionRequest()"  type="radio" id="unknown" name="gameType" value="unknown" checked/>
+            <label for="unknown">Unknown</label>
+            <input onchange="displayQuestionRequest(this.value)" type="radio" id="emulator" name="gameType" value="emulator" />
+            <label for="emulator">Emulator</label>
+            <input onclick="hideQuestionRequest()"  type="radio" id="flash" name="gameType" value="flash" />
+            <label for="flash">Flash</label>
+      <input onclick="hideQuestionRequest()"  type="radio" id="html" name="gameType" value="html" />
+            <label for="html">HTML</label>
+      <input onclick="hideQuestionRequest()"  type="radio" id="webgl" name="gameType" value="webgl" />
+            <label for="webgl">WebGL</label>
+        </div>
+      </div><br>
+       <div class="items-center -mx-2 md:flex">
+        <div class="w-full mx-2">
+        <label class="block mb-2 text-sm font-medium text-gray-200">Game Name<span class="text-red-500">*</span></label>
+        <input name="gameName" style="width: 200px;" class="block w-full px-4 py-2 border rounded-md bg-gray-800 text-gray-300 border-gray-600 focus:ring-blue-300 focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" type="text" required>
+        </div>
+        <div id="emulatorQuestion" style="display: none;"class="w-full mx-2 mt-4 md:mt-0">
+        <label class="block mb-2 text-sm font-medium text-gray-200">Platform<span class="text-red-500">*</span></label>
+        <select id="emulatorQuestion3" name="platform" class="block w-full px-4 py-2 border rounded-md bg-gray-800 text-gray-300 border-gray-600 focus:ring-blue-300 focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" required>
+        <option value="gba">GBA</option>
+        <option value="nes">NES</option>
+        <option value="virtual boy">Virtual Boy</option>
+        <option value="game boy">Game Boy</option>
+        <option value="snes">SNES</option>
+          <option value="ds">DS</option>
+          <option value="n64">N64</option>
+          <option value="master">Master System</option>
+          
+          <option value="genesis">Genesis</option>
+          <option value="gear">Game Gear</option>
+          <option value="saturn">Saturn</option>
+          <option value="32X">32X</option>
+          <option value="cd">CD</option>
+          <option value="jaguar">Jaguar</option>
+          <option value="lynx">Lynx</option>
+          <option value="78">7800</option>
+          <option value="26">2600</option>
+          <option value="msx">MSX</option>
+          <option value="3do">3DO</option>
+          <option value="neo geo">Neo Geo Pocket</option>
+        </select>
+        </div>
+        </div><br>
+    <div id="emulatorQuestion2" class="w-full mt-4 md:mt-0">
+    <label class="block mb-2 text-sm font-medium text-gray-200">Game Link
+</label>
+    <input name="url" class="block w-full px-4 py-2 border rounded-md bg-gray-800 text-gray-300 border-gray-600 focus:ring-blue-300 focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" type="text">
+    </div>
+    <div class=" justify-center mt-6">
+    <input type="submit" class="px-4 py-2 text-gray-200 transition-colors duration-200 transform bg-gray-700 rounded-md hover:bg-gray-600 focus:outline-none focus:bg-gray-600 btn" value="Request">
+      <button type="button" style="margin: 0;left: 51%; -ms-transform: translateX(-50%);transform: translateX(-50%);"class="px-4 py-2 btn cancel" onclick="closeForm()">Close</button>
+    </div>
+    
+       
+    </form>
+        </div>
+      <div class="form-popup" id="myForm2">
+      <h2 class="text-3xl font-semibold text-center text-gray-200 dark:text-white">Report A Bug</h2>
+     <form id="my-form2" method="POST" class="form-container" action="https://script.google.com/macros/s/AKfycbzfMKZoqG0byCuhH-bOTpNbcahyeKQcZAMbBjTqkbg_k-sulR16SZTCuEjgEC9bkz9W/exec"><br>
+    <div class="items-center -mx-2 md:flex">
+      <label style="margin-bottom: -20px;" class="text-center block mb-2 text-sm font-medium text-gray-200">Location Of The Bug<span class="text-red-500">*</span></label>
+    <div class="w-full mx-2 mt-4 md:mt-0 switch-field" style="margin-bottom: -40px;">
+       <input onclick="hideQuestion()"  type="radio" id="main" name="location" value="main" required/>
+            <label for="main">Main Page</label>
+            <input onchange="displayQuestion(this.value)" type="radio" id="game" name="location" value="game" />
+            <label for="game">Game</label>
+            <input onchange="displayQuestion(this.value)"  type="radio" id="pr*xy" name="location" value="pr*xy" />
+            <label for="pr*xy">Pr*xy</label>
+        </div>
+    </div><br>
+       <div id="mainQuestion" style="display:none; margin: 0;"  class="w-full mt-4 md:mt-0"></div>
+       <div id="pr*xyQuestion" style="margin-top: 50px; display:none;" class="w-full mt-4 md:mt-0">
+    <label class="block mb-2 text-sm font-medium text-gray-200">Pr*xy Name<span class="text-red-500">*</span></label>
+    <input id="pr*xyQuestion2" name="pr*xyName"  class="block w-full px-4 py-2 border rounded-md bg-gray-800 text-gray-300 border-gray-600 focus:ring-blue-300 focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" type="text" required>
+    </div><br>
+    <div id="gameQuestion" style="display:none; margin: 0;"class="w-full mt-4 md:mt-0">
+    <label class="block mb-2 text-sm font-medium text-gray-200">Game Name<span class="text-red-500">*</span></label>
+    <input id="gameQuestion2"name="gameName" class="block w-full px-4 py-2 border rounded-md bg-gray-800 text-gray-300 border-gray-600 focus:ring-blue-300 focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" type="text" required>
+    </div><br>
+       <div style="margin: 0;"class="w-full mt-4 md:mt-0">
+    <label class="block mb-2 text-sm font-medium text-gray-200">Description of the bug<span class="text-red-500">*</span></label>
+    <input name="desc" class="block w-full px-4 py-2 border rounded-md bg-gray-800 text-gray-300 border-gray-600 focus:ring-blue-300 focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" type="text" required>
+    </div><br>
+      
+    <div class="w-full mx-2 mt-4 md:mt-0">
+    <label class="block mb-2 text-sm font-medium text-gray-200">Severity</label>
+    <select name="severity" class="block w-full px-4 py-2 border rounded-md bg-gray-800 text-gray-300 border-gray-600 focus:ring-blue-300 focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40">
+    <option value="minor">Minor</option>
+    <option value="moderate">Moderate</option>
+    <option value="major">Major</option>
+    <option value="game breaking">Game Breaking</option>
+    </select>
+    </div>
+    
+    <br>
+    <div class="justify-center">
+    <input type="submit" class="px-4 py-2 text-gray-200 transition-colors duration-200 transform bg-gray-700 rounded-md hover:bg-gray-600 focus:outline-none focus:bg-gray-600 btn" value="Report">
+      <button type="button" style="margin: 0;left: 51%; -ms-transform: translateX(-50%);transform: translateX(-50%);"class="px-4 py-2 btn cancel" onclick="closeBug()">Close</button>
+    </div> 
+    </form>
+        </div> 
+      <script>function openForm() {
+          document.getElementById("myForm").style.display = "block";
+        }
+        
+        function openBug() {
+          document.getElementById("myForm2").style.display = "block";
+        }
+        
+        function closeForm() {
+          document.getElementById("myForm").style.display = "none";
+        }
+        
+        function closeBug() {
+          document.getElementById("myForm2").style.display = "none";
+        }
+        
+        function hideRequest() {
+          document.getElementById("request").style.display = "none";
+        }
+        
+        function hideBug() {
+          document.getElementById("bug").style.display = "none";
+        }</script>
+      <button id="request" class="open-button" onclick="openForm()">Request a Game</button>
+      <button id="bug" class="open-button2" onclick="openBug()">Report A Bug</button>
+      <div id="divwithfilters"class="flex flex-col items-center w-full h-full min-h-screen py-20 ">
+        <strong class="neon"style="font-size: 2.5em;font-weight: bold;" style=font-family:verdana>Games</strong><div>
+          <a style="font-size: 1em;font-weight: bold;" onclick="openInUnblocked('https://' + window.location.hostname)">
+            <p>Hide this from History</p>
+          </a>
+        </div>
+         <a href=https://github.com/EmulatorOS/EmulatorOS.github.io>Github</a>
+         <a href=/download>Download or Import Game Data</a>
+         <div class="footer__visits"><i class="fas fa-eye"></i><span id="visit-count">0</span></div>
+         <input type="text"class="form-index input input-bordered input-outline   max-w-xs" id="GameSearch" onkeyup="searchGames()" placeholder="Search">
+            
+        <section class="  gap-4 w-full h-min  filter-categories"></section>
+        
+        <div class="w-full grid flex-row justify-center" style="grid-template-columns: 0.5fr 2fr 0.5fr;">
+          
+          <div class="adcontainer"></div>
+          <div id="gridCardsWithFilter" class="w-full min-h-screen max-w-7xl px-5 flex flex-col gap-y-16 py-20 items-center">
+           
+            <div class="grid grid-cols-1  md:grid-cols-3 xl:grid-cols-3 gap-4 w-full h-min filter-wrap"></div>
+          </div>
+          <div class="adcontainer"></div>
+        </div>
+      </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/main.js"></script>
+    <script src="/mainads.js"></script>
+    <script src="/games.js"></script>
+    <script src="/addgames.js"></script>
+
+    <script src="/filters.js"></script>
+
+</html>
