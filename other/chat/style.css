@@ -1,0 +1,34 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  height: 95%;
+  width: 100%;
+  font-family: sans-serif;
+  background-image: url('http://addyosmani.com/blog/wp-content/uploads/2013/04/unicorn.jpg');
+}
+
+.main-container {
+  width: 75%;
+  margin: 10px auto;
+  background: rgba(255, 255, 255, 0.86);
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.main-container h1 {
+  text-align: center;
+}
+
+.text-box {
+  margin: 0px auto;
+  width: 40%;
+}
+
+p{
+  text-align: center;
+  margin: 3px 0;
+  font-size: 17px;
+}
