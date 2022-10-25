@@ -1,0 +1,365 @@
+﻿<html>
+<head>
+    <title>NewPlantsVS.ZombiesJs | 江南游戏 | JiangNanGame</title>
+    <link rel="stylesheet" href="UI.css">
+    <body id="dBody" topmargin="0" leftmargin="0" oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+   <div id="preloader">
+	    <div id="status" class="WindowFrame"></div>
+    </div>
+    <script src="js/Cfunction.js"></script>
+    <script src="js/Welcome.js"></script>
+    <div id="dFlagMeter">
+	<div id="dFlagMeterTitle"><div id="dFlagMeterTitleB"></div><div id="sFlagMeterTitleF"></div></div>
+	<div id="dFlagMeterContent">
+		<img id="imgFlagMeterEmpty" src="images/interface/FlagMeterEmpty.png">
+		<img id="imgFlagMeterFull" src="images/interface/FlagMeterFull.png">
+		<img class="flag" id="imgFlag1" src="images/interface/FlagMeterParts2.png">
+		<img class="flag" id="imgFlag2" src="images/interface/FlagMeterParts2.png">
+		<img class="flag" id="imgFlag3" src="images/interface/FlagMeterParts2.png">
+		<img class="flag" id="imgFlag4" src="images/interface/FlagMeterParts2.png">
+		<img id="imgGQJC" src="images/interface/FlagMeterLevelProgress.png">
+		<img id="imgFlagHead" src="images/interface/FlagMeterParts1.png">
+	</div>
+    </div>
+    <div id="dSurface" class="WindowFrame">
+	<div id="iSurfaceBackground">
+		<map name="FPMap0">
+			<script>
+			(function(){
+				var s="",ar=[{c:'641,466,724,527',k:'ShowOptions()'},{c:'718,512,790,558',k:'ShowHelp()'},{c:'800,495,879,548',k:'SetNone($(\'dSurface\'));PlayAudio(\'tap\')'}];
+				for(var i=0;i<=2;i++)s+='<area href="javascript:;" shape="rect" coords="'+ar[i].c+'" onclick="'+ar[i].k+'">';document.write(s);
+			})()
+			</script>
+		</map>
+		<img src="images/interface/Surface.jpg" usemap="#FPMap0" border="0">
+		<div style="position:absolute;width:350px;height:150px;left:468px;top:82px;background:url(images/interface/SelectorScreen_Shadow_Adventure.png)"></div>
+		<div class="adventure0" id="dAdventure" onmouseover="this.style.backgroundPosition='bottom';" onmouseout="this.style.backgroundPosition='top'" onclick="StartAdventure()"></div>
+		<div style="position:absolute;width:318px;height:136px;left:476px;top:208px;background:url(images/interface/SelectorScreen_Shadow_Survival.png)"></div>
+		<div class="mini" onmouseover="this.style.backgroundPosition='bottom';" onmouseout="this.style.backgroundPosition='top'" onclick="ShowMiniGame()"></div>
+		<div style="position:absolute;width:289px;height:127px;left:480px;top:307px;background:url(images/interface/SelectorScreen_Shadow_Challenge.png)"></div>
+		<div class="riddle" onmouseover="this.style.backgroundPosition='bottom';" onmouseout="this.style.backgroundPosition='top'" onclick="ShowRiddleGame()"></div>
+		<div class="Sunflower_trophy"><script>document.write('<img onclick="PlayAudio(\'buttonclick\');alert(\'新植物大战僵尸js\\n原作：lonelystar\\n制作单位：江南游戏开发社\\n开发人员：PAK向日葵（程序关卡设计）疯狂阳光Bean（美术指导、设计）\\n技术帮扶：Mr_KhrisTele\\n图片、音乐版权：popcap、部分来自网络搜集\\n鸣谢&感谢：彩色奢望、15574587513sh、陈思行大王、筱岚君、56743x、徐昊、四二fourtwo以及全体在游戏开发社参加内部测试的人员\\n感谢组织：pvz2js、pvz2pak、pvz2素材吧、pvz2科研部门\')" title="制作人" alt="3" src="images/interface/Sunflower_trophy32.png">')</script></div>
+		<div class="handbook" onmouseover="this.style.backgroundPosition='bottom'" onmouseout="this.style.backgroundPosition='top'" onclick="ViewHandBook()"></div>
+		<div id="ZombieHand"></div>
+		<div id="dNameDiv0">
+			<div id="dNameDiv1" onmouseover="this.style.backgroundPosition='bottom'" onmouseout="this.style.backgroundPosition='top'" onclick="ShowLoginDiv()"></div>
+			<div id="dNameDiv2"></div>
+		</div>
+	</div>
+	<div id="dPause">
+		<table border="0" width="434" cellspacing="0" cellpadding="0" height="484">
+			<tr>
+				<td width="107" height="142" valign="bottom">
+				<img border="0" src="images/interface/dialog_topleft.png" width="423" height="401"></td>
+			</tr>
+		</table>
+		<div class="list">
+			<div class="hidden" onclick="SetNone($('dSurface'),$('dPause'))"></div>
+			<div id="dPauseAD"></div>
+		</div>
+		<div class="button" onclick="ResetGame($('dMenu0'))">继续游戏</div>
+	</div>
+	<div id="dSurfaceBack">
+		<div id="dHelp" onclick="HiddenHelp()"></div>
+		<div id="dOptionsMenuback">
+			<div id="dOptionsMenu">
+				<div class="OMd0">
+					<div class="OMd1">
+						<div><input type="checkbox" id="cAutoSun" value="1" onchange="CheckAutoSun(this)"> <label for="cAutoSun" id="lAutoSun">自动拾取阳光</label></div>
+						<div><input type="checkbox" id="cSilence" value="1"> <label for="cSilence" id="lSilence">静&nbsp;&nbsp; &nbsp;&nbsp;音&nbsp;&nbsp;  </label></div>
+					</div>
+				</div>
+				<div class="BigLevel button" onclick="ShowLevel()">游戏选关</div>
+				<div class="BigLevel button" onclick="ShowSpeed()">游戏调速</div>
+				<div class="BigLevel button" onclick="ViewHandBook()">查看图鉴</div>
+				<div class="BigLevel button" onclick="SelectModal(oS.Lvl)">重新开始</div>
+				<div class="BigLevel button" onclick="SelectModal(0);SetBlock($('dSurface'),$('iSurfaceBackground'));">返回菜单</div>
+				<div class="OptionsMenuButton" style="margin-top:20px" onmousedown="OptionsMenuDown(this,$('sOptionsMenu'))" onmouseup="OptionsMenuUP(this,$('sOptionsMenu'));HiddenOptions();CheckAutoSun($('cAutoSun'));CheckSilence($('cSilence'))"><span id="sOptionsMenu" class="OptionsMenuButtonSpan">继续游戏</span></div>
+			</div>
+<script>
+var ArLvl={1:'一',2:'二',3:'三',4:'四',5:'五',6:'六',7:'七',8:'八',9:'九',10:'十'},
+LvlList=function(BLvl,SLvl1,SLvl2){
+	var s='',startlvl=BLvl*10;
+	do{
+		s+='<span class="lvl" onclick="StartAdventure('+(startlvl+SLvl1)+')">第'+ArLvl[SLvl1]+'关</span>';
+	}while(SLvl1++<SLvl2)
+	document.write(s);
+};
+</script>
+		</div>
+		<div id="dAdvSmallContainer" class="TitleSmallContainer Challenge_Background">
+			<div id="dAdvSmallTitle">冒险模式</div>
+			<div class="list">
+				<div class="title">白天草地</div>
+				<div class="icon">
+					<img class="img1" style="clip:rect(0,61px,auto,0);left:16px" border="0" src="images/interface/Almanac_Ground.jpg" width="366" height="61"></td>
+					<img class="img2" border="0" src="images/interface/Almanac_ZombieWindow2.png" width="76" height="76"></p>
+				</div>
+				<div class="lvl2">
+					<script>LvlList(0,1,10)</script>
+				</div>
+			</div>
+			<div class="list">
+				<div class="title">夜晚草地</div>
+				<div class="icon">
+					<img class="img1" style="clip:rect(0,183px,auto,122px);left:-106px" border="0" src="images/interface/Almanac_Ground.jpg" width="366" height="61"></td>
+					<img class="img2" border="0" src="images/interface/Almanac_ZombieWindow2.png" width="76" height="76"></p>
+				</div>
+				<div class="lvl2">
+					<script>LvlList(1,1,10)</script>
+				</div>
+			</div>
+			<div class="list">
+				<div class="title">白天泳池</div>
+				<div class="icon">
+					<img class="img1" style="clip:rect(0,305px,auto,244px);left:-228px" border="0" src="images/interface/Almanac_Ground.jpg" width="366" height="61"></td>
+					<img class="img2" border="0" src="images/interface/Almanac_ZombieWindow2.png" width="76" height="76"></p>
+				</div>
+				<div class="lvl2">
+					<script>LvlList(2,1,10)</script>
+				</div>
+			</div>
+			<div class="list">
+				<div class="title">东海龙宫</div>
+				<div class="icon">
+					<img class="img1" style="clip:rect(0,244px,auto,183px);left:-167px" border="0" src="images/interface/Almanac_Ground.jpg" width="366" height="61"></td>
+					<img class="img2" border="0" src="images/interface/Almanac_ZombieWindow2.png" width="76" height="76"></p>
+				</div>
+				<div class="lvl2">
+					<script>LvlList(3,1,10)</script>
+				</div>
+			</div>
+			<div class="list">
+				<div class="title">水乡嘉兴</div>
+				<div class="icon">
+					<img class="img1" style="clip:rect(0,61px,auto,0);left:16px" border="0" src="images/interface/jiaxing.png" width="366" height="61"></td>
+					<img class="img2" border="0" src="images/interface/Almanac_ZombieWindow2.png" width="76" height="76"></p>
+				</div>
+				<div class="lvl2">
+					<script>LvlList(4,1,10)</script>
+				</div>
+			</div>
+			<div class="button" onmouseover="this.style.backgroundPosition='bottom'" onmouseout="this.style.backgroundPosition='top'"  onclick="HiddenLevel()">关闭</div>
+		</div>
+		
+		<div id="dMiniSmallContainer" class="TitleSmallContainer Challenge_Background">
+			<div id="dMiniSmallTitle">中国馆 - 戴夫的中国之行</div>
+			<div id="dMini0">
+				<table cellspacing="10" width="100%">
+				<script>
+					(function(){
+						var ar=['100','初入中国','wall0.png',
+						'101','暗杀行动','wall1.png',
+						'102','夜幕降临','wall2.png',
+						'103','突出重围','wall3.png',
+						'104','古老水寨','zhi.png',
+						'105','水上运动','zhi1.png',
+						'106','坟墓村庄','bai.png',
+						'107','幽灵喧夜','bai1.png',
+						'108','火山之脚','huo.png',
+						'109','火上浇油','huo1.png',
+						'110','魔王宫殿','wang.png',
+						'111','尸群围剿','wang0.png',
+						'112','决战秦皇','wang1.png',
+						'FB','副本-关口恶战','FB.png',
+						'WJY','副本-江轶同学会晤','WJY.png'],
+						v,i=0,n,l=ar.length,s='';
+						for(n=0;n<l;n+=3){
+							i%5==0&&(s+='<tr>');
+							s+='<td height="139" valign="top" onclick="SelectModal(\''+ar[n]+'\')"><div><img src="images/interface/'+ar[n+2]+'"></div><div class="list">'+ar[n+1]+'</div></td>';
+							(i+1)%5==0?(
+								s+='</tr>',
+								i=0
+							):++i;
+						}
+						if(i!=0){
+							while(--i)s+='<td>　</td>';
+							s+='</tr>';
+						}
+						document.write(s)
+					})()
+				</script>
+				</table>
+				<div class="button" onmouseover="this.style.backgroundPosition='bottom'" onmouseout="this.style.backgroundPosition='top'"  onclick="HiddenMiniGame()">关闭</div>
+			</div>
+		</div>
+</div>
+		<div id="dRiddleSmallContainer" class="TitleSmallContainer Challenge_Background">
+			<div id="dMiniSmallTitle">迷 你 游 戏</div>
+			<div id="dMini0">
+				<table cellspacing="10" width="100%">
+				<script>
+					(function(){
+						var ar=['NutBowling','坚果保龄球 ','baolingqiu.png',
+						'GuanXin','观星','GuanXin.png',
+						'yy','以牙还牙','yy.png',
+						'ZombieGames','僵尸运动会','woxinfeixiang.png',
+						'yicixingxiaofei','一次性消费','yicixingxiaofei.gif',
+						'kaotianchifan','靠天吃饭','kaotianchifan.png',
+						'pinjizhidi','三路防守','pinjizhidi.png',
+					                'bpsyc','玩偶匣市场','bpsyc.png',
+						'fmdzz','三列防部','fmdzz.png',
+						'ydbs','一朵不少','ten.png',
+						'KongXi','空袭','KongXi.png',
+						'YXZZ','隐形战役','YXZZ.png',
+						'xjsdmf','小僵尸大麻烦','sm.png',
+						'QRWX','全日无休','QRWX.png',
+                                                                                                '150','常青之塔','mota.png'],
+						v,i=0,n,l=ar.length,s='';
+						for(n=0;n<l;n+=3){
+							i%5==0&&(s+='<tr>');
+							s+='<td height="139" valign="top" onclick="SelectModal(\''+ar[n]+'\')"><div><img src="images/interface/'+ar[n+2]+'"></div><div class="list">'+ar[n+1]+'</div></td>';
+							(i+1)%5==0?(
+								s+='</tr>',
+								i=0
+							):++i;
+						}
+						if(i!=0){
+							while(--i)s+='<td>　</td>';
+							s+='</tr>';
+						}
+						document.write(s)
+					})()
+				</script>
+				</table>
+				<div class="button" onmouseover="this.style.backgroundPosition='bottom'" onmouseout="this.style.backgroundPosition='top'"  onclick="HiddenMiniGame()">关闭</div>
+				</div>
+
+			<!--单机界面已作废，无特殊请勿乱动-->
+			<div id="dRiddle0">
+				<div class="button" onmouseover="this.style.backgroundPosition='bottom'" onmouseout="this.style.backgroundPosition='top'"  onclick="ReturnRiddleInx()">益智模式索引</div>
+			</div>
+			<!--对战界面已作废，无特殊请勿乱动-->
+			<div id="dRiddle1">
+				<div style="position:relative;width:94%;font-size:12px;margin-top:10px;margin-left:auto;margin-right:auto;color:#000">
+					<button class="jhp" style="height:23px" onclick="window.frames['fRiddleAlreadyCreateGame'].SearchLvl(0)">所有游戏</button> 
+					<button class="jhp" style="height:23px" onclick="window.frames['fRiddleAlreadyCreateGame'].SearchLvl(1)">我创建的</button> 
+					<button class="jhp" style="height:23px" onclick="window.frames['fRiddleAlreadyCreateGame'].SearchLvl(2)">我玩过的</button>&nbsp;&nbsp;&nbsp;
+					<input type=text id="tRiddleID" size="1"><button class="jhp" style="height:23px" onclick="window.frames['fRiddleAlreadyCreateGame'].SearchLvl(3,$('tRiddleID').value)">序号查询</button>&nbsp;&nbsp;&nbsp;
+					<input type=text id="tRiddleUserName" size="3"><button class="jhp" style="height:23px" onclick="window.frames['fRiddleAlreadyCreateGame'].SearchLvl(4,$('tRiddleUserName').value)">创建人查询</button>&nbsp;&nbsp;&nbsp;
+					<input type=text id="tRiddleTitle" size="3"><button class="jhp" style="height:23px" onclick="window.frames['fRiddleAlreadyCreateGame'].SearchLvl(5,$('tRiddleTitle').value)">标题查询</button>
+					<div style="border:1px solid #000;height:440px;width:100%;background:#fafafa">
+						<iframe name="fRiddleAlreadyCreateGame" id="fRiddleAlreadyCreateGame" marginwidth="1" marginheight="1" height="100%" width="100%" scrolling="no" border="0" frameborder="0"></iframe>
+					</div>
+				</div>
+				<div class="button" onmouseover="this.style.backgroundPosition='bottom'" onmouseout="this.style.backgroundPosition='top'"  onclick="ReturnRiddleInx()">叛逆模式索引</div>
+				<div class="button" style="left:220px" onmouseover="this.style.backgroundPosition='bottom'" onmouseout="this.style.backgroundPosition='top'"  onclick="if($User.Visitor.UserName!='游客'||confirm('游客只能体验创建功能无法存档\n请使用注册用户以保存你的创意！'))SelectModal('ImZombieCreateGame')">创建新的关卡</div>
+			</div>
+			<div id="dRiddleClose" onmouseover="this.style.backgroundPosition='bottom'" onmouseout="this.style.backgroundPosition='top'" onclick="HiddenRiddleGame()">关 闭&nbsp;</div>				
+		</div>
+	</div>
+    </div>
+    <div class="WindowFrame" id="dAll">
+	<div id="tGround"></div>
+	<div id="dCardList"></div>
+	<div id="dZombie"></div>
+	<div id="bShowHandBook" onmouseover="this.style.backgroundPosition='bottom'" onmouseout="this.style.backgroundPosition='top'" onclick="ViewHandBook()">图 鉴&nbsp;</div>
+	<div id="dSelectCard">
+		<div class="title"></div>
+		<div id="dPCard"></div>
+		<div class="bTitle">
+			<input class="button" onclick="ResetSelectCard()" type="button" value="重选" name="btnReset" id="btnReset" style="color:#FC6">
+			<input class="button" onclick="oS.ScrollBack(LetsGO)" type="button" value="开战!" disabled="disabled" name="btnOK" id="btnOK" style="color:#888">
+		</div>
+	</div>
+	<div id="dTop">
+		<div id="dSunNum">
+			<span id="sSunNum"></span>
+		</div>
+		<div id="tdShovel">
+			<img id="imgShovel" src="images/interface/Shovel/0.gif" onmousedown="ChoseShovel(event)">
+		</div>
+	</div>
+	<div id="dPZ"></div>
+    </div>
+    <div id="dMenu">
+	<div id="dMenu0" class="Menu" onclick="ShowSpeed()">调 速</div>
+	<div id="dMenu1" class="Menu" onclick="ClickMenu()">菜 单</div>
+    </div>
+    <div id="dHandBook" class="WindowFrame">
+	<div class="title">图鉴——索引</div>
+	<div class="content">
+		<div>
+			<img border="0" src="images/Plants/SunFlower/0.gif" width="73" height="74"><br>
+			<input class="button" type="button" value="查看植物" name="btnViewPlant" id="btnViewPlant" onclick="InitHandBookPCard()">
+		</div>
+		<div style="left:50%;padding-top:95px">
+			<img border="0" src="images/Zombies/Zombie/0.gif" width="149" height="130"><br>
+			<input class="button" type="button" value="查看僵尸" name="btnViewZombie" id="btnViewZombie" onclick="InitHandBookZCard()">
+		</div>
+	</div>
+	<div class="close" onmouseover="this.style.backgroundPosition='bottom'" onmouseout="this.style.backgroundPosition='top'" onclick="CloseHandBook()">关 闭&nbsp;</div>
+    </div>
+    <div id="dHandBookPZ" class="WindowFrame Almanac_PlantBack">
+	<div id="dHandBookP">
+		<div class="title">图鉴——植物</div>
+		<div id="dHandBookPCard"></div>
+		<div id="pPlantBack"></div>
+		<div class="list">
+			<div id="pHandBookPlant"></div>
+			<div id="dHandBookPlantName"></div>
+			<div id="dProducePlant"></div>
+			<div class="cost_cool">
+				<span class="cost">花费:</span><span id="spSunNum"></span><span class="cool">冷却:</span><span id="spCoolTime"></span>
+			</div>
+		</div>
+	</div>
+	<div id="dHandBookZ">
+		<div class="title">图鉴——僵尸</div>
+		<div id="dHandBookZCard"></div>
+		<div id="pZombieBack"></div>
+		<div class="list">
+			<div id="pHandBookZombie"></div>
+			<div id="dHandBookZombieName"></div>
+			<div id="dProduceZombie"></div>
+		</div>
+	</div>
+	<div class="dButton">
+		<div class="button1" onmouseover="this.style.backgroundPosition='bottom'" onmouseout="this.style.backgroundPosition='top'" onclick="ReturnHandBookInx()">图鉴索引</div>
+		<div class="button2" onmouseover="this.style.backgroundPosition='bottom'" onmouseout="this.style.backgroundPosition='top'" onclick="CloseHandBook()">关 闭&nbsp;</div>
+	</div>
+    </div>
+    <div id="dNewPlant">
+	<div id="dNewPlantTitle">你获得了一棵新的植物！</div>
+	<div class="card">
+		<img id="iNewPlantCard" border="0">
+	</div>
+	<br>
+	<div id="dNewPlantName"></div>
+	<br><br><br>
+	<div id="dNewPlantTooltip"></div>
+	<br><br><br><br><br><br>
+	<input type="button" value="下一关！" name="btnNextLevel" id="btnNextLevel">
+    </div>
+    <div id="dProcess">
+	<input class="button" type="button" value="关闭" onclick="SetHidden($('dProcess'))">
+	<script>document.write('<a style="margin-left:50px;cursor:pointer;color:#FF0;font-size:15px;text-decoration:none;font-weight:bold" target="_blank" ></a>');</script>
+    </div>
+    <div id="dSpeedContainer">
+	<div class="title">应玩家要求，特推出游戏调速功能</div>
+	<div class="dSpeed" title="点击一个速度选择软加速">
+		<div class="dS1">在相应的速度上点击</div>
+		<div class="dS2"><div onclick="CSpeed(1,20,.5)">1/2<br><br>┕━</div><div onclick="CSpeed(1,10,1)">原速<br><br>━┻━</div><div onclick="CSpeed(2,10,2)">2<br><br>━┻━</div><div onclick="CSpeed(5,10,5)">5<br><br>━┻━</div><div onclick="CSpeed(5,5,10)">10<br><br>━┛</div></div>
+	</div>
+	<div class="nowspeed">当前的游戏速度:<span id="dDisplaySpeed">1</span> 倍速</div>
+	<div class="content"><span>&nbsp;&nbsp;&nbsp; 调速说明</span>：理想状态下，游戏提供的速度调节是<font color="#FFFF00">1/2倍速-10倍速</font>。但是调速效果跟你的浏览器以及电脑有关，比如IE6浏览器在再好的电脑上也别指望能上10倍速。<br>&nbsp;&nbsp;&nbsp; 调速后可能画面视觉会出现偶尔有点一顿一顿的感觉，并且在比较高的速度时某些浏览器可能无法实现加速效果或者只能短时间加速然后速度便慢下来。<br>&nbsp;&nbsp;&nbsp; <span style="color:#FF0"><b>最后强烈推荐使用IE9,Chrome,FireFox,Opera浏览器，能让你用豌豆射手体验到机关枪的感觉！<br>&nbsp;&nbsp;&nbsp; 声明：受浏览器和电脑限制，该调速不保证一定能达到选择速度的效果！</b></span></div>
+	<br>
+	<div><input type=button value="返回游戏" onclick="HiddenSpeed()">&nbsp;&nbsp; <input type=button value="恢复原速" onclick="CSpeed(1,10,1)"></div>
+    </div>
+    <script>
+    $User.Client.PC&&$User.HTTP?( 
+	    (oS.AutoSun=Math.floor(getCookie('JSPVZAutoSun')))&&($('cAutoSun').checked=true),
+	    (oS.Silence=Math.floor(getCookie('JSPVZSilence')))&&($('cSilence').checked=true)
+    ):(	    oS.AutoSun=1,$('cAutoSun').checked=true,
+	    oS.Silence=0,$('cSilence').checked=false);
+    InitGame();
+    </script>
+    <script  src="js/CPlants.js"></script>
+    <script  src="js/CZombie.js"></script>
+    <div style="display:none"><script src="http://s4.cnzz.com/z_stat.php?id=1256097379&web_id=1256097379" language="JavaScript"></script></div>
+     <!--本网页来自江南游戏 || pvzweb.usa3v.net-->
+</body>
+</html>
