@@ -1,0 +1,214 @@
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width" />
+
+	<title class="lang_title">Goomy Clicker 2</title>
+	<link rel="icon" type="image/png" href="img/favicon.png" />
+
+	<link rel="stylesheet" href="style/gc2.css" />
+	<link rel="stylesheet" href="style/nanoscroller.css" />
+	<link rel="stylesheet" href="style/jquery.qtip.css" />
+
+	<!-- UI libraries -->
+	<script src="lib/jquery.min.js"></script>
+	<script src="lib/jquery.nanoscroller.min.js"></script>
+	<script src="lib/jquery.qrcode.min.js"></script>
+	<script src="lib/jquery.qtip.min.js"></script>
+	<script src="lib/touche.min.js"></script>
+	<!-- game libraries -->
+	<script src="lib/sprintf.min.js"></script>
+	<script src="lib/reprnum.js"></script>
+	<script src="lib/abcdef.js"></script>
+	<script src="lib/funcs.js"></script>
+	<!-- local game code -->
+	<script src="gc2.js"></script>
+	<!-- language packs -->
+	<script src="lang/langs.js"></script>
+	<script src="lang/en-US.js"></script>
+	<script src="lang/fr-CA.js"></script>
+	<script src="lang/es-ES.js"></script>
+	<script src="lang/jp-JP.js"></script>
+	<script src="lang/zh-CN.js"></script>
+	<script src="lang/cs-CZ.js"></script>
+
+</head>
+
+<body>
+
+	<div id="gamearea">
+
+		<div id="centre">
+
+			<div id="mobpane">
+				<div id="mob_infopane">
+					<span class="goomycount" id="mob_goomycount"><span class="lang_goomy_counter_pre"></span><span class="goomies" id="mob_goomies">0</span><span class="lang_goomy_counter_post"> Goomies</span></span><br />
+					<span class="lang_gps_counter_pre"></span><span class="gps" id="mob_gps">0.0</span><span class="lang_gps_counter_post"> Goomies per second</span>
+				</div>
+				<div id="mob_levelpane">
+					<span class="lang_level_counter">Level </span><span class="level" id="mob_level">1</span>
+				</div>
+			</div>
+
+			<div id="mainpane">
+				<div id="infopane">
+					<span class="goomycount" id="goomycount"><span class="lang_goomy_counter_pre"></span><span class="goomies" id="goomies">0</span><span class="lang_goomy_counter_post"> Goomies</span></span><br />
+					<span class="lang_gps_counter_pre"></span><span class="gps" id="gps">0.0</span><span class="lang_gps_counter_post"> Goomies per second</span>
+				</div>
+				<div id="goomy_container">
+					<img id="great_goomy" src="img/great_goomy.png" />
+				</div>
+				<div id="levelpane">
+					<span class="lang_level_counter">Level </span><span class="level" id="level">1</span>
+					<progress id="level_progress" max="100" value="0"></progress>
+				</div>
+			</div>
+
+		</div>
+
+		<div id="sidebar"><div id="sidebar_container">
+
+		<div id="genbar" class="nano"><div class="nano-content">
+
+			<div id="generators">
+
+				<div class="special-generator" id="cursor">
+					<img style="float: left;" src="img/cursor.png" />
+					<span style="font-size: 200%;" id="cursor_count">0</span> <span class="counter" id="cursor_counter">cursors</span><br />
+					<span style="font-size: 8pt;">Next: <span class="generator-cost" id="cursor_cost">20</span></span>
+				</div>
+
+				<div class="special-generator" id="youngster">
+					<img style="float: left;" src="img/youngster.png" />
+					<span style="font-size: 200%;" id="youngster_count">0</span> <span class="counter" id="youngster_counter">youngsters</span><br />
+					<span style="font-size: 8pt;">Next: <span class="generator-cost" id="youngster_cost">100</span></span>
+				</div>
+
+				<hr />
+
+			</div>
+
+			<hr />
+
+			<div id="items">
+			</div>
+
+		</div></div>
+
+		<div id="statbar" class="nano"><div class="nano-content">
+			<h1 class="lang_stats_header" style="text-align: center;">Stats</h1>
+			<hr />
+			<table id="goomy_stats">
+				<tr><td class="lang_stats_play_time">Play Time</td><td style="text-align: right;"><b id="stats_playtime">00:00:00<small>.00</small></b></td></tr>
+				<tr id="shiny_goomy_rain_dance" style="display: none;">
+					<td><span class="lang_rain_dance_time_left">Rain Dance time left</span></td>
+					<td style="text-align: right;"><b id="rain_dance_time_left">00<small>.00</small></b></td>
+				</tr>
+				<tr id="shiny_goomy_click_frenzy" style="display: none;">
+					<td><span class="lang_click_frenzy_time_left">Click Frenzy time left</span></td>
+					<td style="text-align: right;"><b id="click_frenzy_time_left">00<small>.00</small></b></td>
+				</tr>
+
+				<tr style="height: 8px;"></tr>
+
+				<tr><td class="lang_stats_goomies">Goomies</td><td style="text-align: right;"><b id="stats_goomies">0</b></td></tr>
+				<tr><td class="lang_stats_total_goomies">Total Goomies</td><td style="text-align: right;"><b id="stats_total_goomies">0</b></td></tr>
+
+				<tr style="height: 8px;"></tr>
+
+				<tr><td class="lang_stats_exp">Experience points</td><td style="text-align: right;"><b id="stats_exp">0</b></td></tr>
+				<tr id="stats_next_level_row">
+					<td>
+						<span class="lang_stats_exp_to_next_level_pre">To level </span><span id="stats_next_level">1</span><span class="lang_stats_exp_to_next_level_post"></span>
+					</td>
+					<td style="text-align: right;">
+						<b id="stats_exp_to_next_level">100</b>
+					</td>
+				</tr>
+			</table>
+			<hr />
+			<!--
+				<p>
+					Your swath of Goomies, if laid out end to end, would <b>go one-fifth of the way to the Earth's core</b>.
+				</p>
+				<p>
+					Your swath of Goomies could <b>cover the entirety of Vatican City</b>.
+				</p>
+				<p>
+					Your swath of Goomies would weigh as much as <b>the amount of trash produced in New York City in 1.1 days</b>.
+				</p>
+				<p>
+					The caloric energy of your swath of Goomies could <b>heat an average American household for a month</b>.
+				</p>
+				<p>
+					If each Goomy in your swath were sold for <b>one dollar</b>, you could buy <b>a Lamborghini Veneno Roadster</b>.
+				</p>
+			-->
+			<p>
+				<button id="export_save_button">Export Save</button>
+				<button id="import_save_button">Import Save</button>
+			</p>
+			<p>
+				<a href="https://facebook.com/pages/Goomy-Clicker/1562420244016716"><button>Like us on Facebook!</button></a>
+				<button id="about_button">Credits</button>
+				<a href="http://patreon.com/joezeng"><button>Patreon</button></a>
+			</p>
+		</div></div>
+
+		</div></div>
+
+		<div id="shiny_goomy"><img src="img/shiny_dancing_goomy_100.gif" /></div>
+
+	</div>
+
+	<div id="about">
+		<h2 style="font-weight: normal;">Goomy Clicker 2 <span class="version">v.0.363 (pre-alpha)</span></h2>
+		<p>Now with 100% more responsive design!</p>
+		<hr />
+		<p>
+			Attributions: <a href="http://www.pixiv.net/member_illust.php?mode=medium&illust_id=38905126">The Great Goomy</a>
+		</p>
+		<hr />
+		<p>
+			The original Cookie Clicker parody. <span style="white-space: nowrap;">&copy; 2014 <a href="http://joezeng.com/">Joe Zeng</a>.</span>
+		</p>
+		<p>
+			Pokémon is &copy; 1996-2014 Game Freak, Creatures Inc., Nintendo.
+		</p>
+		<p style="text-align: center;">
+			<button id="about_close">Close</button>
+		</p>
+	</div>
+
+	<div id="export_save">
+		<h2>Export Save</h2>
+		<p>
+			Exported save string: <input type="text" readonly="readonly" id="export_save_string" />
+		</p>
+		<p style="margin-top: 1em;">
+			QR code for mobile: <canvas id="export_qr_code" width="200" height="200" />
+		</p>
+		<p style="text-align: center;">
+			<button id="export_close">Close</button>
+		</p>
+	</div>
+
+	<div id="tooltips">
+
+	</div>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-45012430-4', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+
+</html>

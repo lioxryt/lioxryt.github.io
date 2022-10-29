@@ -1,0 +1,61 @@
+langs ["es-ES"] = {
+
+	"title": "Goomy Clicker 2",
+
+	"goomy_counter_pre": "",
+	"goomy_counter_post": " Goomys",
+	"gps_counter_pre": "",
+	"gps_counter_post": " Goomys por segundo",
+	"level_counter": "Nivel ",
+
+	"stats_header": "Estadísticas",
+	"stats_play_time": "Tiempo pasado",
+	"stats_goomies": "Goomys",
+	"stats_total_goomies": "Goomys totales",
+	"stats_total_total_goomies": "[total total Goomys]",
+	"stats_exp": "Puntos de experiencia",
+	"stats_exp_to_next_level_pre": "A nivel ",
+	"stats_exp_to_next_level_post": " necesita",
+
+	"cursor_counter": "cursores",
+	"cursor_abbrev_length": 5,
+	"cursor_counter_short": "crsrs.",
+
+	"youngster_counter": "jóvenes",
+	"youngster_abbrev_length": 5,
+	"youngster_counter_short": "jvns.",
+
+	"cursor_name": "Cursor",
+	"youngster_name": "Joven",
+	"daycare_name": "Guardería",
+	"reserve_name": "Reserva",
+	"fountain_name": "Fuente de Pringue",
+	"farm_name": "Caldo de Cultivo",
+	"clonelab_name": "Laboratorio de Clonación",
+	"arceus_name": "Arceus Esclavizado",
+	"planet_name": "Planeta Repoblado",
+	"factory_name": "Fábrica de MecaGoomy",
+	"church_name": "Iglesia de Goomy",
+	"simulator_name": "Simulador de Ecosistema",
+	"rngabuser_name": "Abusador de GNA",
+	"photoncollider_name": "Acelerador de Fotónes",
+
+	"cursor_description": "A cursor to click on the Goomy automatically.",
+	"youngster_description": "A nice little youngster who catches Goomies.",
+	"daycare_description": "A daycare where trainers deposit their Goomies to breed.",
+	"reserve_description": "A wildlife reserve where Goomy is a protected Pokémon.",
+	"fountain_description": "A natural wellspring that spews nutrient-rich goop to form Goomies.",
+	"farm_description": "A place where Goomies are farmed for... certain things.",
+	"clonelab_description": "A research lab that clones Goomies en masse to study their genetic properties.",
+	"arceus_description": "An Arceus that was captured and forced to give birth to Goomies nonstop.",
+	"planet_description": "A planet that is terraformed by Goomies that are adapted to populate it.",
+	"factory_description": "A factory that makes mechanical Goomies. Somehow they're still 97% water, though.",
+	"church_description": "A congregation that prays to the Great Goomy to rain down more Goomies for his great glory.",
+	"simulator_description": "A giant planet-sized device that simulates entire ecosystems, with the offhand consequence that any Goomies formed inside it are real.",
+	"rngabuser_description": "A computer program that brute-forces values from a random-number generator in search for the perfect Goomy.",
+	"photoncollider_description": "A particle accelerator whose sole purpose is to collide photons in order to create Goomies.",
+
+	"tooltip_gps_pre": "Cada generador produce ",
+	"tooltip_gps_post": " Goomys por segundo",
+
+};

@@ -1,0 +1,456 @@
+html, body{
+	font-family: 'PT Sans', sans-serif;
+	height: 100%;
+	margin: 0;
+	background-color: #141414;
+	color: #e9e9e9;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-family: 'PT Sans', sans-serif;
+	font-weight: normal;
+	margin: 0.4em 0em 0.2em;
+}
+
+h1 { font-size: 250%; }
+h2 { font-size: 200%; }
+h3 { font-size: 160%; }
+
+p{
+	margin: 0.4em 0em 0.4em;
+}
+
+small{ font-size: 75%; }
+
+a { color: #ff9640; text-decoration: none; font-weight: bold; }
+a:hover { color: #ffb273; }
+a:visited { color: #ffb273; }
+
+hr{
+	border: none;
+	height: 10px;
+}
+
+button{
+	font: inherit;
+	font-size: 20px;
+	margin: 10px 8px;
+	border: 1px solid #484848;
+	padding: 4px 8px;
+	border-radius: 4px;
+	background-color: black;
+	color: inherit;
+	cursor: pointer;
+}
+
+button:active { background-color: #323232; }
+
+/* area-specific styles */
+
+#gamearea {
+	position: relative;
+	display: table;
+	width: 100%;
+	height: 100%;
+}
+
+#centre{
+	height: 100%;
+	padding: 20px;
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+}
+
+#mobpane{
+	display: none;
+	width: 400px;
+	margin: 40px 0px;
+}
+
+#goomy_container{
+	position: relative;
+	margin: auto;
+	width: 300px;
+	height: 430px;
+	cursor: pointer;
+}
+
+#great_goomy{
+	transition: 0.03s linear;
+	position: relative;
+	width: 100%;
+	top: 0%;
+	pointer-events: none;
+}
+
+#goomycount, #mob_goomycount{
+	font-size: 200%;
+}
+
+#levelpane, #mob_levelpane{
+	font-size: 125%;
+}
+
+#level_progress{
+	-moz-appearence: progressbar;
+	margin-left: 8px;
+	width: 200px;
+	height: 2.2ex;
+	border: 1px solid #404040;
+	background-color: black;
+	color: purple;
+}
+
+#sidebar{
+	height: 100%;
+	display: table-cell;
+	width: 760px;
+}
+
+#sidebar_container{
+	height: 100%;
+	width: 100%;
+	display: table;
+}
+
+#statbar{
+	display: table-cell;
+	width: 360px;
+	height: 100%;
+	position: relative;
+}
+
+#statbar > .nano-content{
+	padding: 8px 8px;
+}
+
+#statbar button{
+	font-size: 100%;
+	margin: 0.2ex 0.2em;
+}
+
+#genbar{
+	display: table-cell;
+	width: 400px;
+	height: 100%;
+	position: relative;
+}
+
+#genbar > .nano-content{
+	padding: 20px 0px;
+}
+
+
+#generators{ font-size: 0; }
+
+.special-generator{
+	display: inline-block;
+	vertical-align: top;
+	width: 180px;
+	height: 60px;
+	font-size: 12pt;
+	cursor: pointer;
+}
+
+.generator{
+	display: inline-block;
+	width: 120px;
+	height: 120px;
+	background-size: 100%;
+	font-size: 8pt;
+	cursor: pointer;
+}
+
+.generator-info{
+	display: table-cell;
+	width: 104px; height: 120px;
+	padding: 8px;
+	text-align: right;
+	vertical-align: bottom;
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 1) 100%);
+	cursor: pointer;
+}
+
+.generator-info:hover{
+	/* color: transparent; */
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0) 100%);
+}
+
+.generator-count{
+	font-size: 200%;
+	color: yellow;
+	-webkit-text-outline: black;
+}
+
+.generator-info:hover > .generator-count{
+	/* color: transparent; */
+}
+
+
+.item{
+	display: inline-block;
+	width: 60px; height: 60px;
+	border: 4px solid #099909;
+	margin: 6px;
+	cursor: pointer;
+}
+
+
+
+
+#goomy_stats{ width: 100%; }
+
+
+#shiny_goomy{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100px;
+	height: 100px;
+	z-index: 100;
+	opacity: 0;
+	cursor: pointer;
+}
+
+#shiny_goomy > img{
+	pointer-events: none;
+}
+
+#about, #export_save{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 480px;
+	height: 360px;
+	margin-top: -180px;
+	margin-left: -240px;
+	padding: 10px 20px;
+	box-sizing: padding-box;
+	background-color: #0a0a0a;
+	border: 1px dotted black;
+	display: none;
+}
+
+.version{
+	font-weight: normal;
+	font-size: 12pt;
+	white-space: nowrap;
+	margin-left: 0.2em;
+}
+
+#export_save{
+	width: 420px;
+	margin-left: -210px;
+}
+
+#export_qr_code{
+	background-color: white;
+	display: inline-block;
+	padding: 8px;
+	margin-left: 8px;
+	width: 200px;
+	height: 200px;
+	vertical-align: middle;
+}
+
+
+/* Tooltip content */
+
+#tooltips{ display: none; }
+
+.qtip hr{ border-top: 1px solid #e9e9e9; height: 0px; }
+
+.tooltip-gps{ font-weight: bold; }
+
+button.tooltip-buy-button{
+	font: inherit;
+	font-size: 8pt;
+	margin: 4px 2px 2px;
+	padding: 1px 4px 2px;
+	border: 1px solid #484848;
+	border-radius: 4px;
+	background-color: black;
+	color: inherit;
+	cursor: pointer;
+}
+
+/* Plus markers */
+
+.plus_marker{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	font-size: 160%;
+	pointer-events: none;
+	text-shadow: 0px -1px 8px black;
+}
+
+
+
+
+
+
+
+
+
+/* Reflow for small-width devices */
+
+@media (max-width: 1279px){
+
+	#sidebar{
+		display: table-cell;
+		width: 612px;
+	}
+
+	#statbar{
+		display: table-cell;
+		width: 300px;
+		height: 100%;
+	}
+
+	#genbar{
+		display: table-cell;
+		width: 256px;
+		height: 100%;
+	}
+
+	.special-generator{ width: 240px; }
+
+}
+
+
+
+/* Reflow for tablets */
+
+@media (max-width: 1023px){
+
+	html, body{
+		min-height: 125vw;
+	}
+
+	#centre{
+		display: block;
+		height: auto;
+		vertical-align: middle;
+	}
+
+	#mobpane, #mainpane{
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	#infopane, #levelpane{
+		display: none;
+	}
+
+	#sidebar{
+		display: table-row;
+	}
+
+	#statbar{
+		box-sizing: border-box;
+		height: auto;
+		min-height: 300px;
+	}
+
+	#genbar{
+		width: 384px;
+		height: auto;
+		min-height: 300px;
+		text-align: center;
+	}
+
+	#great_goomy{
+		width: 100%;
+		max-width: 400px;
+		display: block;
+		margin: auto;
+	}
+
+	.special-generator{
+		width: 180px;
+		text-align: left;
+	}
+
+	#footbar1{ display: none; }
+
+}
+
+
+
+
+/* Reflow for phones */
+
+@media (max-width: 720px){
+
+	#centre{
+		display: block;
+		vertical-align: middle;
+		padding: 0;
+	}
+
+	#mobpane{
+		display: block;
+		width: 100%;
+	}
+
+	#sidebar{
+		width: auto;
+	}
+
+	#sidebar_container{
+		display: block;
+	}
+
+	#statbar{
+		display: block;
+		box-sizing: border-box;
+		width: 100%;
+		height: 100vh;
+	}
+
+	#genbar{
+		display: block;
+		text-align: center;
+		padding: 0;
+		width: 100%;
+		height: 100vh;
+	}
+
+	#genbar > .nano-content{
+		max-width: 500px;
+		margin: auto;
+	}
+
+	#great_goomy{
+		display: block;
+		margin: auto;
+	}
+
+	#shiny_goomy{
+		width: 80px;
+		height: 80px;
+		background-size: contain;
+	}
+
+}
+
+
+@media (max-width: 528px){
+
+	#about{
+		top: 0; left: 0;
+		width: 100%; height: 100%;
+		margin: 0;
+	}
+
+}
+
+@media (max-width: 320px){
+	@-viewport {
+		min-width: 300px;
+	}
+}

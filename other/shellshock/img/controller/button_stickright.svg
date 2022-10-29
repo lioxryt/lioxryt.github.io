@@ -1,0 +1,11 @@
+<svg width="300" height="100" xmlns="http://www.w3.org/2000/svg">
+<g stroke="#0E7697" stroke-width="16" fill="#0E7697">
+  <g>
+    <polygon points="30,30, 30,92, 90,92 90,30 120,30 0,30" fill="none"/>
+  </g>
+  <g transform="translate(180, 0)">
+    <polygon points="30,50, 30,92, 90,92 90,50 120,50 0,50"/>
+    <polygon fill="#0E7697" stroke-width="0" points="60,35, 20,0, 100,0"/>
+  </g>
+</g>
+</svg>
