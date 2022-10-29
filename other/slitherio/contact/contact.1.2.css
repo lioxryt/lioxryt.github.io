@@ -1,0 +1,47 @@
+html, body {
+    height:100%;
+    background-color: #202020;
+}
+
+body {
+    margin:auto;
+    padding:0;
+    overflow: hidden;
+    font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+    font-size: 13px;
+    text-align:center;
+    color:white;
+}
+
+A {
+    opacity: 0.8;
+    text-decoration: none;
+    color: #8058D0;
+    
+}
+
+A:hover {
+    opacity: 1;
+    text-decoration: underline;
+    color: #8058D0;
+}
+    
+
+#contactImage {
+    border:0;
+    width:1024px;
+    height:500px;
+}
+
+#contactLinks {
+    margin:auto;
+    padding: 10px 0px 50px 0px;
+    text-align:center;
+}
+
+.likeus {
+    margin:0;
+    padding:0;
+    border:0;
+}
+
