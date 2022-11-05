@@ -1,6 +1,6 @@
-{
-	"name": "OvO – Play it now at Coolmath-games.com",
-	"short_name": "OvO – Play it now at Coolmath-games.com",
+﻿{
+	"name": "OvO",
+	"short_name": "OvO",
 	"start_url": "index.html",
 	"display": "fullscreen",
 	"orientation": "any",
