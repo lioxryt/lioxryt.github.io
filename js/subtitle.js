@@ -13,7 +13,7 @@ say[5] = "ONG";
 say[6] = "🤨";
 say[7] = "This project was made possible due to extensive use of narcotics";
 say[8] = "Last chance to look at me Hector";
-say[8] = "👋hello👋 and welcome to the Los Pollos hermanos 👪family👪👪 my name📛 is Gustavo but you can 📲call 📲 me Gus";
+say[9] = "👋hello👋 and welcome to the Los Pollos hermanos 👪family👪👪 my name📛 is Gustavo but you can 📲call 📲 me Gus";
 
 
 // pick a random greeting
