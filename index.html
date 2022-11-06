@@ -26,7 +26,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <style>
     .subtitle {
-        font-size: larger;
+        font-size: medium;
         color: white;
     }
     .text {
@@ -82,17 +82,36 @@
       transform: translate(-50%, -50%);
       margin: 0 auto;
     }
+    #factDisplay {
+      font-size: xx-large;
+      color: white;
+    }
   </style>
 </head>
 <body>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
     <!-- Div content -->
     <div style="text-align:center">
     <img src="img/logo.png">
+    <div id="factDisplay"></div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     <p class="subtitle">Welcome to lioxryt's Game Stash, a web page made for students by students. We have a wide range of Flash, HTML, and Emulated games.</p>
     <a href="html/main.html"><button class="start">Start Playing</button></a>
     <a href="https://github.com/lioxryt/lioxryt.github.io"><button class="source">Visit Github</button></a>
     <br>
-    <p class="subtitle">Below are some of my other projects. Check em out</p>
+    <p class="subtitle">Below are some of my other projects. Check em out.</p>
     <a href="https://lio2xr.github.io/"><button class="clone">Schoology Clone</button></a>
       <div id="fooo" style="text-align:center">
         <script type='text/javascript' src='other/counter/lll'></script>
@@ -100,8 +119,15 @@
       </div>
     <div id="foo" style="text-align:right">
     <p class="text">You can make recommendations <a href="https://form.jotform.com/222717812268055">here</a>.</p>
+    <p class="text">You can recommend a randomized subtitle <a href="https://form.jotform.com/223095696684067">here</a>.</p>
     <p class="text">You can report issues <a href="https://github.com/lioxryt/lioxryt.github.io/issues">here</a>.</p>
 	  <p class="text">Use the chat feature <a href="other/chat/index.html">here</a>.</p>
 	  <p class="text">If you have any questions or concerns, <a href="https://mail.google.com/mail/u/0/?fs=1&to=lioxryt@gmail.com&su=&body=&bcc=&tf=cm">Shoot me an Email</a>.</p>
-
+  <script>
+    const facts = ["WSHS Tech Teams worst nightmare", "Don't Get Caught", "🤨"];
+    !function newFact() {
+      const randomFact = Math.floor(Math.random() * facts.length);
+      document.getElementById('factDisplay').innerHTML = facts[randomFact];
+    }();
+  </script>
 </body>
