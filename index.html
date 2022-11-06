@@ -82,7 +82,7 @@
       transform: translate(-50%, -50%);
       margin: 0 auto;
     }
-    #factDisplay {
+    #subtitle {
       font-size: xx-large;
       color: white;
     }
@@ -101,9 +101,11 @@
     <!-- Div content -->
     <div style="text-align:center">
     <img src="img/logo.png">
-    <div id="factDisplay"></div>
     <br>
     <br>
+    <br>
+    <br>
+    <p id="subtitle">...</p>
     <br>
     <br>
     <br>
@@ -123,11 +125,5 @@
     <p class="text">You can report issues <a href="https://github.com/lioxryt/lioxryt.github.io/issues">here</a>.</p>
 	  <p class="text">Use the chat feature <a href="other/chat/index.html">here</a>.</p>
 	  <p class="text">If you have any questions or concerns, <a href="https://mail.google.com/mail/u/0/?fs=1&to=lioxryt@gmail.com&su=&body=&bcc=&tf=cm">Shoot me an Email</a>.</p>
-  <script>
-    const facts = ["WSHS Tech Teams worst nightmare", "Don't Get Caught", "🤨"];
-    !function newFact() {
-      const randomFact = Math.floor(Math.random() * facts.length);
-      document.getElementById('factDisplay').innerHTML = facts[randomFact];
-    }();
-  </script>
+    <script src="/js/subtitle.js"></script>
 </body>
