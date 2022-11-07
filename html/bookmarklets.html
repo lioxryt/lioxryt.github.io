@@ -11,10 +11,8 @@
     <h1>Bookmarklet Collection</h1>
     <h2>General Info</h2>
     <p>
-      <b>How to add Bookmarklets</b> Click the bookmark button (star), a box
-      will pop up. Click "more". Where it says URL, copy and paste the
-      bookmarklet code. Then click save and your bookmarklet should appear with
-      other bookmarks. It is that simple.
+      <b>How to add Bookmarklets</b> Copy all the code that you see and drag it
+      to your bookmark bar.
     </p>
 
     <h3>X-Ray Goggles</h3>
@@ -263,6 +261,14 @@
       DELAY);}}document.body.addEventListener("click", addClicker, 1);
     </p>
 
+    <h3>Google Snake Mod</h3>
+    <p>Adds more options to google snake</p>
+    <p>
+      javascript: req = new XMLHttpRequest(); req.open('GET',
+      'https://raw.githubusercontent.com/DarkSnakeGang/GoogleSnakeCustomMenuStuff/main/custom.js');
+      req.onload = function() { eval(this.responseText + 'snake.more_menu();');
+      }; req.send();
+    </p>
     <!-- ↑↑↑ next one goes above here ↑↑↑ -->
   </body>
 </html>
