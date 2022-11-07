@@ -14,9 +14,8 @@ say[6] = "🤨";
 say[7] = "This project was made possible due to extensive use of narcotics";
 say[8] = "Last chance to look at me Hector";
 say[9] = "👋hello👋 and welcome to the Los Pollos hermanos 👪family👪👪 my name📛 is Gustavo but you can 📲call 📲 me Gus";
+say[10] = "According to all known laws of aviation,  : there is no way a bee should be able to fly.";
 
-
-// pick a random greeting
 var howmany = say.length;
 var bRand = 0;
 bRand = Math.random();
