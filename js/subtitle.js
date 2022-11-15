@@ -16,6 +16,9 @@ say[8] = "Last chance to look at me Hector";
 say[9] = "👋hello👋 and welcome to the Los Pollos hermanos 👪family👪👪 my name📛 is Gustavo but you can 📲call 📲 me Gus";
 say[10] = "According to all known laws of aviation,  : there is no way a bee should be able to fly.";
 say[11] = "amojngus ahdahahahayah i scab cab  cab can spell correctky ahahahha your bad and im gododd";
+say[12] = "no school, no need to block this";
+say[13] = "I made it mom! I’m on a randomized subtitle!";
+say[14] = "made by someone";
 
 var howmany = say.length;
 var bRand = 0;
