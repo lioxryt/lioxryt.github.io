@@ -1,12 +1,10 @@
 {
-    "TOTAL_MEMORY": 268435456,
+    "TOTAL_MEMORY": 1073741824,
     "dataUrl": "ItchIO.data.unityweb",
     "asmCodeUrl": "ItchIO.asm.code.unityweb",
     "asmMemoryUrl": "ItchIO.asm.memory.unityweb",
     "asmFrameworkUrl": "ItchIO.asm.framework.unityweb",
-    "graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
-    "webglContextAttributes": {"preserveDrawingBuffer": false},
-    "splashScreenStyle": "Light",
     "backgroundUrl": "ItchIO.jpg",
+    "splashScreenStyle": "Light",
     "backgroundColor": "#FFFFFF"
-    }
+}
