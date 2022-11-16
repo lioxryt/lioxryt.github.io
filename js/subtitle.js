@@ -5,7 +5,7 @@ function changeSub(num) {
 
 var say = [];
 say[0] = "The tech teams worst nightmare.";
-say[1] = "Hello!";
+say[1] = "Better than coolmathgames";
 say[2] = "HEY! is this thing on";
 say[3] = "Don't get caught";
 say[4] = "There is definitely no games here";
@@ -18,7 +18,7 @@ say[10] = "According to all known laws of aviation,  : there is no way a bee sho
 say[11] = "amojngus ahdahahahayah i scab cab  cab can spell correctky ahahahha your bad and im gododd";
 say[12] = "no school, no need to block this";
 say[13] = "I made it mom! I’m on a randomized subtitle!";
-say[14] = "made by someone";
+say[14] = "Playing games in my class, ay?";
 
 var howmany = say.length;
 var bRand = 0;
