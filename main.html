@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-243532838-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-243532838-1');
+  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Math Equation Explaner</title>
+  <style>
+	body {
+	  font-family: sans-serif;
+	  font-size: "25px";
+	  color: #ffffff;
+	  text-align: left;
+	  background-color: #1c1c1c;
+	  background-repeat: no-repeat;
+	  background-size: cover;
+	}
+  
+	a {
+	  text-decoration: none;
+	  color: #0084ff;
+	}
+  
+	.text-center {
+	  text-align: center;
+	}
+  
+	.game-link {
+	  height: 200px;
+	  width: 150px;
+	}
+  
+	.game-tile {
+	  background-color: #949494;
+	  height: 200px;
+	  width: 150px;
+	  color: #ffffff;
+	  border-radius: 30px;
+	  -webkit-animation: scale-down-center 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+	  animation: scale-down-center 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+	}
+  
+	.game-tile:hover {
+	  text-decoration: none;
+	  -webkit-animation: scale-up-center 0.3s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+	  animation: scale-up-center 0.3s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+	}
+  
+	@-webkit-keyframes scale-up-center {
+	  0% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	  }
+  
+	  100% {
+		-webkit-transform: scale(1.1);
+		transform: scale(1.1);
+	  }
+	}
+  
+	@keyframes scale-up-center {
+	  0% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	  }
+  
+	  100% {
+		-webkit-transform: scale(1.1);
+		transform: scale(1.1);
+	  }
+	}
+  
+	@-webkit-keyframes scale-down-center {
+	  0% {
+		-webkit-transform: scale(1.1);
+		transform: scale(1.1);
+	  }
+  
+	  100% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	  }
+	}
+  
+	@keyframes scale-down-center {
+	  0% {
+		-webkit-transform: scale(1.1);
+		transform: scale(1.1);
+	  }
+  
+	  100% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	  }
+	}
+  
+	.game-icon {
+	  border-radius: 15px;
+	  width: 150px;
+	  height: 150px;
+	}
+  
+	.game-title {
+	  font-size: 15px;
+	  color: #ffffff;
+	  text-align: center;
+	}
+  
+	.flex-container {
+	  display: flex;
+	  flex-direction: row;
+	  order: 0;
+	  flex-grow: 0;
+	  flex-wrap: wrap;
+	  align-items: center;
+	  justify-content: center;
+	}
+  
+	.container {
+	  padding: 10px;
+	}
+  
+	.badge {
+	  background-color: red;
+	  color: white;
+	  padding: 4px 8px;
+	  text-align: center;
+	  border-radius: 5px;
+	}
+  
+	#mySearch {
+	  width: 50%;
+	  text-align: center;
+	  font-size: 18px;
+	  padding: 11px;
+	  border: 3px solid #ddd;
+	  border-radius: 30px;
+	}
+  h2 {
+   width: 100%; 
+   text-align: center; 
+   border-bottom: 1px solid #000; 
+   line-height: 0.1em;
+   margin: 10px 0 20px; 
+  } 
+
+  h2 span { 
+    padding:0 10px; 
+  }
+  .topcorner{
+  position:absolute;
+  top:10;
+  right:15;
+  }
+  </style>
+</head>
+<body>
+  <div class="topcorner" style="text-align:center">
+    <script type='text/javascript' src='other/counter/lll'></script>
+    <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/974405/t/1"></script>
+  </div>
+  <div class="text-center">
+    <input type="text" class="text-center" id="mySearch" onload="startSearch()" onkeyup="startSearch()" placeholder="Search for games..." title="Search" autofocus="">
+  </div>
+  <script src="/js/search.js"></script>
+  <div id="search" class="flex-container">
+  <section>
+  <h2><span>Flash Games (When on game screen right click to open in full screen)</span></h2>
+  <div id="search" class="flex-container">
+  <a href="/html/alien.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/ah.jpg" alt="icon" loading="lazy">	  <h1 class="game-title">Alien Homonid</h1> 	</div>
+  <a href="/html/ageofwar.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/aow.png" alt="icon" loading="lazy">	  <h1 class="game-title">Age Of War</h1> 	</div>
+  <a href="/html/appleshoot.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/as.jpg" alt="icon" loading="lazy">	  <h1 class="game-title">Apple Shooter</h1> 	</div>
+  <a href="/html/assroid.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/ar.jpg" alt="icon" loading="lazy">	  <h1 class="game-title">Asteroids</h1> 	</div>
+  <a href="/html/bigadventure.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/aba.jpg" alt="icon" loading="lazy">	  <h1 class="game-title">Abobbos Big Adventure</h1> 	</div>
+  <a href="/html/bloxorz.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/bx.jpg" alt="icon" loading="lazy">	  <h1 class="game-title">Bloxorz</h1> 	</div>
+  <a href="/html/bloons.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/btd.jpg" alt="icon" loading="lazy">	  <h1 class="game-title">Bloons Tower Defence</h1> 	</div>
+  <a href="/html/bloons2.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/btd2.jpg" alt="icon" loading="lazy">	  <h1 class="game-title">Bloons Tower Defence 2</h1> 	</div>
+  <a href="/html/bloons3.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/btd3.jpg" alt="icon" loading="lazy">	  <h1 class="game-title">Bloons Tower Defence 3</h1> 	</div>
+  <a href="/html/bh2.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/b2p.jpg" alt="icon" loading="lazy">	  <h1 class="game-title">BoxHead 2</h1> 	</div>
+  <a href="/html/bubble.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/bs.png" alt="icon" loading="lazy">	  <h1 class="game-title">Bubble Shooter</h1> 	</div>
+  <a href="/html/colorcombat.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/cc.jpg" alt="icon" loading="lazy">	  <h1 class="game-title">Color Combat</h1> 	</div>
+  <a href="/html/commando.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/com.jpg" alt="icon" loading="lazy">	  <h1 class="game-title">Commando</h1> 	</div>
+  <a href="/html/cube.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/cf.jpg" alt="icon" loading="lazy">	  <h1 class="game-title">Cubefield</h1> 	</div>
+  <a href="/html/dadnme.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/dnm.png" alt="icon" loading="lazy">	  <h1 class="game-title">Dad n' Me</h1> 	</div>
+  <a href="/html/dwyt.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/dwyt.jpg" alt="icon" loading="lazy">	  <h1 class="game-title">Don't Whack Your Teacher</h1> 	</div>
+  <a href="/html/castle.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/dyc.jpg" alt="icon" loading="lazy">	  <h1 class="game-title">Defend Your Castle</h1> 	</div>
+  <a href="/html/dbzd.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/dbzd.jpg" alt="icon" loading="lazy">	  <h1 class="game-title">Dragon Ball Z Devolution</h1> 	</div>
+  <a href="/html/dbz.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/dbz.jpg" alt="icon" loading="lazy">	  <h1 class="game-title">Dragon Ball Z</h1> 	</div>
+  <a href="/html/ducklife.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/dl.jpg" alt="icon" loading="lazy">	  <h1 class="game-title">Duck Life</h1> 	</div>
+  <a href="/html/ducklife2.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/dl2.jpg" alt="icon" loading="lazy">	  <h1 class="game-title">Duck Life 2</h1> 	</div>
+  <a href="/html/ducklife3.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/dl3.jpg" alt="icon" loading="lazy">	  <h1 class="game-title">Duck Life 3</h1> 	</div>
+  <a href="/html/ducklife4.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/dl4.jpg" alt="icon" loading="lazy">	  <h1 class="game-title">Duck Life 4</h1> 	</div>
+  <a href="/html/duckhunt.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/dh.jpg" alt="icon" loading="lazy">	  <h1 class="game-title">Duck Hunt</h1> 	</div>
+  <a href="/html/etd.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/etd.jpg" alt="icon" loading="lazy">	  <h1 class="game-title">Earn to Die</h1> 	</div>
+  <a href="/html/etd2.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/etd2.jpg" alt="icon" loading="lazy">	  <h1 class="game-title">Earn to Die 2</h1> 	</div>
+  <a href="/html/eman2.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/em2.jpg" alt="icon" loading="lazy">	  <h1 class="game-title">Electricman 2</h1> 	</div>
+  <a href="/html/fancypants.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/fpa.png" alt="icon" loading="lazy">	  <h1 class="game-title">The Fancy Pants Adventures</h1> 	</div>
+  <a href="/html/etp.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/etp.jpg" alt="icon" loading="lazy">	  <h1 class="game-title">Escaping the Prison</h1> 	</div>
+  <a href="/html/stealing.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/std.jpg" alt="icon" loading="lazy">	  <h1 class="game-title">Stealing the Diamond</h1> 	</div>
+  <a href="/html/btb.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/btb.jpg" alt="icon" loading="lazy">	  <h1 class="game-title">Breaking the Bank</h1> 	</div>
+  <a href="/html/infiltrating.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/ita.jpg" alt="icon" loading="lazy">	  <h1 class="game-title">Infiltrating the Airship</h1> 	</div>
+  <a href="/html/fleeing.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/ftc.jpg" alt="icon" loading="lazy">	  <h1 class="game-title">Fleeing the Complex</h1> 	</div>
+  <a href="/html/gunblood.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/gb.png" alt="icon" loading="lazy">	  <h1 class="game-title">Gunblood</h1> 	</div>
+  <a href="/html/hobo.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/h.jpg" alt="icon" loading="lazy">	  <h1 class="game-title">Hobo</h1> 	</div>
+  <a href="/html/hobo2.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/h2.jpg" alt="icon" loading="lazy">	  <h1 class="game-title">Hobo 2: Prison Brawl</h1> 	</div>
+  <a href="/html/ib.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/ib.jpg" alt="icon" loading="lazy">	  <h1 class="game-title">Interactive Buddy</h1> 	</div>
+  <a href="/html/ib2.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/ib2.jpg" alt="icon" loading="lazy">	  <h1 class="game-title">Interactive Buddy 2</h1> 	</div>
+  <a href="/html/johnny2.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/jrf2.jpg" alt="icon" loading="lazy">	  <h1 class="game-title">Johnny Rocketfingers 2</h1> 	</div>
+  <a href="/html/ltf.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/ltf.jpg" alt="icon" loading="lazy">	  <h1 class="game-title">Learn to Fly</h1> 	</div>
+  <a href="/html/ltf2.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/ltf2.jpg" alt="icon" loading="lazy">	  <h1 class="game-title">Learn to Fly 2</h1> 	</div>
+  <a href="/html/ltf3.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/ltf3.jpg" alt="icon" loading="lazy">	  <h1 class="game-title">Learn to Fly 3</h1> 	</div>
+  <a href="/html/mariocombat.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/mc.jpg" alt="icon" loading="lazy">	  <h1 class="game-title">Mario Combat</h1> 	</div>
+  <a href="/html/miamishark.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/ms.jpg" alt="icon" loading="lazy">	  <h1 class="game-title">Miami Shark</h1> 	</div>
+  <a href="/html/meatboy.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/mb.jpg" alt="icon" loading="lazy">	  <h1 class="game-title">Meat Boy</h1> 	</div>
+  <a href="/html/miniputt.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/mp.jpg" alt="icon" loading="lazy">	  <h1 class="game-title">Mini Putt</h1> 	</div>
+  <a href="/html/mctd.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/mctd.jpg" alt="icon" loading="lazy">	  <h1 class="game-title">Minecraft TD</h1> 	</div>
+  <a href="/html/mkflash.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/mcf.jpg" alt="icon" loading="lazy">	  <h1 class="game-title">Mario Kart Flash</h1> 	</div>
+  <a href="/html/mad.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/mad.png" alt="icon" loading="lazy">	  <h1 class="game-title">Mutilate a Doll</h1> 	</div>
+  <a href="/html/NYshark.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/nys.jpg" alt="icon" loading="lazy">	  <h1 class="game-title">New York Shark</h1> 	</div>
+  <a href="/html/only.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/only.png" alt="icon" loading="lazy">	  <h1 class="game-title">This is the Only Level</h1> 	</div>
+  <a href="/html/Pacman.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/pm.jpg" alt="icon" loading="lazy">	  <h1 class="game-title">Pac-Man</h1> 	</div>
+  <a href="/html/papapizza.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/ppiz.jpg" alt="icon" loading="lazy">	  <h1 class="game-title">Papa's Pizzaria</h1> 	</div>
+  <a href="/html/pong.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/pong.png" alt="icon" loading="lazy">	  <h1 class="game-title">Pong</h1> 	</div>
+  <a href="/html/portal.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/pf.jpg" alt="icon" loading="lazy">	  <h1 class="game-title">Portal: The Flash Version</h1> 	</div>
+  <a href="/html/pr.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/pr.jpg" alt="icon" loading="lazy">	  <h1 class="game-title">Potty Racers</h1> 	</div>
+  <a href="/html/pr2.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/pr2.jpg" alt="icon" loading="lazy">	  <h1 class="game-title">Potty Racers 2</h1> 	</div>
+  <a href="/html/pr3.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/pr3.png" alt="icon" loading="lazy">	  <h1 class="game-title">Potty Racers 3</h1> 	</div>
+  <a href="/html/pr4.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/pr4.jpg" alt="icon" loading="lazy">	  <h1 class="game-title">Potty Racers 4</h1> 	</div>
+  <a href="/html/ra.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/ra2.jpg" alt="icon" loading="lazy">	  <h1 class="game-title">Ragdoll Avalanche 2</h1> 	</div>
+  <a href="/html/rage3.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/r3.jpg" alt="icon" loading="lazy">	  <h1 class="game-title">Rage 3</h1> 	</div>
+  <a href="/html/riddleschool.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/rs.jpg" alt="icon" loading="lazy">	  <h1 class="game-title">Riddle School</h1> 	</div>
+  <a href="/html/riddleschool2.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/rs2.jpg" alt="icon" loading="lazy">	  <h1 class="game-title">Riddle School 2</h1> 	</div>
+  <a href="/html/riddleschool3.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/rs3.jpg" alt="icon" loading="lazy">	  <h1 class="game-title">Riddle School 3</h1> 	</div>
+  <a href="/html/riddleschool4.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/rs4.jpg" alt="icon" loading="lazy">	  <h1 class="game-title">Riddle School 4</h1> 	</div>
+  <a href="/html/riddleschool5.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/rs5.jpg" alt="icon" loading="lazy">	  <h1 class="game-title">Riddle School 5</h1> 	</div>
+  <a href="/html/riddletransfer.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/rt.jpg" alt="icon" loading="lazy">	  <h1 class="game-title">Riddle Transfer</h1> 	</div>
+  <a href="/html/riddletransfer2.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/rt2.jpg" alt="icon" loading="lazy">	  <h1 class="game-title">Riddle Transfer 2</h1> 	</div>    
+  <a href="/html/rw.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/rw.jpg" alt="icon" loading="lazy">	  <h1 class="game-title">Raft Wars</h1> 	</div>
+  <a href="/html/run.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/run.png" alt="icon" loading="lazy">	  <h1 class="game-title">Run</h1> 	</div>
+  <a href="/html/run2.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/run2.jpg" alt="icon" loading="lazy">	  <h1 class="game-title">Run 2</h1> 	</div>
+  <a href="/html/stickrpg.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/srpg.jpg" alt="icon" loading="lazy">	  <h1 class="game-title">Stick RPG</h1> 	</div>
+  <a href="/html/sonic.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/son.jpg" alt="icon" loading="lazy">	  <h1 class="game-title">Sonic Flash</h1> 	</div>
+  <a href="/html/mario63.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/sm63.png" alt="icon" loading="lazy">	  <h1 class="game-title">Super Mario 63</h1> 	</div>
+  <a href="/html/ssf.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/ssf.jpg" alt="icon" loading="lazy">	  <h1 class="game-title">Super Smash Flash</h1> 	</div>
+  <a href="/html/supermarioflash.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/smf.jpg" alt="icon" loading="lazy">	  <h1 class="game-title">Super Mario Flash</h1> 	</div>
+  <a href="/html/tanktrouble.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/tt.jpg" alt="icon" loading="lazy">	  <h1 class="game-title">Tank Trouble</h1> 	</div>
+  <a href="/html/tetris.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/tet.jpg" alt="icon" loading="lazy">	  <h1 class="game-title">Tetris</h1> 	</div>
+  <a href="/html/tboi.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/tboi.jpg" alt="icon" loading="lazy">	  <h1 class="game-title">The Binding of Isaac</h1> 	</div>
+  <a href="/html/quiz.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/impossiblequiz.png" alt="icon" loading="lazy">	  <h1 class="game-title">The Impossible Quiz</h1> 	</div>
+  <a href="/html/hardestgame.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/whg.jpg" alt="icon" loading="lazy">	  <h1 class="game-title">The World's Hardest Game</h1> 	</div>
+  <a href="/html/hardestgame2.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/whg2.jpg" alt="icon" loading="lazy">	  <h1 class="game-title">The World's Hardest Game 2</h1> 	</div>
+  <a href="/html/turtle.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/ttt.png" alt="icon" loading="lazy">	  <h1 class="game-title">Toss the Turtle</h1> 	</div>
+  <a href="/html/um.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/um.jpg" alt="icon" loading="lazy">	  <h1 class="game-title">Unfair Mario</h1> 	</div></a>
+  </section>
+  </section>
+  <h2><span>Other Games</span></h2>
+  <div id="search" class="flex-container">
+  <a href="/other/1/"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/other/1/meta/apple-touch-icon.png" alt="icon" loading="lazy">	  <h1 class="game-title">1</h1> 	</div>
+  <a href="/other/10mtd/"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/other/10mtd/splash.png" alt="icon" loading="lazy">	  <h1 class="game-title">10 Minutes Till Dawn</h1> 	</div>
+  <a href="/other/100ng/"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/other/100ng/100ng.jpg" alt="icon" loading="lazy">	  <h1 class="game-title">100NG</h1> 	</div>
+  <a href="https://ga13.herokuapp.com"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/13.gif" alt="icon" loading="lazy">	  <h1 class="game-title">13 P2P</h1> 	</div>
+  <a href="/other/1v1lol/"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/other/1v1lol/1v1.png" alt="icon" loading="lazy">	  <h1 class="game-title">1v1lol</h1> 	</div>
+  <a href="/other/2048/"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/other/2048/thumb.png" alt="icon" loading="lazy">	  <h1 class="game-title">2048</h1> 	</div>
+  <a href="/other/2048-multitask/"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/other/2048-multitask/splash.png" alt="icon" loading="lazy">	  <h1 class="game-title">2048 Multitask</h1> 	</div>
+  <a href="/other/8ball/"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/other/8ball/8ball.jpg" alt="icon" loading="lazy">	  <h1 class="game-title">8 Ball</h1> 	</div>
+  <a href="/other/9007199254740992/"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/other/9007199254740992/logo-4.png" alt="icon" loading="lazy">	  <h1 class="game-title">9007199254740992</h1> 	</div>
+  <a href="/other/achievementunlocked/"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/other/achievementunlocked/achievementunlocked.png" alt="icon" loading="lazy">	  <h1 class="game-title">Achievement Unlocked</h1> 	</div>
+  <a href="/other/adrenalinechallenge/"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/other/adrenalinechallenge/adrenalinechallenge.jpg" alt="icon" loading="lazy">	  <h1 class="game-title">Adrenaline Challenge</h1> 	</div>
+  <a href="/other/agario/"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/other/agario/img/agar.jpg" alt="icon" loading="lazy">	  <h1 class="game-title">Agar.io</h1> 	</div>
+  <a href="/other/among-us/"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/other/among-us/red.png" alt="icon" loading="lazy">	  <h1 class="game-title">Among Us</h1> 	</div>
+  <a href="/other/backrooms/"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/other/backrooms/img/splash.jpg" alt="icon" loading="lazy">	  <h1 class="game-title">Backrooms</h1> 	</div>
+  <a href="/other/bstars/"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/other/bstars/bstars.jpg" alt="icon" loading="lazy">	  <h1 class="game-title">Basketball Stars</h1> 	</div>
+  <a href="/other/blackjack/"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/other/blackjack/bj.jpg" alt="icon" loading="lazy">	  <h1 class="game-title">BlackJack</h1> 	</div>
+  <a href="/other/cannon-basketball-4/"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/other/cannon-basketball-4/img/splash.png" alt="icon" loading="lazy">	  <h1 class="game-title">Cannon Basketball 4</h1> 	</div>
+  <a href="/other/cell-machine/"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/other/cell-machine/img/te9nDu.png" alt="icon" loading="lazy">	  <h1 class="game-title">Cell Machine</h1> 	</div>
+  <a href="/other/circlo/"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/other/circlo/img/download.png" alt="icon" loading="lazy">	  <h1 class="game-title">Circl0</h1> 	</div>
+  <a href="/html/ch.html"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/img/ch.jpg" alt="icon" loading="lazy">	  <h1 class="game-title">Clicker Heroes</h1> 	</div>
+  <a href="/other/cookie/"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/other/cookie/img/cookie.jpg" alt="icon" loading="lazy">	  <h1 class="game-title">Cookie Clicker</h1> 	</div>
+  <a href="/other/craftmine/"class="game-link container">	<div class="game-tile">	  <img class="game-icon" src="/other/craftmine/images/craftmine.png" alt="icon" loading="lazy">	  <h1 class="game-title">Craft Mine</h1> 	</div>
+  <a href="/other/creativekillchamber/"class="game-link container">  <div class="game-tile">     <img class="game-icon" src="/other/creativekillchamber/creativekillchamber.jpg" alt="icon" loading="lazy">     <h1 class="game-title">Creative Kill Chamber</h1>   </div>
+  <a href="/other/ckc2/"class="game-link container">  <div class="game-tile">     <img class="game-icon" src="/other/ckc2/" alt="icon" loading="lazy">     <h1 class="game-title">Creative Kill Chamber 2</h1>   </div>
+  <a href="/other/crossyroad/"class="game-link container">  <div class="game-tile">     <img class="game-icon" src="/other/crossyroad/crossyroad.png" alt="icon" loading="lazy">     <h1 class="game-title">Crossyroad</h1>   </div>
+  <a href="/other/csgo-clicker/"class="game-link container">   <div class="game-tile">     <img class="game-icon" src="/other/csgo-clicker/images/vanguard.png" alt="icon" loading="lazy">     <h1 class="game-title">CS-GO Clicker</h1>   </div>
+  <a href="/other/ctr/"class="game-link container">  <div class="game-tile">     <img class="game-icon" src="/other/ctr/logo.png" alt="icon" loading="lazy">     <h1 class="game-title">Cut the Rope</h1>  </div>
+  <a href="/other/ctrholiday/"class="game-link container">   <div class="game-tile">     <img class="game-icon" src="/other/ctrholiday/Holiday_Gift.webp" alt="icon" loading="lazy">     <h1 class="game-title">Cut the Rope Holiday Gift</h1>   </div>
+  <a href="/other/ctrtr/"class="game-link container">  <div class="game-tile">     <img class="game-icon" src="/other/ctrtr/logo.png" alt="icon" loading="lazy">     <h1 class="game-title">Cut the Rope Time Travel</h1>  </div>
+  <a href="/other/deal-or-no-deal/"class="game-link container">  <div class="game-tile">     <img class="game-icon" src="/other/deal-or-no-deal/index.jpg" alt="icon" loading="lazy">     <h1 class="game-title">Deal or No Deal</h1>   </div>
+  <a href="/other/doodle-jump/"class="game-link container">  <div class="game-tile">     <img class="game-icon" src="/other/doodle-jump/doodle.png" alt="icon" loading="lazy">     <h1 class="game-title">Doodle Jump</h1>   </div>
+  <a href="/other/drifthunters/"class="game-link container">  <div class="game-tile">     <img class="game-icon" src="/other/drifthunters/Build/ItchIO.jpg" alt="icon" loading="lazy">     <h1 class="game-title">Drift Hunters</h1>   </div>
+  <a href="/other/flappy-2048/"class="game-link container">  <div class="game-tile">     <img class="game-icon" src="/other/flappy-2048/meta/apple-touch-icon.png" alt="icon" loading="lazy">     <h1 class="game-title">Flappy 2048</h1>   </div>
+  <a href="/other/flappy-bird/"class="game-link container">  <div class="game-tile">     <img class="game-icon" src="/other/flappy-bird/assets/thumb.png" alt="icon" loading="lazy">     <h1 class="game-title">Flappy Bird</h1>   </div>
+  <a href="/other/fwitft/"class="game-link container">   <div class="game-tile">     <img class="game-icon" src="/other/fwitft/img.gamedistribution.com/gamedistributionid-512x512.jpeg" alt="icon" loading="lazy">     <h1 class="game-title">Fireboy Watergirl in the Forest Temple</h1>  </div>
+  <a href="/other/flippy-fish/"class="game-link container">  <div class="game-tile">     <img class="game-icon" src="/other/flippy-fish/2022_10_28_0jt_Kleki.png" alt="icon" loading="lazy">     <h1 class="game-title">Flippy Fish</h1>   </div>
+  <a href="/other/fnaf/"class="game-link container">   <div class="game-tile">     <img class="game-icon" src="/other/fnaf/resources/0000.png" alt="icon" loading="lazy">     <h1 class="game-title">Five Nights at Freddy's</h1>   </div>
+  <a href="/other/fnaf2/"class="game-link container">  <div class="game-tile">     <img class="game-icon" src="/other/fnaf2/resources/0018.png" alt="icon" loading="lazy">     <h1 class="game-title">Five Nights at Freddy's 2</h1>   </div>
+  <a href="/other/frying-nemo/"class="game-link container">  <div class="game-tile">     <img class="game-icon" src="/other/frying-nemo/splash.png" alt="icon" loading="lazy">     <h1 class="game-title">Frying Nemo</h1>   </div>
+  <a href="/other/funkin/"class="game-link container">   <div class="game-tile">     <img class="game-icon" src="/other/funkin/favicon.png" alt="icon" loading="lazy">     <h1 class="game-title">Friday Night Funkin</h1>   </div>
+  <a href="/other/ucn/"class="game-link container">  <div class="game-tile">     <img class="game-icon" src="/other/ucn/resources/0317.png" alt="icon" loading="lazy">     <h1 class="game-title">Ultimate Custom Night</h1>   </div>
+  <a href="/other/game-inside/"class="game-link container">  <div class="game-tile">     <img class="game-icon" src="/other/game-inside/img/display.png" alt="icon" loading="lazy">     <h1 class="game-title">Game Inside a Game</h1>  </div>
+  <a href="/other/georgeandtheprinter/"class="game-link container">  <div class="game-tile">     <img class="game-icon" src="/other/georgeandtheprinter/img/SnDTEn.png" alt="icon" loading="lazy">     <h1 class="game-title">George and the Printer</h1>  </div>
+  <a href="/other/getawayshootout/"class="game-link container">  <div class="game-tile">     <img class="game-icon" src="/other//getawayshootout/images.jpg" alt="icon" loading="lazy">     <h1 class="game-title">Getaway Shootout</h1>  </div>
+  <a href="/other/gimme-the-airpod/"class="game-link container">   <div class="game-tile">     <img class="game-icon" src="/other/gimme-the-airpod/img/logo.png" alt="icon" loading="lazy">     <h1 class="game-title">Gimme the Airpod</h1>  </div>
+  <a href="/other/glass-city/"class="game-link container">   <div class="game-tile">     <img class="game-icon" src="/other/glass-city/image.png" alt="icon" loading="lazy">     <h1 class="game-title">Glass City</h1>  </div>
+  <a href="/other/goodnight/"class="game-link container">  <div class="game-tile">     <img class="game-icon" src="/other/goodnight/goodnight.jpg" alt="icon" loading="lazy">     <h1 class="game-title">Goodnight</h1>   </div>
+  <a href="/other/goomyclicker/"class="game-link container">   <div class="game-tile">     <img class="game-icon" src="/other/goomyclicker/favicon.png" alt="icon" loading="lazy">     <h1 class="game-title">Goomy Clicker</h1>   </div>
+  <a href="/other/goomyclicker2/"class="game-link container">  <div class="game-tile">     <img class="game-icon" src="/other/goomyclicker2/img/great_goomy.png" alt="icon" loading="lazy">     <h1 class="game-title">Goomy Clicker 2</h1>   </div>
+  <a href="/other/gravity-soccer/"class="game-link container">   <div class="game-tile">     <img class="game-icon" src="/other/gravity-soccer/splash.png" alt="icon" loading="lazy">     <h1 class="game-title">Gravity Soccer</h1>  </div>
+  <a href="/other/grindcraft/"class="game-link container">   <div class="game-tile">     <img class="game-icon" src="/other/grindcraft/img/splash.png" alt="icon" loading="lazy">     <h1 class="game-title">GrindCraft</h1>  </div>
+  <a href="/other/idle-shark/"class="game-link container">   <div class="game-tile">     <img class="game-icon" src="/other/idle-shark/img/sharkgame.png" alt="icon" loading="lazy">     <h1 class="game-title">Idle Shark</h1>  </div>
+  <a href="/other/just-one-boss/"class="game-link container">  <div class="game-tile">     <img class="game-icon" src="/other/just-one-boss/pv1Gr5.png" alt="icon" loading="lazy">     <h1 class="game-title">Just One Boss</h1>   </div>
+  <a href="/other/kitchen-gun-game/"class="game-link container">  <div class="game-tile">     <img class="game-icon" src="/other/kitchen-gun-game/splash.png" alt="icon" loading="lazy">     <h1 class="game-title">Kitchen Gun</h1>   </div>
+  <a href="/other/krunker/"class="game-link container">  <div class="game-tile">     <img class="game-icon" src="/other/krunker/img/krunker-io.jpg" alt="icon" loading="lazy">     <h1 class="game-title">Krunker.io</h1>  </div>
+  <a href="/other/madalin-stunt-cars-2/"class="game-link container">   <div class="game-tile">     <img class="game-icon" src="/other/madalin-stunt-cars-2/img/logo.jpg" alt="icon" loading="lazy">     <h1 class="game-title">Madalin Stunt Cars 2</h1>  </div>
+  <a href="/other/madalin-stunt-cars-3/"class="game-link container">   <div class="game-tile">     <img class="game-icon" src="/other/madalin-stunt-cars-3/img/index.jpg" alt="icon" loading="lazy">     <h1 class="game-title">Madalin Stunt Cars 3</h1>  </div>
+  <a href="/other/mario/"class="game-link container">  <div class="game-tile">     <img class="game-icon" src="/other/mario/m0.png" alt="icon" loading="lazy">     <h1 class="game-title">Mari0</h1>   </div>
+  <a href="/other/minesweeper/"class="game-link container">  <div class="game-tile">     <img class="game-icon" src="/other/minesweeper/assets/clock_icon.png" alt="icon" loading="lazy">     <h1 class="game-title">Minesweeper</h1>   </div>
+  <a href="/other/minecrap/"class="game-link container">   <div class="game-tile">     <img class="game-icon" src="/other/minecrap/pack.png" alt="icon" loading="lazy">     <h1 class="game-title">Minecraft (Classic)</h1>   </div>
+  <a href="/other/minecraft/"class="game-link container">  <div class="game-tile">     <img class="game-icon" src="/other/minecraft/mc.jpg" alt="icon" loading="lazy">     <h1 class="game-title">Minecraft 1.5.2</h1>   </div>
+  <a href="/other/precision-client/"class="game-link container">   <div class="game-tile">     <img class="game-icon" src="/other/precision-client/logo.png" alt="icon" loading="lazy">     <h1 class="game-title">Percision Client</h1>  </div>
+  <a href="/other/motox3m/"class="game-link container">  <div class="game-tile">     <img class="game-icon" src="/other/motox3m/splash.jpg" alt="icon" loading="lazy">     <h1 class="game-title">Motox3m</h1>   </div>
+  <a href="/other/motox3mpool/"class="game-link container">  <div class="game-tile">     <img class="game-icon" src="/other/motox3mpool/splash.jpg" alt="icon" loading="lazy">     <h1 class="game-title">Motox3m Pool Party</h1>   </div>
+  <a href="/other/motox3mspooky/"class="game-link container">  <div class="game-tile">     <img class="game-icon" src="/other/motox3mspooky/splash.jpeg" alt="icon" loading="lazy">     <h1 class="game-title">Motox3m Spooky</h1>   </div>
+  <a href="/other/motox3mwinter/"class="game-link container">  <div class="game-tile">     <img class="game-icon" src="/other/motox3mwinter/download.jpeg" alt="icon" loading="lazy">     <h1 class="game-title">Motox3m Winter</h1>   </div>
+  <a href="/other/om-bounce/"class="game-link container">  <div class="game-tile">     <img class="game-icon" src="/other/om-bounce/assets/icon.jpeg" alt="icon" loading="lazy">     <h1 class="game-title">Om Nom Bounce</h1>   </div>
+  <a href="/other/ovo/"class="game-link container">  <div class="game-tile">     <img class="game-icon" src="/other/ovo/ovo.png" alt="icon" loading="lazy">     <h1 class="game-title">Ovo</h1>   </div>
+  <a href="/other/paperio2/"class="game-link container">   <div class="game-tile">     <img class="game-icon" src="/other/paperio2/images/logo.png" alt="icon" loading="lazy">     <h1 class="game-title">Paper.io 2</h1>  </div>
+  <a href="/other/papery-planes/"class="game-link container">  <div class="game-tile">     <img class="game-icon" src="/other/papery-planes/splash.jpg" alt="icon" loading="lazy">     <h1 class="game-title">Papery Planes</h1>   </div>
+  <a href="/other/rabbit-samurai/"class="game-link container">   <div class="game-tile">     <img class="game-icon" src="/other/rabbit-samurai/splash.png" alt="icon" loading="lazy">     <h1 class="game-title">Rabbit Samurai</h1>  </div>
+  <a href="/other/rabbit-samurai2/"class="game-link container">  <div class="game-tile">     <img class="game-icon" src="/other/rabbit-samurai2/splash.png" alt="icon" loading="lazy">     <h1 class="game-title">Rabbit Samurai 2</h1>  </div>
+  <a href="/other/retrobowl/"class="game-link container">  <div class="game-tile">     <img class="game-icon" src="/other/retrobowl/img/splash.png" alt="icon" loading="lazy">     <h1 class="game-title">Retro Bowl</h1>  </div>
+  <a href="/other/rooftopsnipers/"class="game-link container">   <div class="game-tile">     <img class="game-icon" src="/other/rooftopsnipers/img/thumb.png" alt="icon" loading="lazy">     <h1 class="game-title">Rooftop Snipers</h1>   </div>
+  <a href="/other/run3/"class="game-link container">   <div class="game-tile">     <img class="game-icon" src="/other/run3/favicon.png" alt="icon" loading="lazy">     <h1 class="game-title">Run 3</h1>   </div>
+  <a href="/other/sand-game/"class="game-link container">  <div class="game-tile">     <img class="game-icon" src="/other/sand-game/sand.png" alt="icon" loading="lazy">     <h1 class="game-title">Sand Game</h1>   </div>
+  <a href="/other/sansfight/"class="game-link container">  <div class="game-tile">     <img class="game-icon" src="/other/sansfight/icon-256.png" alt="icon" loading="lazy">     <h1 class="game-title">Sans Fight</h1>   </div>
+  <a href="/other/scrapmetal/"class="game-link container">   <div class="game-tile">     <img class="game-icon" src="/other/scrapmetal/img/splash.png" alt="icon" loading="lazy">     <h1 class="game-title">Scrap Metal</h1>   </div>
+  <a href="/other/slitherio/"class="game-link container">  <div class="game-tile">     <img class="game-icon" src="/other/slitherio/slithr.jpg" alt="icon" loading="lazy">     <h1 class="game-title">Slither.io</h1>  </div>
+  <a href="/other/slope/"class="game-link container">  <div class="game-tile">     <img class="game-icon" src="/other/slope/slope.jpg" alt="icon" loading="lazy">     <h1 class="game-title">Slope</h1>   </div>
+  <a href="/other/slowroads/"class="game-link container">  <div class="game-tile">     <img class="game-icon" src="/other/slowroads/favicon_circle.svg" alt="icon" loading="lazy">     <h1 class="game-title">SlowRoads.io</h1>  </div>
+  <a href="/other/smashkarts/"class="game-link container">   <div class="game-tile">     <img class="game-icon" src="/other/smashkarts/images/favicon.png" alt="icon" loading="lazy">     <h1 class="game-title">Smash Karts</h1>   </div>
+  <a href="/other/smokingbarrels/"class="game-link container">   <div class="game-tile">     <img class="game-icon" src="/other/smokingbarrels/smokingbarrels.jpg" alt="icon" loading="lazy">     <h1 class="game-title">Smoking Barrels</h1>   </div>
+  <a href="/other/snake/"class="game-link container">  <div class="game-tile">     <img class="game-icon" src="/other/snake/assets/apple_00.png" alt="icon" loading="lazy">     <h1 class="game-title">Snake</h1>   </div>
+  <a href="/other/snowbattle/"class="game-link container">   <div class="game-tile">     <img class="game-icon" src="/other/snowbattle/img/logo.png" alt="icon" loading="lazy">     <h1 class="game-title">SnowBattle.io</h1>   </div>
+  <a href="/other/sort-the-court/"class="game-link container">   <div class="game-tile">     <img class="game-icon" src="/other/sort-the-court/img/splash.png" alt="icon" loading="lazy">     <h1 class="game-title">Sort the Court</h1>  </div>
+  <a href="/other/stack/"class="game-link container">  <div class="game-tile">     <img class="game-icon" src="/other/stack/stack.png" alt="icon" loading="lazy">     <h1 class="game-title">Stack</h1>   </div>
+  <a href="/other/station-141/"class="game-link container">  <div class="game-tile">     <img class="game-icon" src="/other/station-141/75wxYs.png" alt="icon" loading="lazy">     <h1 class="game-title">Station 141</h1>   </div>
+  <a href="/other/stickman-boost/"class="game-link container">  <div class="game-tile">     <img class="game-icon" src="/other/stickman-boost/icon-256.png" alt="icon" loading="lazy">     <h1 class="game-title">Stickman Boost</h1>   </div>
+  <a href="/other/stickman-golf/"class="game-link container">  <div class="game-tile">     <img class="game-icon" src="/other/stickman-golf/splash.png" alt="icon" loading="lazy">     <h1 class="game-title">Stickman Golf</h1>   </div>
+  <a href="/other/stickman-survival/"class="game-link container">  <div class="game-tile">     <img class="game-icon" src="/other/Stickman-Survival/Icon.png" alt="icon" loading="lazy">     <h1 class="game-title">Stickman Survival</h1>   </div>
+  <a href="/other/stickwar/"class="game-link container">   <div class="game-tile">     <img class="game-icon" src="/other/stickwar/stickwar.jpg" alt="icon" loading="lazy">     <h1 class="game-title">Stick War</h1>   </div>
+  <a href="/other/stormthehouse2/"class="game-link container">   <div class="game-tile">     <img class="game-icon" src="/other/stormthehouse2/stormthehouse2.jpg" alt="icon" loading="lazy">     <h1 class="game-title">Storm the House 2</h1>   </div>
+  <a href="/other/subwaysurfers/"class="game-link container">  <div class="game-tile">     <img class="game-icon" src="/other/subwaysurfers/img/splash.jpg" alt="icon" loading="lazy">     <h1 class="game-title">Subway Surfers</h1>  </div>
+  <a href="/other/superhot/"class="game-link container">   <div class="game-tile">     <img class="game-icon" src="/other/superhot/hot.jpg" alt="icon" loading="lazy">     <h1 class="game-title">Superhot</h1>  </div>
+  <a href="/other/supermarioconstruct/"class="game-link container">  <div class="game-tile">     <img class="game-icon" src="/other/supermarioconstruct/icons/icon-256.png" alt="icon" loading="lazy">     <h1 class="game-title">Super Mario Construct</h1>   </div>
+  <a href="/other/swerve/"class="game-link container">   <div class="game-tile">     <img class="game-icon" src="/other/swerve/img/favicon.jpg" alt="icon" loading="lazy">     <h1 class="game-title">Swerve</h1>  </div>
+  <a href="/other/tacticalassasin2/"class="game-link container">   <div class="game-tile">     <img class="game-icon" src="/other/tacticalassasin2/tacticalassassin2.png" alt="icon" loading="lazy">     <h1 class="game-title">Tactical Assasin 2</h1>  </div>
+  <a href="/other/tactical-weapon-pack-2/"class="game-link container">   <div class="game-tile">     <img class="game-icon" src="/other/tactical-weapon-pack-2/splash.jpg" alt="icon" loading="lazy">     <h1 class="game-title">Tactical Weapon Pack 2</h1>  </div>
+  <a href="/other/tank-trouble-2/"class="game-link container">   <div class="game-tile">     <img class="game-icon" src="/other/tank-trouble-2/icon-128.png" alt="icon" loading="lazy">     <h1 class="game-title">Tank Trouble 2</h1>  </div>
+  <a href="/other/templerun2/"class="game-link container">   <div class="game-tile">     <img class="game-icon" src="/other/templerun2/img/cover.png" alt="icon" loading="lazy">     <h1 class="game-title">Temple Run 2</h1>  </div>
+  <a href="/other/theheist/"class="game-link container">   <div class="game-tile">     <img class="game-icon" src="/other/theheist/theheist.jpg" alt="icon" loading="lazy">     <h1 class="game-title">The Heist</h1>   </div>
+  <a href="/other/thereisnogame/"class="game-link container">  <div class="game-tile">     <img class="game-icon" src="/other/thereisnogame/logo.png" alt="icon" loading="lazy">     <h1 class="game-title">There is No Game</h1>  </div>
+  <a href="/other/townscaper/"class="game-link container">   <div class="game-tile">     <img class="game-icon" src="/other/townscaper/img/cover.jpg" alt="icon" loading="lazy">     <h1 class="game-title">Townscaper</h1>  </div>
+  <a href="/other/tunnelrush/"class="game-link container">   <div class="game-tile">     <img class="game-icon" src="/other/tunnelrush/tunnel.jpg" alt="icon" loading="lazy">     <h1 class="game-title">Tunnel Rush</h1>   </div>
+  <a href="/other/veloce/"class="game-link container">  <div class="game-tile">     <img class="game-icon" src="/other/veloce/qN6zkD.png" alt="icon" loading="lazy">     <h1 class="game-title">Veloce</h1>   </div>
+  <a href="/other/vex3/"class="game-link container">   <div class="game-tile">     <img class="game-icon" src="/other/vex3/vex3.png" alt="icon" loading="lazy">     <h1 class="game-title">Vex 3</h1>   </div>
+  <a href="/other/vex4/"class="game-link container">   <div class="game-tile">     <img class="game-icon" src="/other/vex4/vex4.png" alt="icon" loading="lazy">     <h1 class="game-title">Vex 4</h1>   </div>
+  <a href="/other/vex5/"class="game-link container">   <div class="game-tile">     <img class="game-icon" src="/other/vex5/vex.jpeg" alt="icon" loading="lazy">     <h1 class="game-title">Vex 5</h1>   </div>
+  <a href="/other/vex6/"class="game-link container">   <div class="game-tile">     <img class="game-icon" src="/other/vex6/assets/icon.jpeg" alt="icon" loading="lazy">     <h1 class="game-title">Vex 6</h1>   </div>
+  <a href="/other/vex7/"class="game-link container">   <div class="game-tile">     <img class="game-icon" src="/other/vex7/assets/icon.jpeg" alt="icon" loading="lazy">     <h1 class="game-title">Vex 7</h1>   </div>
+  <a href="/other/waterworks/"class="game-link container">  <div class="game-tile">     <img class="game-icon" src="/other/waterworks/splash.png" alt="icon" loading="lazy">     <h1 class="game-title">Waterworks</h1>   </div>
+  <a href="/other/wordle/"class="game-link container">  <div class="game-tile">     <img class="game-icon" src="/other/wordle/img/logo_512x512.png" alt="icon" loading="lazy">     <h1 class="game-title">Wordle</h1>   </div>
+  <a href="/other/wolf3d/"class="game-link container">   <div class="game-tile">     <img class="game-icon" src="/other/wolf3d/art/wolf3d.png" alt="icon" loading="lazy">     <h1 class="game-title">Wolfenstien 3D</h1>  </div>
+  <a href="/other/x-trial-racing/"class="game-link container">   <div class="game-tile">     <img class="game-icon" src="/other/x-trial-racing/splash.png" alt="icon" loading="lazy">     <h1 class="game-title">X Trial Racing</h1>  </div></a>
+  <a href="/other/yoshifabrication/"class="game-link container">   <div class="game-tile">     <img class="game-icon" src="/other/yoshifabrication/icons/icon-512.png" alt="icon" loading="lazy">     <h1 class="game-title">Yoshi's Fabrication</h1>  </div></a>
+  <a href="/other/zombs-royale/"class="game-link container">   <div class="game-tile">     <img class="game-icon" src="/other/zombs-royale/zomb.png" alt="icon" loading="lazy">     <h1 class="game-title">Zombs Royale</h1>  </div></a>
+  </section>
+	<section>
+  <h2><span>Emulation</span></h2>
+  <div id="search" class="flex-container">
+  <a href="/other/example/batman.html"class="game-link container">   <div class="game-tile">     <img class="game-icon" src="/img/bm.jpg" alt="icon" loading="lazy">     <h1 class="game-title">Batman (NES)</h1>  </div>
+  <a href="/other/miscgame/contracool.html"class="game-link container">   <div class="game-tile">     <img class="game-icon" src="/img/cont.jpg" alt="icon" loading="lazy">     <h1 class="game-title">Contra (NES)</h1>  </div>
+  <a href="/other/miscgame/doubled.html"class="game-link container">   <div class="game-tile">     <img class="game-icon" src="/img/dd.jpg" alt="icon" loading="lazy">     <h1 class="game-title">Double Dragon (NES)</h1>  </div>
+  <a href="/other/example/ducktales.html"class="game-link container">   <div class="game-tile">     <img class="game-icon" src="/img/dt.png" alt="icon" loading="lazy">     <h1 class="game-title">Duck Tales (NES)</h1>  </div>
+  <a href="/other/example/excitebike.html"class="game-link container">   <div class="game-tile">     <img class="game-icon" src="/img/eb.jpg" alt="icon" loading="lazy">     <h1 class="game-title">Excite Bike (NES)</h1>  </div>
+  <a href="/other/example/f13.html"class="game-link container">   <div class="game-tile">     <img class="game-icon" src="/img/ft13.png" alt="icon" loading="lazy">     <h1 class="game-title">Friday the 13th (NES)</h1>  </div>
+  <a href="/other/miscgame/megamandos.html"class="game-link container">   <div class="game-tile">     <img class="game-icon" src="/img/mm2.jpg" alt="icon" loading="lazy">     <h1 class="game-title">Mega Man 2 (NES)</h1>  </div>
+  <a href="/other/example/rivercity.html"class="game-link container">   <div class="game-tile">     <img class="game-icon" src="/img/rcr.jpg" alt="icon" loading="lazy">     <h1 class="game-title">River City Ransom (NES)</h1>  </div>
+  <a href="/other/sm64/"class="game-link container">   <div class="game-tile">     <img class="game-icon" src="/img/sm64.jpg" alt="icon" loading="lazy">     <h1 class="game-title">Super Mario 64</h1>  </div>
+  <a href="/other/miscgame/mariones.html"class="game-link container">   <div class="game-tile">     <img class="game-icon" src="/img/sm.png" alt="icon" loading="lazy">     <h1 class="game-title">Super Mario Bros. (NES)</h1>  </div>
+  <a href="/other/example/sm2.html"class="game-link container">   <div class="game-tile">     <img class="game-icon" src="/img/sm2.jpg" alt="icon" loading="lazy">     <h1 class="game-title">Super Mario Bros. 2 (NES)</h1>  </div>
+  <a href="/other/example/sm3.html"class="game-link container">   <div class="game-tile">     <img class="game-icon" src="/img/sm3.jpg" alt="icon" loading="lazy">     <h1 class="game-title">Super Mario Bros. 3 (NES)</h1>  </div>
+  <a href="/other/miscgame/zeldanes.html"class="game-link container">   <div class="game-tile">     <img class="game-icon" src="/img/zeld.png" alt="icon" loading="lazy">     <h1 class="game-title">The Legend of Zelda (NES)</h1>  </div>
+  <a href="/other/webretro/roms.html"class="game-link container">   <div class="game-tile">     <img class="game-icon" src="/other/webretro/assets/icons/icon204.png" alt="icon" loading="lazy">     <h1 class="game-title">WebRetro</h1>  </div></a>
+  </section>
+  <section>
+  <h2><span>Tools</span></h2>
+  <div id="search" class="flex-container">
+  <a href="https://go.goguardian.cf"class="game-link container">   <div class="game-tile">     <img class="game-icon" src="/img/prox.jpg" alt="icon" loading="lazy">     <h1 class="game-title">Proxy</h1>  </div>
+  <a href="http://zoccmu-8080.preview.csb.app/"class="game-link container">   <div class="game-tile">     <img class="game-icon" src="/img/prox.jpg" alt="icon" loading="lazy">     <h1 class="game-title">Proxy 2</h1>  </div>
+  <a href="https://zaluea-production.up.railway.app/"class="game-link container">   <div class="game-tile">     <img class="game-icon" src="/img/prox.jpg" alt="icon" loading="lazy">     <h1 class="game-title">Proxy 3</h1>  </div>
+  <a href="https://5e4r06.sse.codesandbox.io/"class="game-link container">   <div class="game-tile">     <img class="game-icon" src="/img/prox.jpg" alt="icon" loading="lazy">     <h1 class="game-title">LioProxy</h1>  </div></a> 
+  </section>
+   </div>
+  </html>
