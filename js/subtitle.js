@@ -21,6 +21,8 @@ say[13] = "I made it mom! I’m on a randomized subtitle!";
 say[14] = "Playing games in my class, ay?";
 say[15] = "A moment of silence for adobe flash player";
 say[16] = "Whats my name? You're Heisenberg. You're God Damn Right";
+say[17] = "";
+say[18] = "";
 
 var howmany = say.length;
 var bRand = 0;
