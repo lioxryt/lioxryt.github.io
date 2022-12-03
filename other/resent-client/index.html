@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Resent Client | lioxryt</title>
+    <meta charset="application/javascript" />
+    <!--meta content="IMAGE" property="og:image"/>-->
+    <meta
+      content="Eaglercraft pvp client. Currently developed by hooman#1196/Nitwit in-game. Packs are created by BDA, Woody, Nine4, Vortexian, Luv, and a few are taken from precision."
+      property="og:description"
+    />
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+    <script type="text/javascript" src="eagswebrtc.js"></script>
+    <script type="text/javascript" src="classes.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body id="game_frame">
+    <div class="stuff" id="changelog">
+      <h4>Changelog and Updates</h4>
+      <div>
+        <p>[+]Fixed ComboCounter</p>
+        <br />
+        <p>[+]Fixed hotbar flickering</p>
+        <br />
+        <p>[+]Added Gawr Gura 16x</p>
+        <br />
+        <p>[+]Improved AutoGG</p>
+        <br />
+        <p>[+]Added mars 32x</p>
+        <br />
+        <p>[+]Added SuperiorFPS</p>
+      </div>
+    </div>
+
+    <div class="stuff" id="quickstart">
+      <h4>Quick Guide</h4>
+      <p>- Press "Y" in game to open the GUI</p>
+      <br />
+      <p>- Set hotkeys and other keybinds in controls</p>
+      <br />
+      <p>- Press "Modify HUD" to change the layout</p>
+      <br />
+      <p>- Press "Y" again to close the GUI menu and close the menu.</p>
+    </div>
+
+    <div id="Selection">
+      <div background-color: light-grey;>
+        <h1>Resent Client</h1>
+      </div>
+      <h3>Select a texture pack:</h3>
+      <br />
+      <select id="Packs">
+        <option>---- Choose one ----</option>
+        <option value="redberyl">Redberyl 16x</option>
+        <option value="vividity">Vividity 16x</option>
+        <option value="dawn">Dawn Pit 16x</option>
+        <option value="fall">Fall 16x (BDA)</option>
+        <option value="1.17PvP">1.19 PvP</option>
+        <option value="gawr">Gawr Gura 16x</option>
+        <option value="sup">SuperiorFPS</option>
+        <option value="mars">mars 32x</option>
+        <option value="NqouirFinnalyFixedsmh">Nqouir short swords 32x</option>
+        <option value="blue128x">Blue 128x</option>
+        <option value="bear">Montfault 16x</option>
+        <option value="arm">Arm Pink 128x</option>
+        <option value="solr2">SOLR 16x</option>
+        <option value="Urusai">Urusai 32x</option>
+        <option value="someguys1kpack">1k pack 32x</option>
+        <option value="sangRE">SangRE 16x</option>
+        <option value="rbwtory">rbw 16x</option>
+        <option value="1.8">1.8 PvP</option>
+        <option value="san">Sanman Murasaki 16x</option>
+        <option value="purpled">purpled 3k</option>
+        <option value="007">luvres 32x</option>
+        <option value="bombies80k">Bombies 80k</option>
+        <option value="wemmbu">Wubefault 16x</option>
+        <option value="twizzydefault">lil default edit</option>
+        <option value="heated">Heat 16x</option>
+        <option value="toxica spec">Toxica 16x specular edit</option>
+        <option value="rosamie 32x">Rosamie 32x</option>
+        <option value="rubellite">Rubellite Red 64x</option>
+        <option value="default-diamondEdit">Default netherite edit</option>
+        <option value="rhedd">Rhedd 16x</option>
+        <option value="bubblerose">Bubblerose 16x</option>
+        <option value="bonesnormalsword">Bare Bones Normal Swords</option>
+        <option value="defaultfps">Default FPS</option>
+        <option value="shyguyfixed">Shy Guy 16x</option>
+        <option value="simplybombies">Simply 32x (Bombies 200k)</option>
+        <option value="RKYfault">RKYfault 16x</option>
+        <option value="bn550">Bedlessfault 16x</option>
+        <option value="asda_short">Asda 16x Short Swords</option>
+        <option value="Foam_Private">Foam_Private 32x</option>
+        <option value="cobalt">Cobalt 32x</option>
+        <option value="simplybombies">Simply (Bombies 200k)</option>
+        <option value="plat">Platinum 16x</option>
+        <option value="soup">Soups Kids 16x</option>
+        <option value="bonsai">Bonsai 16x</option>
+        <option value="camellia">Camellia 16x</option>
+        <option value="Latenci">Latenci 32x</option>
+        <option value="venomv2">Venom 16x</option>
+        <option value="luv">Luvplaste 16x</option>
+        <option value="sabor">Sabor 32x</option>
+        <option value="asda">Asda 16x</option>
+        <option value="novisfixed">Novis 16x</option>
+        <option value="frag">RasplinVanilla</option>
+        <option value="rasplin">RasplinRevamped</option>
+        <option value="azura">Azura 16x</option>
+        <option value="magma">iMxrix 16x</option>
+        <option value="leo">Leowook</option>
+        <option value="woody2">Woodyfault 32x</option>
+        <option value="orchid">Orchid 16x</option>
+        <option value="lazy">Lazy 16x</option>
+        <option value="kirby">Kirby 16x</option>
+        <option value="prism">Prism 16x</option>
+        <option value="aether">Aether 16x</option>
+        <option value="dynamic">Dynamic Duo 32x</option>
+        <option value="goofy">Goofy Ahh BDA 16x</option>
+        <option value="woody">Intel 64x</option>
+        <option value="bluepack">Vortexian 8k</option>
+        <option value="ClownPierce32x">Clownpierce</option>
+        <option value="drago">Dragon Fruit</option>
+        <option value="faithful">Faithful</option>
+        <option value="sunset">Sunset Default</option>
+        <option value="miamiprivate">Miami Private</option>
+        <option value="aquari">Aquari (No worky)</option>
+        <option value="bda">BDA</option>
+        <option value="bombies">Bombies 180k</option>
+        <option value="bones">Bare Bones 16x</option>
+        <option value="ClownPierce32x">Clownpierce 32x</option>
+        <option value="candy">Cotton Candy 16x</option>
+        <option value="defaultnew">Default 1.19</option>
+        <option value="defaultold">Default 1.5</option>
+        <option value="dino">Dino 16x</option>
+        <option value="drago">Dragon Fruit 32x</option>
+        <option value="faithful">Faithful 32x</option>
+        <option value="FruitFul32x">Fruitful 16x</option>
+        <option value="Lemon">Lemon 16x</option>
+        <option value="lunar">Lunar Client 16x</option>
+        <option value="miamiprivate">Miami Private</option>
+        <option value="mid">Midnight 16x</option>
+        <option value="modifiednew">Modified 1.19</option>
+        <option value="nebula">Nebula 32x</option>
+        <option value="nicofruit">NicoFruit 16x</option>
+        <option value="resent">Resent 16x</option>
+        <option value="ricefault">Ricefault 32x</option>
+        <option value="skyline">Skyline 16x</option>
+        <option value="swiss">Swiss 16x</option>
+        <option value="tightfault">Tightfault revamped</option>
+        <option value="tron 16">Tron 16x</option>
+        <option value="refault fixed">Trycs 600k (ReFault)</option>
+        <option value="walifault">Walifault 16x</option>
+      </select>
+      <br />
+      <br />
+      <div class="container">
+        <button onclick="Start();" class="btn"><a href="#">Launch</a></button>
+      </div>
+      <p>
+        <a
+          href="https://github.com/ThisIsALegitUsername/Resent-web"
+          target="_blank"
+          style="color: #ffffff; font-size: 28px"
+          >GitHub</a
+        >
+      </p>
+    </div>
+    <script type="text/javascript">
+      if (document.location.href.startsWith("file:")) {
+        alert(
+          "You cannot 'open' this file in your browser, the code doesn't work. Upload this folder to your HTTP(s) server and access it via the internet to launch the stable-download game. This is not a bug, please read the documentation."
+        );
+      } else {
+        var PackSelect = document.getElementById("Packs");
+        function Start() {
+          if (PackSelect.selectedIndex !== 0) {
+            var Selected = PackSelect.options[PackSelect.selectedIndex].value;
+            document.getElementById("Selection").style.display = "none";
+            document.getElementById("changelog").style.display = "none";
+            document.getElementById("quickstart").style.display = "none";
+            localStorage.LastPack = Selected;
+            const relayId = Math.floor(Math.random() * 3);
+            window.eaglercraftOpts = {
+              container: "game_frame",
+              assetsURI: `packs/${Selected}.epk`,
+              serverWorkerURI: "worker_bootstrap.js",
+              worldsFolder: "MAIN",
+              servers: [
+                {
+                  serverName: "Asspixel",
+                  serverAddress: "wss://web.asspixel.net/CAP/",
+                  hideAddress: false,
+                },
+                {
+                  serverName: "VanillaCraft",
+                  serverAddress: "wss://play.vanillacraftsmp.org",
+                  hideAddress: false,
+                },
+                {
+                  serverName: "CraftClue",
+                  serverAddress: "wss://play.craftclue.rocks",
+                  hideAddress: false,
+                },
+                {
+                  serverName: "Ayunboom",
+                  serverAddress: "wss://sus.shhnowisnottheti.me",
+                  hideAddress: false,
+                },
+                {
+                  serverName: "Sealcraft",
+                  serverAddress: "wss://sealcraft.ddns.net:442/servers",
+                  hideAddress: false,
+                },
+                {
+                  serverName: "MessCraft",
+                  serverAddress: "wss://mess.eu.org/s1/",
+                  hideAddress: false,
+                },
+                {
+                  serverName: "B2",
+                  serverAddress: "wss://mc.b2server.tk",
+                  hideAddress: false,
+                },
+                {
+                  serverName: "Epic Survival",
+                  serverAddress: "wss://play.theepicgamer.repl.co/server",
+                  hideAddress: false,
+                },
+                {
+                  serverName: "IMC.RE",
+                  serverAddress: "wss://play.imc.re:441/server",
+                  hideAddress: false,
+                },
+                {
+                  serverName: "BnogoCraftMC",
+                  serverAddress: "wss://play.bnogocarft.games",
+                  hideAddress: false,
+                },
+                {
+                  serverName: "Aeon Network",
+                  serverAddress: "wss://aeon-network.net/server",
+                  hideAddress: false,
+                },
+                {
+                  serverName: "ArchMC",
+                  serverAddress: "wss://web.arch.lol/join",
+                  hideAddress: false,
+                },
+                {
+                  serverName: "Hyper Network",
+                  serverAddress: "wss://hyper-network.me/server",
+                  hideAddress: false,
+                },
+                {
+                  serverName: "TrippleThePotatoes",
+                  serverAddress:
+                    "wss://tripplethepotatoes.potatolord5.repl.co/server",
+                  hideAddress: false,
+                },
+                {
+                  serverName: "Samcraft",
+                  serverAddress:
+                    "wss://Samsunggamingyt.samsungtah.repl.co/server",
+                  hideAddress: false,
+                },
+                {
+                  serverName: "HardCoreSMP",
+                  serverAddress: "wss://hardcoresmp.mrnewt.repl.co/serve",
+                  hideAddress: false,
+                },
+              ],
+              relays: [
+                {
+                  addr: "wss://relay.deev.is/",
+                  name: "lax1dude relay #1",
+                  primary: relayId == 0,
+                },
+                {
+                  addr: "wss://relay.lax1dude.net/",
+                  name: "lax1dude relay #2",
+                  primary: relayId == 1,
+                },
+                {
+                  addr: "wss://relay.shhnowisnottheti.me/",
+                  name: "ayunami relay #1",
+                  primary: relayId == 2,
+                },
+              ],
+              mainMenu: {
+                splashes: ["Press Y to open GUI!"],
+                eaglerLogo: false,
+              },
+            };
+            (function () {
+              var q = window.location.search;
+              if (typeof q === "string" && q.startsWith("?")) {
+                q = new URLSearchParams(q);
+                var s = q.get("server");
+                if (s) window.minecraftOpts.push(s);
+              }
+            })();
+            main();
+          } else alert("You need to select a pack");
+        }
+      }
+      if (localStorage.LastPack)
+        for (Pack of PackSelect.children)
+          if (Pack.value === localStorage.LastPack) {
+            Pack.selected = "selected";
+            break;
+          }
+    </script>
+    <script src="/js/main.js"></script>
+  </body>
+</html>

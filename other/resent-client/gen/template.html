@@ -1,0 +1,173 @@
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Resent Client</title>
+
+<style>
+_css_
+</style>
+
+<script type="text/javascript">
+function Launch() {
+var selectedPack = document.getElementById("packs");
+document.getElementById("launcher").style.display = "none";
+
+const relayId = Math.floor(Math.random() * 3);
+const servers = [
+	{ serverName: "BlobCraft", serverAddress: "wss://blobcraft.tk" }
+]
+window.eaglercraftOpts = {
+container: "game_frame", assetsURI: getAssetsURI(), serverWorkerURI: createWorkerURI("sp_worker"), worldsFolder: "TEST",
+assetOverrides: {
+    "sounds/gta.mp3": "https://stream.nightride.fm/spacesynth.ogg",
+},
+servers: servers,
+hideDownServers: true,
+relays: [
+	{ addr: "wss://relay.deev.is/", name: "lax1dude relay #1", primary: relayId == 0 },
+	{ addr: "wss://relay.lax1dude.net/", name: "lax1dude relay #2", primary: relayId == 1 },
+	{ addr: "wss://relay.shhnowisnottheti.me/", name: "ayunami relay #1", primary: relayId == 2 }
+],
+mainMenu: { splashes: [
+"offline download"
+], eaglerLogo: false }};
+main();
+}
+</script>
+
+<link type="image/png" rel="shortcut icon" href="data:image/png;base64,_logo_" />
+
+<script type="text/javascript">
+classes_js
+eagswebrtc_js
+</script>
+
+<script type="text/eaglerworker" id="sp_worker">
+classes_server_js
+</script>
+
+<script type="text/javascript">
+function getAssetsURI() {
+	return `data:application/octet-stream;base64,${document.getElementById("packs").value}`;
+}
+</script>
+
+<script type="text/javascript">
+function createWorkerURI(el) {
+	var eee = document.getElementById(el);
+	var str = eee.innerHTML;
+	eee.remove();
+	str = "onmessage = function(o) { eaglercraftServerOpts = o.data; main(); };\n" + str;
+	return URL.createObjectURL(new Blob([str], {type:"text/javascript"}));
+}
+</script>
+
+</head>
+<body style="margin:0px;width:100vw;height:100vh;font-family:sans-serif;" id="game_frame">
+<div class="container flex" id="launcher">
+<h1>Resent Client</h1>
+<br>
+<h2>Please select a pack:</h2>
+<br>
+<select id="packs" class="dropdown">
+			<option>---- Choose one ----</option>
+			<option value="gawr">Gawr Gura 16x</option>
+			<option value="sup">SuperiorFPS</option>
+			<option value="mars">mars 32x</option>
+			<option value="NqouirFinnalyFixedsmh">Nqouir short swords 32x</option>
+			<option value="blue128x">Blue 128x</option>
+			<option value="bear">Montfault 16x</option>
+			<option value="arm">Arm Pink 128x</option>
+			<option value="solr2">SOLR 16x</option>
+			<option value="boxing128x">Boxing 128X(maybe broken)</option>
+			<option value="Urusai">Urusai 32x</option>
+      <option value="someguys1kpack">1k pack 32x</option>
+			<option value="sangRE">SangRE 16x</option>
+			<option value="rbwtory">rbw 16x</option>
+			<option value="1.8"> 1.8 PvP</option>
+			<option value="san">Sanman Murasaki 16x</option>
+			<option value="purpled">purpled 3k</option>
+			<option value="007">luvres 32x</option>
+			<option value="bombies80k">Bombies 80k</option>
+			<option value="wemmbu">Wubefault 16x</option>
+			<option value="twizzydefault">lil default edit</option>
+			<option value="heated">Heat 16x</option</option>
+			<option value="toxica spec">Toxica 16x specular edit</option>
+			<option value="rosamie 32x">Rosamie 32x</option>
+			<option value="rubellite">Rubellite Red 64x</option>
+			<option value="default-diamondEdit">Default netherite edit</option>
+			<option value="rhedd">Rhedd 16x</option>
+			<option value="bubblerose">Bubblerose 16x</option>
+			<option value="bonesnormalsword">Bare Bones Normal Swords</option>
+			<option value="defaultfps">Default FPS</option>
+			<option value="shyguyfixed">Shy Guy 16x</option>
+			<option value="simplybombies">Simply 32x (Bombies 200k)</option>
+			<option value="RKYfault">RKYfault 16x</option>
+			<option value="bn550">Bedlessfault 16x</option>
+			<option value="asda_short">Asda 16x Short Swords</option>
+			<option value="cobalt">Cobalt 32x</option>
+			<option value="simplybombies">Simply (Bombies 200k)</option>
+			<option value="plat">Platinum 16x</option>
+			<option value="soup">Soups Kids 16x</option>x</option>
+			<option value="bonsai">Bonsai 16x</option>
+			<option value="camellia">Camellia 16x</option>
+			<option value="Latenci">Latenci 32x</option>
+			<option value="venomv2">Venom 16x</option>
+			<option value="luv">Luvplaste 16x</option>
+			<option value="sabor">Sabor 32x</option>
+			<option value="asda">Asda 16x</option>
+			<option value="novisfixed">Novis 16x</option>
+			<option value="frag">RasplinVanilla</option>
+			<option value="rasplin">RasplinRevamped</option>
+			<option value="azura">Azura 16x</option>
+			<option value="magma">Magma 16x</option>
+			<option value="leo">Leowook</option>
+			<option value="woody2">Woodyfault 32x</option>
+			<option value="orchid">Orchid 16x</option>
+			<option value="lazy">Lazy 16x</option>
+			<option value="kirby">Kirby 16x</option>
+			<option value="prism">Prism 16x</option>
+			<option value="aether">Aether 16x</option>
+			<option value="dynamic">Dynamic Duo 32x</option>
+			<option value="goofy">Goofy Ahh BDA 16x</option>
+			<option value="woody">Intel 64x</option>
+			<option value="bluepack">Vortexian 8k</option>
+			<option value="ClownPierce32x">Clownpierce </option>
+			<option value="drago">Dragon Fruit </option>
+			<option value="faithful">Faithful </option>
+			<option value="sunset">Sunset Default</option>
+			<option value="miamiprivate">Miami Private</option>
+			<option value="1.17PvP">1.19 PvP</option>
+			<option value="aquari">Aquari (No worky)</option>
+			<option value="bda">BDA</option>
+			<option value="bombies">Bombies 180k</option>
+			<option value="bones">Bare Bones 16x</option>
+			<option value="ClownPierce32x">Clownpierce 32x</option>
+                        <option value="candy">Cotton Candy 16x</option>
+			<option value="defaultnew">Default 1.19</option>
+ 	                <option value="defaultold">Default 1.5</option>
+			<option value="dino">Dino 16x</option>
+			<option value="drago">Dragon Fruit 32x</option>
+			<option value="faithful">Faithful 32x</option>
+		        <option value="FruitFul32x">Fruitful 16x</option>
+		        <option value="Lemon">Lemon 16x</option>
+			<option value="lunar">Lunar Client 16x</option>
+			<option value="miamiprivate">Miami Private</option>
+		        <option value="mid">Midnight 16x</option>
+			<option value="modifiednew">Modified 1.19</option>
+			<option value="nebula">Nebula 32x</option>
+			<option value="nicofruit">NicoFruit 16x</option>
+			<option value="resent">Resent 16x</option>
+		        <option value="ricefault">Ricefault 32x</option>
+			<option value="skyline">Skyline 16x</option>
+			<option value="swiss">Swiss 16x</option>
+			<option value="tightfault">Tightfault revamped</option>
+			<option value="tron 16">Tron 16x</option>
+			<option value="refault fixed">Trycs 600k (ReFault)</option>
+			<option value="walifault">Walifault 16x</option>
+</select>
+<br>
+<button onclick="Launch()">Launch</button>
+</div>
+</body>
+</html>
