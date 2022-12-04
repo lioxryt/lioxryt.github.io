@@ -4,12 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Play minecraft 1.8 in your browser" />
-    <meta name="keywords" content="eaglercraft, eaglercraftx, minecraft, 1.8, 1.8.8" />
-    <title>EaglercraftX 1.8 | 3kh0</title>
+    <meta
+      name="keywords"
+      content="eaglercraft, eaglercraftx, minecraft, 1.8, 1.8.8"
+    />
+    <title>EaglercraftX 1.8 | lioxryt</title>
     <meta property="og:locale" content="en-US" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="EaglercraftX 1.8" />
-    <meta property="og:description" content="Play minecraft 1.8 in your browser" />
+    <meta
+      property="og:description"
+      content="Play minecraft 1.8 in your browser"
+    />
     <meta property="og:image" content="favicon.png" />
     <link type="image/png" rel="shortcut icon" href="favicon.png" />
     <script type="text/javascript" src="classes.js"></script>
@@ -17,7 +23,9 @@
     <script type="text/javascript">
       window.addEventListener("load", () => {
         if (document.location.href.startsWith("file:")) {
-          alert("HTTP please, do not open this file locally, run a local HTTP server and load it via HTTP");
+          alert(
+            "HTTP please, do not open this file locally, run a local HTTP server and load it via HTTP"
+          );
         } else {
           window.eaglercraftXOpts = {
             container: "game_frame",
@@ -29,7 +37,10 @@
               { addr: "wss://aeon-network.net/1.8", name: "Aeon" },
               { addr: "wss://beta.vanillacraftsmp.org/", name: "VanillaCraft" },
               { addr: "wss://mc.sealcentral.co", name: "SealCraft" },
-              { addr: "wss://g.deev.is/eaglerx-reference", name: "Reference Implementation" },
+              {
+                addr: "wss://g.deev.is/eaglerx-reference",
+                name: "Reference Implementation",
+              },
             ],
           };
           main();
@@ -37,5 +48,8 @@
       });
     </script>
   </head>
-  <body style="margin: 0px; width: 100vw; height: 100vh; overflow: hidden;" id="game_frame"></body>
+  <body
+    style="margin: 0px; width: 100vw; height: 100vh; overflow: hidden"
+    id="game_frame"
+  ></body>
 </html>
