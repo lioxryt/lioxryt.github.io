@@ -12,7 +12,7 @@
         <input class="form-control text-box" type="text" ng-model="message" placeholder="Message">
       </form>
       <div class="messages-container">
-        <p ng-repeat="message in messages"> {{message.text}} </p>
+        <p ng-repeat="message in messages"> <var> message.text </var> </p>
       </div>
     </div>
     <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.2.19.min.js"></script>
