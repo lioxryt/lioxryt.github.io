@@ -25,6 +25,13 @@ say[17] = "Anyone remember when the background was white? No? Just me?";
 say[18] = "If you are over 25 and own a computer, you wont last 5 seconds playing these games";
 say[19] = "only in ohio 💀";
 say[20] = "The Rizzard of Oz";
+say[21] = "We have a Discord Now";
+say[22] = "the god made this site";
+say[23] = "good soup 🍲";
+say[24] = "You wouldn't download a car?";
+say[25] = "L for Coolmath. This site is better still.";
+say[26] = "Jessie you were supposed to get a plastic container";
+say[27] = "N Gon go hard on this site";
 
 var howmany = say.length;
 var bRand = 0;
