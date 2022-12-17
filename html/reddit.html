@@ -1,0 +1,97 @@
+<html>
+  <head>
+    <title>Random Meme Generator</title>
+    <style>
+      body {
+        background-color: #000000;
+      }
+      button {
+        background-color: #171717;
+        border: none;
+        color: rgb(255, 255, 255);
+        padding: 10px 24px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        border-radius: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1
+      id="title"
+      style="
+        font-size: 36;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+          sans-serif;
+        color: #ffffff;
+      "
+    >
+      Random Reddit Meme
+    </h1>
+    <h1
+      id="caption"
+      style="
+        font-size: 20;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+          sans-serif;
+        color: #ffffff;
+      "
+    ></h1>
+    <img
+      id="memeImg"
+      src=""
+      alt="Random Meme"
+      onerror="setMemeImage()"
+      style="height: 75vh; width: auto"
+    />
+    <br />
+    <button id="refreshButton">Load Another Meme</button>
+    <script>
+      // Array of subreddit names
+      const subreddits = [
+        "r/dankmemes",
+        "r/memes",
+        "r/funny",
+        "r/meirl",
+        "r/wholesomememes",
+      ];
+
+      // Function to get a random subreddit from the array
+      function getRandomSubreddit() {
+        return subreddits[Math.floor(Math.random() * subreddits.length)];
+      }
+
+      // Function to get a random meme from the subreddit
+      async function getRandomMeme(subreddit) {
+        const response = await fetch(
+          `https://www.reddit.com/${subreddit}/random.json`
+        );
+        const data = await response.json();
+        const post = data[0].data.children[0].data;
+        return {
+          url: post.url,
+          permalink: post.permalink,
+          caption: post.title,
+        };
+      }
+
+      // Function to set the src attribute and caption of the meme image
+      async function setMemeImage() {
+        const subreddit = getRandomSubreddit();
+        const { url, permalink, caption } = await getRandomMeme(subreddit);
+        document.getElementById("memeImg").src = url;
+        document.getElementById("caption").textContent = caption;
+      }
+
+      // Set the initial meme image
+      setMemeImage();
+
+      // Add an event listener to the refresh button to set a new meme image when clicked
+      document
+        .getElementById("refreshButton")
+        .addEventListener("click", setMemeImage);
+    </script>
+  </body>
+</html>
