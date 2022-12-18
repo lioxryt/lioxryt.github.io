@@ -1,0 +1,30 @@
+<script src="/js/js-dos.js"></script>
+  <style>
+    html, body, a, canvas, .dosbox-container {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      </style>
+      
+      <style>
+a {
+  color: #556BCB;
+}
+</style>
+
+<canvas id="jsdos"></canvas>
+  <script>
+    Dos(document.getElementById("jsdos"), {
+        wdosboxUrl: "https://lioxryt.github.io/js/wdosbox.js",
+        cycles: "max",
+        autolock: true,
+    }).ready(function (fs, main) {
+      fs.extract("Ssf2t.zip").then(function () {
+        main(["-c", "SF2Turbo.EXE"]).then(function (ci) {
+            window.ci = ci;
+        });
+      });
+    });
+  </script>
+</div>
