@@ -1,0 +1,139 @@
+<html>
+  <head>
+    <title>YouTube Client</title>
+    <style>
+      button.lll {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>YouTube Client</h1>
+    <form id="searchForm">
+      <input type="text" id="searchInput" placeholder="Search YouTube" />
+      <button type="submit">Search</button>
+    </form>
+    <div id="results"></div>
+    <script>
+      // Your YouTube API key
+      const API_KEY = "AIzaSyAEMhOnd-XvznBR-wgMxpQsDoOGpkU6TRw";
+
+      // Function to search for videos on YouTube
+      async function searchVideos(query, pageToken = null) {
+        let url = `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${query}&type=video&key=${API_KEY}`;
+        if (pageToken) {
+          url += `&pageToken=${pageToken}`;
+        }
+        const response = await fetch(url);
+        const data = await response.json();
+        return data;
+      }
+
+      // Function to handle form submission event
+      async function handleFormSubmit(event) {
+        event.preventDefault();
+        const searchInput = document.getElementById("searchInput");
+        const query = searchInput.value;
+        searchInput.value = "";
+        const resultsDiv = document.getElementById("results");
+        resultsDiv.innerHTML = "";
+        let nextPageToken = null;
+
+        const data = await searchVideos(query);
+        const videos = data.items;
+        nextPageToken = data.nextPageToken;
+        for (const video of videos) {
+          const title = video.snippet.title;
+          const thumbnailUrl = video.snippet.thumbnails.default.url;
+          const videoId = video.id.videoId;
+          const videoUrl = `https://www.youtube.com/watch?v=${videoId}`;
+          const resultDiv = document.createElement("div");
+          resultDiv.setAttribute("data-video-id", videoId);
+          resultDiv.innerHTML = `
+            <iframe src="${videoUrl}" width="640" height="360"></iframe>
+            <button class="pause-resume-button">Pause</button>
+            <h3>${title}</h3>
+          `;
+          resultsDiv.appendChild(resultDiv);
+        }
+
+        // Add event listeners to pause-resume buttons
+        const pauseResumeButtons = document.querySelectorAll(
+          ".pause-resume-button"
+        );
+        for (const button of pauseResumeButtons) {
+          button.addEventListener("click", (event) => {
+            const button = event.target;
+            const parentDiv = button.parentNode;
+            const videoId = parentDiv.getAttribute("data-video-id");
+            const iframe = parentDiv.querySelector("iframe");
+            if (iframe.src.includes(videoId)) {
+              iframe.src = "";
+              button.textContent = "Resume";
+            } else {
+              iframe.src = `https://www.youtube.com/embed/${videoId}`;
+              button.textContent = "Pause";
+            }
+          });
+        }
+
+        // Add "Load More" button if there are more search results
+        if (nextPageToken) {
+          const loadMoreButton = document.createElement("button");
+          loadMoreButton.textContent = "Load More";
+          loadMoreButton.addEventListener("click", async (event) => {
+            const data = await searchVideos(query, nextPageToken);
+            const videos = data.items;
+            nextPageToken = data.nextPageToken;
+            for (const video of videos) {
+              const title = video.snippet.title;
+              const thumbnailUrl = video.snippet.thumbnails.default.url;
+              const videoId = video.id.videoId;
+              const videoUrl = `https://www.youtube.com/watch?v=${videoId}`;
+              const resultDiv = document.createElement("div");
+              resultDiv.setAttribute("data-video-id", videoId);
+              resultDiv.innerHTML = `
+                <iframe src="${videoUrl}" width="640" height="360"></iframe>
+                <button class="pause-resume-button">Pause</button>
+                <h3>${title}</h3>
+              `;
+              resultsDiv.appendChild(resultDiv);
+            }
+
+            // Add event listeners to new pause-resume buttons
+            const pauseResumeButtons = document.querySelectorAll(
+              ".pause-resume-button"
+            );
+            for (const button of pauseResumeButtons) {
+              button.addEventListener("click", (event) => {
+                const button = event.target;
+                const parentDiv = button.parentNode;
+                const videoId = parentDiv.getAttribute("data-video-id");
+                const iframe = parentDiv.querySelector("iframe");
+                if (iframe.src.includes(videoId)) {
+                  iframe.src = "";
+                  button.textContent = "Resume";
+                } else {
+                  iframe.src = `https://www.youtube.com/embed/${videoId}`;
+                  button.textContent = "Pause";
+                }
+              });
+            }
+
+            // Remove "Load More" button if there are no more search results
+            if (!nextPageToken) {
+              loadMoreButton.remove();
+            }
+          });
+          resultsDiv.appendChild(loadMoreButton);
+        }
+      }
+
+      // Add event listener
+      const searchForm = document.getElementById("searchForm");
+      searchForm.addEventListener("submit", handleFormSubmit);
+    </script>
+  </body>
+</html>
