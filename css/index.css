@@ -94,7 +94,7 @@ body {
 }
 #fooo {
   position: fixed;
-  left: 3%;
+  left: 50%;
   bottom: -40px;
   transform: translate(-50%, -50%);
   margin: 0 auto;
