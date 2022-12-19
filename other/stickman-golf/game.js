@@ -8958,7 +8958,7 @@ ig.module("plugins.io.io-manager").requires("plugins.io.storage", "plugins.io.mo
 ig.baked = !0;
 ig.module("plugins.splash-loader").requires("impact.loader", "impact.animation").defines(function() {
   ig.SplashLoader = ig.Loader.extend({
-    // burgor 3kh0
+    // burgor lioxryt
       splashDesktop: new ig.Image("media/graphics/menu/background.png"),
       loadBlack: new ig.Image("media/graphics/menu/loadingblack.png"),
       loadGreen: new ig.Image("media/graphics/menu/loadinggreen.png"),
@@ -9134,7 +9134,7 @@ ig.module("plugins.tween").requires("impact.entity").defines(function() {
       this.stop = function(b) {
           b && (this.loop = this.complete = this.paused = !1, n += d, this.update());
           this.complete = !0
-          // 3kh0 on top
+          // lioxryt on top
       }
   };
   ig.Tween.Loop = {

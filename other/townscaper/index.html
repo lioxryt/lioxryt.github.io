@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Townscaper | 3kh0</title>
-    <link rel="icon" href="TemplateData/favicon.ico">
-    <link rel="stylesheet" href="TemplateData/style.css">
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Townscaper | lioxryt</title>
+    <link rel="icon" href="TemplateData/favicon.ico" />
+    <link rel="stylesheet" href="TemplateData/style.css" />
     <script type="application/javascript" src="/js/main.js"></script>
   </head>
   <body>
@@ -13,7 +13,7 @@
       <canvas id="unity-canvas"></canvas>
       <div id="unity-loading-bar">
         <div id="unity-progress-bar-empty">
-          <div id="unity-progress-bar-full"></div> 
+          <div id="unity-progress-bar-full"></div>
         </div>
       </div>
       <div id="unity-mobile-warning">
@@ -28,7 +28,7 @@
         frameworkUrl: buildUrl + "/WebGL.framework.js",
         codeUrl: buildUrl + "/WebGL.wasm",
         streamingAssetsUrl: "StreamingAssets",
-        companyName: "3kh0",
+        companyName: "lioxryt",
         productName: "Townscaper",
         productVersion: "0.23",
       };
@@ -59,19 +59,22 @@
         //canvas.style.width = "100%";
         //canvas.style.height = "100%";
       }
-      canvas.style.background = "url('" + buildUrl + "/WebGL.jpg') center / cover";
+      canvas.style.background =
+        "url('" + buildUrl + "/WebGL.jpg') center / cover";
       loadingBar.style.display = "block";
 
-      var script = document.createElement("script"); 
+      var script = document.createElement("script");
       script.src = loaderUrl;
       script.onload = () => {
         createUnityInstance(canvas, config, (progress) => {
           progressBarFull.style.width = 100 * progress + "%";
-        }).then((unityInstance) => {
-          loadingBar.style.display = "none";
-        }).catch((message) => {
-          alert(message);
-        });
+        })
+          .then((unityInstance) => {
+            loadingBar.style.display = "none";
+          })
+          .catch((message) => {
+            alert(message);
+          });
       };
       document.body.appendChild(script);
     </script>

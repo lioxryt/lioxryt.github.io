@@ -6860,7 +6860,7 @@ var YaGames;
             }
         }
         if (((YaGames.deviceInfo = z), window.YaGames)) {
-            const e = 'YaGames is already defined. Please, check double <script src="https://3kh0.github.io/projects/vex6/assets/js/v2"> on the page.';
+            const e = 'YaGames is already defined. Please, check double <script src="https://lioxryt.github.io/projects/vex6/assets/js/v2"> on the page.';
             (0, i.mv)() && window.parent.postMessage({ source: "YandexGamesSDK", type: "alert", message: e }, "*"), console.error(e);
         } else {
             window.parent !== window &&

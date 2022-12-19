@@ -5,7 +5,7 @@
   "id": "/",
   "background_color": "#6aaa64",
   "theme_color": "#6aaa64",
-  "description": "A daily, hourly, INFINITE word game made by 3kh0. Made for 3kh0.github.io",
+  "description": "A daily, hourly, INFINITE word game",
   "display": "standalone",
   "icons": [
     {
