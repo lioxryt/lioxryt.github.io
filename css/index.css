@@ -65,6 +65,17 @@ body {
   font-size: 16px;
   border-radius: 100px;
 }
+.lay {
+  background-color: #7a0072;
+  border: none;
+  color: rgb(255, 255, 255);
+  padding: 10px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 100px;
+}
 .book {
   background-color: #282828;
   border: none;
