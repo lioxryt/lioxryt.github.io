@@ -1,11 +1,26 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-us">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-XXGG6SJL6H"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-XXGG6SJL6H");
+    </script>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Super Mario 64 on the Web!</title>
     <style>
-      body, html{
+      body,
+      html {
         margin: 0;
         padding: 0;
         width: 100vw;
@@ -35,59 +50,53 @@
         display: flex;
         align-items: center;
       }
-      #controller, #dmca {
+      #controller,
+      #dmca {
         padding-left: 4em;
       }
     </style>
   </head>
   <body>
-
     <div id="container">
       <canvas class="emscripten" id="canvas"></canvas>
     </div>
-    <script type='text/javascript'>
+    <script type="text/javascript">
       var Module = {
         preRun: [],
         postRun: [],
-        print: (function() {
-          return function(text) {
-            if (arguments.length > 1) text = Array.prototype.slice.call(arguments).join(' ');
+        print: (function () {
+          return function (text) {
+            if (arguments.length > 1)
+              text = Array.prototype.slice.call(arguments).join(" ");
             console.log(text);
           };
         })(),
-        printErr: function(text) {
+        printErr: function (text) {
           if (arguments.length > 1)
-            text = Array.prototype.slice.call(arguments).join(' ');
+            text = Array.prototype.slice.call(arguments).join(" ");
           console.error(text);
         },
-        canvas: (function() {
-          var canvas = document.getElementById('canvas');
+        canvas: (function () {
+          var canvas = document.getElementById("canvas");
           canvas.width = window.innerWidth; // Todo: how to do this from c++
           canvas.height = window.innerHeight;
-          canvas.addEventListener("webglcontextlost", function(e) {
-            alert('WebGL context lost. You will need to reload the page.');
-            e.preventDefault();
-          }, false);
+          canvas.addEventListener(
+            "webglcontextlost",
+            function (e) {
+              alert("WebGL context lost. You will need to reload the page.");
+              e.preventDefault();
+            },
+            false
+          );
           return canvas;
         })(),
-        setStatus: function(text) {
-        }
+        setStatus: function (text) {},
       };
     </script>
     <script async type="text/javascript" src="sm64.us.f3dex2e.js"></script>
-    <script>
-    </script>
-    
-    ;Movement: Arrow Keys
-    ;A: X
-    ;B: C
-    ;L: Q
-    ;Z: Space
-    ;Start: Enter
-    ;C-stick: WASD
-    
+    <script></script>
+
+    ;Movement: Arrow Keys ;A: X ;B: C ;L: Q ;Z: Space ;Start: Enter ;C-stick:
+    WASD
   </body>
 </html>
-
-
-

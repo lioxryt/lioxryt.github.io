@@ -2,13 +2,42 @@
 
 <html data-ruffle-optout>
   <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-XXGG6SJL6H"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-XXGG6SJL6H");
+    </script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Ruffle Web | lioxryt</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato" />
-    <link rel="icon" href="https://ruffle.rs/assets/favicon-32.png" sizes="32x32" />
-    <link rel="icon" href="https://ruffle.rs/assets/favicon-64.png" sizes="64x64" />
-    <link rel="icon" href="https://ruffle.rs/assets/favicon-180.png" sizes="180x180" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Lato"
+    />
+    <link
+      rel="icon"
+      href="https://ruffle.rs/assets/favicon-32.png"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      href="https://ruffle.rs/assets/favicon-64.png"
+      sizes="64x64"
+    />
+    <link
+      rel="icon"
+      href="https://ruffle.rs/assets/favicon-180.png"
+      sizes="180x180"
+    />
   </head>
   <body>
     <div id="nav">
@@ -20,7 +49,12 @@
       <div id="file-picker">
         <div id="local-file-container">
           <span id="local-file-static-label">Local SWF:</span>
-          <input type="file" accept=".swf,.spl" id="local-file" aria-describedby="local-file-static-label" />
+          <input
+            type="file"
+            accept=".swf,.spl"
+            id="local-file"
+            aria-describedby="local-file-static-label"
+          />
           <label for="local-file" id="local-file-label">Select File</label>
           <span id="local-file-name">No file selected.</span>
         </div>
@@ -30,7 +64,9 @@
             <optgroup id="anim-optgroup" label="Animations"></optgroup>
             <optgroup id="games-optgroup" label="Games"></optgroup>
           </select>
-          <div id="author-container" class="hidden"><span>Author: </span><a href="#" target="_blank" id="author"></a></div>
+          <div id="author-container" class="hidden">
+            <span>Author: </span><a href="#" target="_blank" id="author"></a>
+          </div>
         </div>
         &emsp;
         <svg width="20px" id="open-modal" viewBox="0 0 416.979 416.979">
@@ -50,7 +86,9 @@
         <table id="metadata">
           <tr>
             <td>Uncompressed Length</td>
-            <td><span class="metadata" id="uncompressedLength">Loading</span></td>
+            <td>
+              <span class="metadata" id="uncompressedLength">Loading</span>
+            </td>
           </tr>
           <tr>
             <td>SWF Version</td>
@@ -82,7 +120,15 @@
           </tr>
           <tr>
             <td>SWF Background Color</td>
-            <td><input class="metadata" type="color" id="backgroundColor" disabled value="#FFFFFF" /></td>
+            <td>
+              <input
+                class="metadata"
+                type="color"
+                id="backgroundColor"
+                disabled
+                value="#FFFFFF"
+              />
+            </td>
           </tr>
         </table>
       </div>

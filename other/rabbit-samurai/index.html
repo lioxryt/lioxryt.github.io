@@ -1,13 +1,30 @@
 <!DOCTYPE html>
 <html manifest="offline.appcache">
   <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-XXGG6SJL6H"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-XXGG6SJL6H");
+    </script>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>Rabbit Samurai</title>
 
     <link rel="manifest" href="appmanifest.json" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui"
+    />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <link rel="apple-touch-icon" sizes="256x256" href="icon-256.png" />
@@ -50,9 +67,14 @@
     <div id="c2canvasdiv">
       <canvas id="c2canvas" width="640" height="1000">
         <h1>
-          Your browser does not appear to support HTML5. Try upgrading your browser to the latest version. <a href="http://www.whatbrowser.org">What is a browser?</a> <br />
+          Your browser does not appear to support HTML5. Try upgrading your
+          browser to the latest version.
+          <a href="http://www.whatbrowser.org">What is a browser?</a> <br />
           <br />
-          <a href="http://www.microsoft.com/windows/internet-explorer/default.aspx">Microsoft Internet Explorer</a><br />
+          <a
+            href="http://www.microsoft.com/windows/internet-explorer/default.aspx"
+            >Microsoft Internet Explorer</a
+          ><br />
           <a href="http://www.mozilla.com/firefox/">Mozilla Firefox</a><br />
           <a href="http://www.google.com/chrome/">Google Chrome</a><br />
           <a href="http://www.apple.com/safari/download/">Apple Safari</a>
@@ -60,10 +82,19 @@
       </canvas>
     </div>
     <script src="/js/main.js"></script>
-    <script src="jquery-2.1.1.min.js" type="b045aebe46709cd40b10bed2-text/javascript"></script>
-    <script src="pathfind.js" type="b045aebe46709cd40b10bed2-text/javascript"></script>
+    <script
+      src="jquery-2.1.1.min.js"
+      type="b045aebe46709cd40b10bed2-text/javascript"
+    ></script>
+    <script
+      src="pathfind.js"
+      type="b045aebe46709cd40b10bed2-text/javascript"
+    ></script>
 
-    <script src="c2runtime.js" type="b045aebe46709cd40b10bed2-text/javascript"></script>
+    <script
+      src="c2runtime.js"
+      type="b045aebe46709cd40b10bed2-text/javascript"
+    ></script>
     <script type="b045aebe46709cd40b10bed2-text/javascript">
       // Start the Construct 2 project running on window load.
       jQuery(document).ready(function ()
@@ -135,6 +166,10 @@
       	}
       };
     </script>
-    <script src="rocket-loader.min.js" data-cf-settings="b045aebe46709cd40b10bed2-|49" defer=""></script>
+    <script
+      src="rocket-loader.min.js"
+      data-cf-settings="b045aebe46709cd40b10bed2-|49"
+      defer=""
+    ></script>
   </body>
 </html>

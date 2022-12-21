@@ -1,13 +1,38 @@
 <head>
-    <link rel="stylesheet" href="TemplateData/style.css">
-    <script src="TemplateData/UnityProgress.js"></script>
-    <script src="TemplateData/unityloader41.js"></script>
-    <script>
-        var gameInstance = UnityLoader.instantiate("gameContainer", "Build/slope.json", { onProgress: UnityProgress, Module: { onRuntimeInitialized: function() { UnityProgress(gameInstance, "complete") } } });
-    </script>
+  <!-- Google tag (gtag.js) -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-XXGG6SJL6H"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-XXGG6SJL6H");
+  </script>
+  <link rel="stylesheet" href="TemplateData/style.css" />
+  <script src="TemplateData/UnityProgress.js"></script>
+  <script src="TemplateData/unityloader41.js"></script>
+  <script>
+    var gameInstance = UnityLoader.instantiate(
+      "gameContainer",
+      "Build/slope.json",
+      {
+        onProgress: UnityProgress,
+        Module: {
+          onRuntimeInitialized: function () {
+            UnityProgress(gameInstance, "complete");
+          },
+        },
+      }
+    );
+  </script>
 </head>
-<body style="margin: 0; overflow: hidden;">
-    <div class="webgl-content">
-        <div id="gameContainer" style="width: 100%; height: 100%; margin: 0;"></div>
-    </div>
+<body style="margin: 0; overflow: hidden">
+  <div class="webgl-content">
+    <div id="gameContainer" style="width: 100%; height: 100%; margin: 0"></div>
+  </div>
 </body>

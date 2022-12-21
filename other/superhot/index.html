@@ -1,16 +1,34 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-XXGG6SJL6H"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-XXGG6SJL6H");
+    </script>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="hot.jpg">
+    <link rel="icon" href="hot.jpg" />
     <title>SUPERHOT</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body style="margin: 0;">
-    <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" style="width: 100%; height: 100%;"></canvas>
+  <body style="margin: 0">
+    <canvas
+      class="emscripten"
+      id="canvas"
+      oncontextmenu="event.preventDefault()"
+      style="width: 100%; height: 100%"
+    ></canvas>
     <script type="text/javascript">
       var Module = {
         TOTAL_MEMORY: 268435456,

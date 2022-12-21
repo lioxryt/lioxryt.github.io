@@ -1,22 +1,41 @@
 <!DOCTYPE html>
 <html lang="en-us">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-XXGG6SJL6H"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      gtag("config", "G-XXGG6SJL6H");
+    </script>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>SWF Runner</title>
     <script src="Build/UnityLoader.js"></script>
     <style>
-    body {
-      background-color: #000000;
-    }
+      body {
+        background-color: #000000;
+      }
     </style>
     <script>
-      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/GetawayShootoutTwoPlayerGamesOrg.json", {width: 800, height: 600});
+      var gameInstance = UnityLoader.instantiate(
+        "gameContainer",
+        "Build/GetawayShootoutTwoPlayerGamesOrg.json",
+        { width: 800, height: 600 }
+      );
     </script>
   </head>
   <body>
-    <div id="gameContainer" style="width: 100%; height: 100%; margin: auto"></div>
+    <div
+      id="gameContainer"
+      style="width: 100%; height: 100%; margin: auto"
+    ></div>
   </body>
-
 </html>
