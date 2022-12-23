@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="yohoho.js" async=""></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Yohoho.io" />
+
+    <meta
+      name="viewport"
+      content="minimal-ui, user-scalable=no, initial-scale=1, maximum-scale=1, width=device-width"
+    />
+    <title>YoHoHo | lioxryt</title>
+
+    <meta property="og:image" content="img/banner1200x630.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <meta property="og:type" content="website" />
+
+    <script
+      src="https://cdn.ravenjs.com/3.26.2/raven.min.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="icon" href="/images/icon.png" />
+    <meta name="msapplication-TileColor" content="#ffc40d" />
+    <meta name="msapplication-config" content="favicon/browserconfig.xml" />
+
+    <link rel="stylesheet" type="text/css" href="/other/yohohoio/yohoho.css" />
+    <script>
+      if (document.location.protocol === "http:") {
+        if (document.referrer && document.location.search.length == 0) {
+          var parts = document.referrer.split("/")[2].split(".");
+          var ref =
+            parts[parts.length - 2] == "co" || parts[parts.length - 2] == "com"
+              ? parts.slice(-3).join(".")
+              : parts.slice(-2).join(".");
+          document.location.href =
+            document.location.href.replace("http:", "https:") +
+            "?ref=" +
+            encodeURIComponent(ref);
+        } else
+          document.location.href = document.location.href.replace(
+            "http:",
+            "https:"
+          );
+      }
+    </script>
+  </head>
+
+  <body>
+    <!-- FACEBOOK SDK -->
+    <div id="fb-root"></div>
+    <script>
+      window.fbAsyncInit = function () {
+        FB.init({
+          appId: "484049782371485",
+          autoLogAppEvents: true,
+          xfbml: true,
+          version: "v2.11",
+        });
+        FB.AppEvents.logPageView();
+        onFacebookLogin();
+      };
+
+      (function (d, s, id) {
+        var js,
+          fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {
+          return;
+        }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      })(document, "script", "facebook-jssdk");
+    </script>
+
+    <div id="homepage">
+      <div class="background">
+        <div class="fade">
+          <div class="bottom-links">
+            <div>
+              <a href="/projects.html"> Home </a>
+            </div>
+          </div>
+          <div class="bottom-bar">
+            <div class="io-games-bar" id="portal-button">
+              <a
+                class="button back"
+                title="Play more IO Games"
+                href="https://www.crazygames.com/c/io"
+                target="_blank"
+                >More IO Games</a
+              >
+            </div>
+          </div>
+          <div class="logo">
+            <h1 class="title">
+              <div>
+                lioxryt's YoHoHo
+                <div id="flag"></div>
+              </div>
+            </h1>
+            <h2 class="subtitle">Pirate Battle Royale</h2>
+            <div class="subtitle2">
+              Ahoy, matey! Ye have been marooned on a tropical island with other
+              pirates...<br />Only one will survive and plunder the booty. Give
+              no quarter!
+            </div>
+          </div>
+          <div id="homepage-content" class="content">
+            <div class="left-box">
+              <div class="inside">
+                <div class="box">
+                  <div class="title">How to Play</div>
+                  <div>Collect doubloons to get bigger</div>
+                  <div>Kill other players to collect their booty</div>
+                  <div class="title2">Controls</div>
+                  <div id="desktop-controls">
+                    <div>Mouse: move with your cursor, click to attack</div>
+                    <div>
+                      Keyboard: move with WASD or arrow keys, SPACE to attack
+                    </div>
+                  </div>
+                  <div id="mobile-controls">
+                    Drag with one finger, tap with second finger to attack
+                  </div>
+                  <div class="bolder">
+                    Keep attack pressed longer to focus and make a special dash
+                    attack
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="middle-box">
+              <div class="inside">
+                <div id="homepage-loading">
+                  <div class="spinner black">
+                    <div></div>
+                  </div>
+                  Loading...
+                </div>
+                <div id="homepage-loaded">
+                  <div class="info">
+                    <div class="level">
+                      Island:<br /><span id="homepage-league">Tortuga</span>
+                    </div>
+                    <div class="booty">
+                      <span id="homepage-booty">0</span>
+                      <img src="img/coins_m.png" />
+                    </div>
+                  </div>
+
+                  <input
+                    type="text"
+                    id="username"
+                    placeholder="Enter your pirate name..."
+                    maxlength="16"
+                  />
+
+                  <div class="buttons">
+                    <div>
+                      <button
+                        id="play-button"
+                        type="button"
+                        class="red button animated pulse"
+                        onclick="yohoho.clickPlay();"
+                      >
+                        Play
+                      </button>
+                      <div
+                        id="homepage-rewarded-button"
+                        class="button green animated pulse"
+                      >
+                        <span class="video"><img src="img/video.svg" /></span
+                        ><span class="text">Start with<br />x2 health</span
+                        ><span class="notice">AD</span>
+                      </div>
+                    </div>
+                    <div>
+                      <button
+                        id="play-spinner"
+                        type="button"
+                        class="red button"
+                        disabled=""
+                      >
+                        <div class="spinner">
+                          <div></div>
+                        </div>
+                      </button>
+                    </div>
+                  </div>
+
+                  <div
+                    id="skin-block"
+                    class="skin"
+                    onclick="yohoho.chooseSkin();"
+                  >
+                    <div id="skin-homepage-canvas"></div>
+                    <div>
+                      <button
+                        id="skin-button"
+                        type="button"
+                        class="black button"
+                      >
+                        Characters<span id="new-skin-avail" class="new"
+                          ><span class="pulse-ring"></span
+                          ><span class="text">!</span></span
+                        >
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="ipad-help">
+                    <div class="title">Controls</div>
+                    <div>
+                      Drag with one finger, tap with second finger to attack
+                    </div>
+                    <div class="bolder">
+                      Keep second finger pressed longer to focus and make a
+                      special dash attack
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="right-box">
+              <div class="inside">
+                <div id="banner-on-homepage" class="right-pub">
+                  <div id="yohoho-io_300x250"></div>
+                </div>
+              </div>
+            </div>
+            <div class="scoreboard">
+              <table>
+                <tbody>
+                  <tr>
+                    <th>Records</th>
+                    <th>Last</th>
+                    <th>Best</th>
+                    <th>Total</th>
+                  </tr>
+                  <tr>
+                    <td>Kills</td>
+                    <td id="last-kills">0</td>
+                    <td id="best-kills">0</td>
+                    <td id="total-kills">0</td>
+                  </tr>
+                  <tr>
+                    <td>Loot</td>
+                    <td id="last-score">0</td>
+                    <td id="best-score">0</td>
+                    <td id="total-score">0</td>
+                  </tr>
+                  <tr>
+                    <td>Time survived</td>
+                    <td id="last-game-time">0s</td>
+                    <td id="best-game-time">0s</td>
+                    <td id="total-game-time">0s</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="wins">Total Wins: <span id="total-wins">0</span></div>
+            </div>
+            <div id="no-webgl-popup">
+              Your browser does not support WebGL, the game will suffer display
+              and performance issues.
+              <div
+                class="close"
+                onclick="document.getElementById('no-webgl-popup').style.display='none';"
+              >
+                ×
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="skin-popup">
+      <div class="fade"></div>
+      <div class="box">
+        <div id="skin-popup-label" class="label">
+          <span class="booty"
+            ><span id="skin-popup-booty">12345</span>
+            <img src="img/coins_m.png" /></span
+          ><span class="pickyer">Pick yer </span
+          ><span
+            id="skin-button-char"
+            class="button red"
+            onclick="yohoho.switchSkinCategory(0);"
+            >character</span
+          >
+          <span
+            id="skin-button-pet"
+            class="button black"
+            onclick="yohoho.switchSkinCategory(1);"
+            >pet<span id="pet-avail" class="new"
+              ><span class="pulse-ring"></span><span class="text">!</span></span
+            ></span
+          >
+        </div>
+        <div id="arrow-up" onclick="yohoho.skinPage(-1);">
+          <div></div>
+        </div>
+        <div id="skin-list" class="skin-list"></div>
+        <div id="arrow-down" onclick="yohoho.skinPage(1);">
+          <div></div>
+        </div>
+        <div id="pet-block">
+          <div class="upgrade">
+            Your pet regenerates: <span id="pet-level">10 Health Points/s</span>
+            <div
+              id="pet-upgrade-button"
+              class="button"
+              onclick="yohoho.upgradePet();"
+            >
+              <span>Upgrade for 12345 </span><img src="img/coins_m.png" />
+            </div>
+          </div>
+          <div id="pet-list" class="pet-list"></div>
+        </div>
+        <div class="close" onclick="yohoho.closeSkinSelector()">
+          <img src="img/close.svg" />
+        </div>
+      </div>
+    </div>
+    <div id="end-popup" class="animated fadeIn">
+      <div class="fade"></div>
+      <div class="box">
+        <div id="end-quote" class="quote">"Dead men tell no tales..."</div>
+        <div id="end-result" class="result">
+          Ye have been killed by <span class="killer">someone</span>
+        </div>
+        <div class="result2">
+          <span
+            >Ye survived <span id="end-time" class="time">1 min 13s</span></span
+          ><span> and placed <span id="end-rank" class="rank">#32</span></span>
+        </div>
+        <div class="result3">
+          <span
+            >Ye killed
+            <span id="end-kills" class="kills">x</span> scallywag(s)</span
+          ><span>
+            and plundered <span id="end-coins" class="earned-coins">15</span
+            ><img src="img/coins_m.png"
+          /></span>
+          <div id="end-rewarded-button" class="button green">
+            <span class="video"><img src="img/video.svg" /></span
+            ><span class="text">Gain x2</span><span class="notice">AD</span>
+          </div>
+        </div>
+        <div class="booty">
+          <img src="img/chest.png" />Yer booty is now
+          <span id="end-booty-coins">1234</span> <img src="img/coins_m.png" />
+        </div>
+        <div id="end-xp-line" class="xp-line">
+          <div class="title">Level</div>
+          <div class="line">
+            <span class="league" id="end-current-league">Silver</span>
+            <div id="end-xp-bar">
+              <div class="bar" id="end-xp-bar-value"></div>
+              <div class="border"></div>
+            </div>
+            <span class="league" id="end-next-league">Gold</span>
+          </div>
+        </div>
+
+        <div
+          id="continue-button"
+          class="red button"
+          onclick="yohoho.backToHomepage();"
+        >
+          Continue
+        </div>
+        <div id="banner-on-end-popup">
+          <div id="yohoho-io_970x250"></div>
+        </div>
+      </div>
+    </div>
+    <div id="ios-fs-popup">
+      <div
+        class="fade"
+        onclick="javascript: document.getElementById('ios-fs-popup').style.display='none';"
+      ></div>
+      <div class="box">
+        <div class="close">
+          <div
+            onclick="javascript: document.getElementById('ios-fs-popup').style.display='none';"
+          >
+            Close
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      window.doorbellOptions = {
+        id: "10008",
+        appKey:
+          "NKwnF6hM33l8aH27ldPD8awN75ylfr5Ufn3xTYfHu21cWumvYTB6hT2ABE6oTA6H",
+      };
+      (function (w, d, t) {
+        var hasLoaded = false;
+
+        function l() {
+          if (hasLoaded) {
+            return;
+          }
+          hasLoaded = true;
+          window.doorbellOptions.windowLoaded = true;
+          var g = d.createElement(t);
+          g.id = "doorbellScript";
+          g.type = "text/javascript";
+          g.async = true;
+          g.src =
+            "https://embed.doorbell.io/button/" +
+            window.doorbellOptions["id"] +
+            "?t=" +
+            new Date().getTime();
+          (
+            d.getElementsByTagName("head")[0] ||
+            d.getElementsByTagName("body")[0]
+          ).appendChild(g);
+        }
+        if (w.attachEvent) {
+          w.attachEvent("onload", l);
+        } else if (w.addEventListener) {
+          w.addEventListener("load", l, false);
+        } else {
+          l();
+        }
+        if (d.readyState == "complete") {
+          l();
+        }
+      })(window, document, "script");
+    </script>
+
+    <div id="preroll"></div>
+  </body>
+</html>
