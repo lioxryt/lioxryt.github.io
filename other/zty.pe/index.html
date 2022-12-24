@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXGG6SJL6H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XXGG6SJL6H');
+</script>
+    <title>ZType – Typing Game - Type to Shoot | lioxryt</title>
+    <link rel="shortcut icon" href="media/favicon.png" type="image/png" />
+    <link rel="icon" href="media/favicon.png" type="image/png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@phoboslab" />
+    <meta property="og:url" content="https://zty.pe/" />
+    <meta property="og:title" content="ZType – Type to Shoot" />
+    <meta
+      property="og:description"
+      content="A typing game that's actually fun to play."
+    />
+    <meta property="og:image" content="https://zty.pe/media/ztype-card.png" />
+
+    <style type="text/css">
+      html,
+      body {
+        background-color: #000;
+        background-image: url(media/background/page.png);
+        color: #555;
+        font-family: helvetica, arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        font-size: 10pt;
+      }
+      a {
+        color: #777;
+        text-decoration: none;
+      }
+      a:hover {
+        color: #ccc;
+      }
+      .ztype-stats-action {
+        margin-right: 32px;
+        font-size: 14px;
+      }
+      .ztype-stats-action img {
+        vertical-align: middle;
+        margin-right: 4px;
+      }
+      .ztype-stats-action:hover,
+      #ztype-stats-close:hover {
+        cursor: pointer;
+        color: #4dfed2;
+      }
+      #ztype-stats-canvas,
+      #ztype-stats-content {
+        width: 100%;
+        height: 100%;
+      }
+      #ztype-stats {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        border: 0;
+        z-index: 1000005;
+        background-color: #fff;
+        display: none;
+        width: 2px;
+        transition: width 0.3s ease-in-out;
+      }
+      #ztype-stats.expanded {
+        transition: width 0.3s ease-in-out;
+        width: 98%;
+      }
+      #ztype-stats-close {
+        position: absolute;
+        right: 0;
+        top: 0;
+        font-size: 48px;
+        width: 64px;
+        text-align: center;
+        height: 64px;
+      }
+      #ztype-stats-foot {
+        padding: 16px 32px 0 32px;
+      }
+
+      #ztype-game-canvas {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        border: 0;
+        z-index: 1000002;
+        box-shadow: 0 0 30px #000;
+      }
+      #ztype-byline {
+        font-size: 12px;
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        padding: 8px;
+      }
+      #ztype-gsense {
+        position: absolute;
+        width: 300px;
+        height: 600px;
+        z-index: 1000001;
+        left: 32px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+      }
+      #ztype-gsense-ins,
+      #nfn-soundtrack-b {
+        width: 300px;
+        height: 600px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+      }
+      #nfn-soundtrack-b {
+        display: none;
+      }
+      #ztype-gsense-close {
+        position: absolute;
+        display: none;
+        bottom: 0;
+        width: 100%;
+        background-color: #555;
+        padding-top: 16px;
+        height: 48px;
+        color: #4dfed2;
+        font-size: 24px;
+        text-align: center;
+      }
+      #ztype-gsense.ztype-gsense-full {
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 720px;
+        background-color: #222;
+        z-index: 1000006;
+      }
+      #ztype-gsense.ztype-gsense-full #ztype-gsense-close {
+        display: block;
+      }
+
+      #ztype-sp {
+        color: #fff;
+        font-size: 11.5pt;
+        width: 720px;
+        position: absolute;
+        margin: auto;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        height: 920px;
+        line-height: 1.4;
+      }
+      #ztype-sp-text {
+        position: absolute;
+        left: 120px;
+        width: 480px;
+      }
+      #ztype-sp-text a {
+        color: #3f93d8;
+        text-decoration: underline;
+      }
+      #ztype-sp-text a:hover {
+        color: #fff;
+      }
+      #ztype-sp-logo {
+        position: absolute;
+        right: 0;
+        top: 18px;
+        width: 108px;
+        height: 24px;
+      }
+
+      @media (max-height: 920px) {
+        body.ztype-desktop #ztype-game-canvas {
+          max-height: 100vh;
+        }
+
+        #ztype-sp {
+          position: absolute;
+          width: 280px;
+          height: 300px;
+          z-index: 0;
+          left: auto;
+          right: 32px;
+          top: 32px;
+          bottom: auto;
+          margin: auto;
+        }
+
+        #ztype-sp-text {
+          position: relative;
+          left: auto;
+          width: auto;
+        }
+
+        #ztype-sp-logo {
+          position: relative;
+        }
+      }
+
+      body.mobile #ztype-byline {
+        display: none;
+      }
+      body.mobile #ztype-gsense {
+        display: none;
+      }
+    </style>
+    <script type="text/javascript" src="ztype.min.js" charset="UTF-8"></script>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+  </head>
+  <body>
+      <div id="nfn-soundtrack-b">
+        <a
+          href="https://nofatenetmusic.bandcamp.com/album/the-phoboslab-works"
+          target="_blank"
+        >
+          <img src="media/nfn-phoboslab-works-300x600.png" />
+        </a>
+      </div>
+      <a
+        id="ztype-gsense-close"
+        href="index.html#"
+        onclick="void(document.getElementById('ztype-gsense').style.display='none');"
+        >Play ZType</a
+      >
+    </div>
+    <div id="ztype-stats">
+      <div id="ztype-stats-content">
+        <div id="ztype-stats-close">&#215;</div>
+        <div><canvas id="ztype-stats-canvas"></canvas></div>
+        <div id="ztype-stats-foot">
+          <span class="ztype-stats-action" id="ztype-stats-share-facebook"
+            ><img src="media/ui/fb-button.png" /> share on facebook</span
+          >
+          <span class="ztype-stats-action" id="ztype-stats-share-twitter"
+            ><img src="media/ui/twitter-button.png" /> share on twitter</span
+          >
+        </div>
+      </div>
+    </div>
+
+    <canvas id="ztype-game-canvas"></canvas>
+    <div id="ztype-byline">
+      ZType (c) –
+      <a href="http://phoboslab.org/" target="_blank">phoboslab.org</a>
+      –
+      <a href="mailto:dominic.szablewski@gmail.com">contact</a>
+      –
+      <a href="http://nofatenetmusic.bandcamp.com/album/the-phoboslab-works"
+        >soundtrack</a
+      >
+    </div>
+
+    <script>
+      (function (i, s, o, g, r, a, m) {
+        i["GoogleAnalyticsObject"] = r;
+        (i[r] =
+          i[r] ||
+          function () {
+            (i[r].q = i[r].q || []).push(arguments);
+          }),
+          (i[r].l = 1 * new Date());
+        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+      })(
+        window,
+        document,
+        "script",
+        "//www.google-analytics.com/analytics.js",
+        "ga"
+      );
+
+      ga("create", "UA-571256-19", "auto");
+      ga("send", "pageview");
+
+      var nfnb = false;
+      setInterval(function () {
+        nfnb = !nfnb;
+        if (nfnb) {
+          document.getElementById("nfn-soundtrack-b").style.display = "block";
+          document.getElementById("ztype-gsense-ins").style.display = "none";
+        } else {
+          document.getElementById("nfn-soundtrack-b").style.display = "none";
+          document.getElementById("ztype-gsense-ins").style.display = "block";
+        }
+      }, 60 * 1000);
+    </script>
+  </body>
+</html>
