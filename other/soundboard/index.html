@@ -1,49 +1,161 @@
 <!DOCTYPE html>
- 
-<head>
-     <!-- Google tag (gtag.js) -->
-     <script
-     async
-     src="https://www.googletagmanager.com/gtag/js?id=G-XXGG6SJL6H"
-   ></script>
-   <script>
-     window.dataLayer = window.dataLayer || [];
-     function gtag() {
-       dataLayer.push(arguments);
-     }
-     gtag("js", new Date());
-
-     gtag("config", "G-XXGG6SJL6H");
-   </script>
-	<title>[Title]</title>
-
-	<script type="text/javascript">
-		// Put code here or set the src attribute
-	</script>
- 
-	<style>
-        .log {
-            width: 40; 
-            height: 50;
-        }
-        button {
-            padding: 5px;
-            background: #d95753;
-        }
-    </style>
- </script>
-</head>
- 
-<body>
-	<audio id="omg" src="sounds/omg.ogg"></audio> 
+<html>
+  <head>
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Soundboard | lioxryt</title>
+  </head>
+  <body>
+    <h1>Soundboard</h1>
+    <h2>
+      Just click a button<br />
+      <a href="https://forms.gle/Afv8gmvbDm4cEUqr5"
+        >Click here to recommend a sound</a
+      >
+    </h2>
     <script>
-        function omgg(){
-            var omg = document.getElementById('omg')
-            omg.load();
-        }
+      function playAll() {
+        const els = document.getElementsByTagName("AUDIO");
+        Array.from(els).forEach((el) => {
+          el.play();
+        });
+      }
+      function stopAll() {
+        const els = document.getElementsByTagName("AUDIO");
+        Array.from(els).forEach((el) => {
+          el.load();
+        });
+      }
     </script>
-    <button onclick="omg"><img src="img/omg.jpg" width="80" 
-        height="100" /></button>
- 
-</body>
+    <div class="control">
+      Audio Controls
+      <button class="woah" onclick="playAll()">Provoke Chaos</button>
+      <button class="woah" onclick="stopAll()">Stop Everything</button>
+    </div>
+
+    <div class="flex-container">
+      <div>
+        <div class="sound">
+          <div
+            class="circle small-button-background"
+            style="background-color: #339900"
+          ></div>
+          <audio
+            class="sound"
+            id="fart"
+            src="sounds/fart.mp3"
+            preload="auto"
+          ></audio>
+          <button
+            class="small-button"
+            onclick="document.getElementById('fart').play();"
+          ></button>
+          <div class="small-button-shadow"></div>
+          <p class="name">
+            <button
+              class="download"
+              onclick="window.location.href='sounds/fart.mp3'"
+            >
+              Download</button
+            ><br />
+            Fart
+          </p>
+        </div>
+      </div>
+      <div>
+        <div class="sound">
+          <div
+            class="circle small-button-background"
+            style="background-color: #694729"
+          ></div>
+          <audio
+            id="fart-with-reverb"
+            src="sounds/fart-with-reverb.mp3"
+            preload="auto"
+          ></audio>
+          <button
+            class="small-button"
+            onclick="document.getElementById('fart-with-reverb').play();"
+          ></button>
+          <div class="small-button-shadow"></div>
+          <p class="name">
+            <button
+              onclick="window.location.href='sounds/fart-with-reverb.mp3'"
+            >
+              Download</button
+            ><br />
+            Fart with reverb<br />
+          </p>
+        </div>
+      </div>
+      <div>
+        <div class="sound">
+          <div
+            class="circle small-button-background"
+            style="background-color: #70492f"
+          ></div>
+          <audio
+            id="sloppy-fart"
+            src="sounds/sloppy-fart.mp3"
+            preload="auto"
+          ></audio>
+          <button
+            class="small-button"
+            onclick="document.getElementById('sloppy-fart').play();"
+          ></button>
+          <div class="small-button-shadow"></div>
+          <p class="name">
+            <button onclick="window.location.href='sounds/sloppy-fart.mp3'">
+              Download</button
+            ><br />
+            Sloppy Fart<br />
+          </p>
+        </div>
+      </div>
+      <div>
+        <div class="sound">
+          <div
+            class="circle small-button-background"
+            style="background-color: #702082"
+          ></div>
+          <audio
+            id="taco-bell"
+            src="sounds/taco-bell.mp3"
+            preload="auto"
+          ></audio>
+          <button
+            class="small-button"
+            onclick="document.getElementById('taco-bell').play();"
+          ></button>
+          <div class="small-button-shadow"></div>
+          <p class="name">
+            <button
+              class="download"
+              onclick="window.location.href='sounds/taco-bell.mp3'"
+            >
+              Download</button
+            ><br />
+            Taco Bell DONG!<br />
+          </p>
+        </div>
+      </div>
+      <div>
+      <!-- TEMPLATE TO ADD MORE SOUNDS
+
+<div>
+  <div class="sound">
+    <div class="circle small-button-background" style="background-color:#COLOR;"></div>
+    <audio id="SOUND" src="sounds/SOUND.mp3" preload="auto"></audio>
+    <button class="small-button" onclick="document.getElementById('SOUND').play();"></button>
+    <div class="small-button-shadow"></div>
+    <p class="name">
+      <button onclick="window.location.href='sounds/SOUND.mp3'">Download</button><br>
+      SOUND<br>
+    </p>
+  </div>
+</div>
+
+-->
+    </div>
+    <script type="application/javascript" src="/js/main.js"></script>
+  </body>
 </html>
