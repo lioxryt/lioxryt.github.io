@@ -21,14 +21,16 @@
 </script>
 </head>
 <body>
-  <div class="topcorner" style="text-align:center">
+  <div class="topleft" style="text-align:center">
     <img onclick="location.href='/'" src="/img/home.png" width="40" height="40" />
   </div>
   <div class="text-center">
     <input type="text" class="text-center" id="mySearch" onload="startSearch()" onkeyup="startSearch()" placeholder="Search for games..." title="Search" autofocus="">
   </div>
+  <img onclick="const gameLinks = document.querySelectorAll('.game-link');const randomIndex = Math.floor(Math.random() * gameLinks.length);const randomLink = gameLinks[randomIndex];location.href = randomLink.href;" class="rand" src="/img/rand.png" width="40" height="40" />
   <script src="/js/search.js"></script>
   <div id="search" class="flex-container">
+  <br>
   <section>
   <h2><span>Flash Games (When on game screen right click to open in full screen)</span></h2>
   <div id="search" class="flex-container">

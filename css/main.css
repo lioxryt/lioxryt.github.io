@@ -139,8 +139,13 @@ margin: 10px 0 20px;
 h2 span { 
 padding:0 10px; 
 }
-.topcorner{
+.topleft{
 position:absolute;
-top:10;
+top:10px;
 right:15;
+}
+.rand{
+  position: absolute;
+  left: 97%;
+  top: 10px;
 }
