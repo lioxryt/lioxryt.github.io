@@ -12,26 +12,6 @@
         >Click here to recommend a sound</a
       >
     </h2>
-    <script>
-      function playAll() {
-        const els = document.getElementsByTagName("AUDIO");
-        Array.from(els).forEach((el) => {
-          el.play();
-        });
-      }
-      function stopAll() {
-        const els = document.getElementsByTagName("AUDIO");
-        Array.from(els).forEach((el) => {
-          el.load();
-        });
-      }
-    </script>
-    <div class="control">
-      Audio Controls
-      <button class="woah" onclick="playAll()">Provoke Chaos</button>
-      <button class="woah" onclick="stopAll()">Stop Everything</button>
-    </div>
-
     <div class="flex-container">
       <div>
         <div class="sound">
@@ -39,15 +19,15 @@
             class="circle small-button-background"
             style="background-color: #339900"
           ></div>
-          <audio
-            class="sound"
-            id="fart"
-            src="sounds/fart.mp3"
-            preload="auto"
-          ></audio>
+          <script>
+            function playFart() {
+            const audioElement = new Audio("sounds/fart.mp3");
+            audioElement.play();
+            }
+          </script>
           <button
             class="small-button"
-            onclick="document.getElementById('fart').play();"
+            onclick="playFart()"
           ></button>
           <div class="small-button-shadow"></div>
           <p class="name">
@@ -67,14 +47,15 @@
             class="circle small-button-background"
             style="background-color: #694729"
           ></div>
-          <audio
-            id="fart-with-reverb"
-            src="sounds/fart-with-reverb.mp3"
-            preload="auto"
-          ></audio>
+          <script>
+            function playFartRe() {
+            const audioElement = new Audio("sounds/fart-with-reverb.mp3");
+            audioElement.play();
+            }
+          </script>
           <button
             class="small-button"
-            onclick="document.getElementById('fart-with-reverb').play();"
+            onclick="playFartRe()"
           ></button>
           <div class="small-button-shadow"></div>
           <p class="name">
@@ -93,14 +74,15 @@
             class="circle small-button-background"
             style="background-color: #70492f"
           ></div>
-          <audio
-            id="sloppy-fart"
-            src="sounds/sloppy-fart.mp3"
-            preload="auto"
-          ></audio>
+          <script>
+            function playSlopFart() {
+            const audioElement = new Audio("sounds/sloppy-fart.mp3");
+            audioElement.play();
+            }
+          </script>
           <button
             class="small-button"
-            onclick="document.getElementById('sloppy-fart').play();"
+            onclick="playSlopFart()"
           ></button>
           <div class="small-button-shadow"></div>
           <p class="name">
@@ -117,14 +99,15 @@
             class="circle small-button-background"
             style="background-color: #702082"
           ></div>
-          <audio
-            id="taco-bell"
-            src="sounds/taco-bell.mp3"
-            preload="auto"
-          ></audio>
+          <script>
+            function playTaco() {
+            const audioElement = new Audio("sounds/taco-bell.mp3");
+            audioElement.play();
+            }
+          </script>
           <button
             class="small-button"
-            onclick="document.getElementById('taco-bell').play();"
+            onclick="playTaco()"
           ></button>
           <div class="small-button-shadow"></div>
           <p class="name">
@@ -134,7 +117,7 @@
             >
               Download</button
             ><br />
-            Taco Bell DONG!<br />
+            Taco Bell!<br />
           </p>
         </div>
       </div>
@@ -144,15 +127,15 @@
             class="circle small-button-background"
             style="background-color: #ffffff"
           ></div>
-          <audio
-            class="sound"
-            id="ni"
-            src="sounds/you-stupid-ni.mp3"
-            preload="auto"
-          ></audio>
+          <script>
+            function playNi() {
+            const audioElement = new Audio("sounds/you-stupid-ni.mp3");
+            audioElement.play();
+            }
+          </script>
           <button
             class="small-button"
-            onclick="document.getElementById('ni').play();"
+            onclick="playNi()"
           ></button>
           <div class="small-button-shadow"></div>
           <p class="name">
@@ -169,21 +152,36 @@
       <div>
       <!-- TEMPLATE TO ADD MORE SOUNDS
 
-<div>
-  <div class="sound">
-    <div class="circle small-button-background" style="background-color:#COLOR;"></div>
-    <audio id="SOUND" src="sounds/SOUND.mp3" preload="auto"></audio>
-    <button class="small-button" onclick="document.getElementById('SOUND').play();"></button>
-    <div class="small-button-shadow"></div>
-    <p class="name">
-      <button onclick="window.location.href='sounds/SOUND.mp3'">Download</button><br>
-      SOUND<br>
-    </p>
-  </div>
-</div>
+        <div class="sound">
+          <div
+            class="circle small-button-background"
+            style="background-color: #COLOR"
+          ></div>
+          <script>
+            function playNAME() {
+            const audioElement = new Audio("sounds/SOUND.mp3");
+            audioElement.play();
+            }
+          </script>
+          <button
+            class="small-button"
+            onclick="playNAME()"
+          ></button>
+          <div class="small-button-shadow"></div>
+          <p class="name">
+            <button
+              class="download"
+              onclick="window.location.href='sounds/SOUND.mp3'"
+            >
+              Download</button
+            ><br />
+            NAME
+          </p>
+        </div>
+      </div>
+      <div>
 
 -->
     </div>
-    <script type="application/javascript" src="/js/main.js"></script>
   </body>
 </html>
