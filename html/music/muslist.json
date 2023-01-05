@@ -1,0 +1,4 @@
+{
+    "music": ["please put music here","seperated by commas"],
+    "notes, pls no import": "if the music is in the files folder inside this directory, specify each file with ./files/*name*."
+}
