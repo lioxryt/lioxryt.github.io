@@ -8,14 +8,14 @@ var player= new Howl({
 });
 
 function playMus() {
-    howl.stop();
-    var indx=howl.play(getRandomInt(music.length()));
+    player.stop();
+    var indx=player.play(getRandomInt(music.length()));
 }
 
 function stopMus() {
-    howl.stop();
+    player.stop();
 }
 function nextTrk() {
-    howl.stop();
-    var indx2=howl.play(indx+1)
+    player.stop();
+    var indx2=player.play(indx+1)
 }
