@@ -1,0 +1,1964 @@
+{
+	"meta":{
+		"name":"Default Mine Blocks Texture Pack",
+		"namespace":"mine_blocks",
+		"author":"Zanzlanz",
+		"game_version":"1.30.5"
+	},
+	"compositing":{
+		"farmland":[
+			{"id":"dirt"},
+			{"id":"farmland"}
+		],
+		"mycelium":[
+			{"id":"dirt"},
+			{"id":"mycelium"}
+		],
+		"gold_soil":[
+			{"id":"dirt"},
+			{"id":"gold_soil"}
+		],
+		"leaves_apple":[
+			{"id":"leaves"},
+			{"id":"leaves_apple"}
+		],
+		"leaves_orange":[
+			{"id":"leaves"},
+			{"id":"leaves_orange"}
+		],
+		"leaves_golden_apple":[
+			{"id":"leaves"},
+			{"id":"leaves_golden_apple"}
+		],
+		"leaves_lemon":[
+			{"id":"leaves"},
+			{"id":"leaves_lemon"}
+		],
+		"diamond_ore":[
+			{"id":"stone"},
+			{"id":"diamond_ore"}
+		],
+		"gold_ore":[
+			{"id":"stone"},
+			{"id":"gold_ore"}
+		],
+		"iron_ore":[
+			{"id":"stone"},
+			{"id":"iron_ore"}
+		],
+		"coal_ore":[
+			{"id":"stone"},
+			{"id":"coal_ore"}
+		],
+		"redstone_ore":[
+			{"id":"stone"},
+			{"id":"redstone_ore"}
+		],
+		"odd_rock_ore":[
+			{"id":"stone"},
+			{"id":"odd_rock_ore"}
+		],
+		"topaz_ore":[
+			{"id":"stone"},
+			{"id":"topaz_ore"}
+		],
+		"lapis_ore":[
+			{"id":"stone"},
+			{"id":"lapis_ore"}
+		],
+		"ender_gem_ore":[
+			{"id":"enderstone"},
+			{"id":"ender_gem_ore"}
+		],
+		"seaweed":[
+			{"id":"water"},
+			{"id":"seaweed"}
+		]
+	},
+	"images":[
+		{
+			"meta":{
+				"file":"teleporter.png",
+				"unit_size":1
+			},
+			"textures":{
+				"teleporter_broken":{
+					"x":0, "y":0,
+					"width":24, "height":16
+				},
+				"teleporter_sparks":{
+					"x":0, "y":16,
+					"width":24, "height":16
+				}
+			}
+		},
+		{
+			"meta":{
+				"file":"ehc.png",
+				"unit_size":1
+			},
+			"textures":{
+				"ehc_beam":{
+					"x":0, "y":0,
+					"width":256, "height":32
+				},
+				"ehc_box":{
+					"x":256, "y":0,
+					"width":16, "height":16
+				}
+			}
+		},
+		{
+			"meta":{
+				"file":"raything.png",
+				"unit_size":150
+			},
+			"textures":{
+				"particle_raything":{
+					"x":0, "y":0,
+					"width":1, "height":1
+				}
+			}
+		},
+		{
+			"meta":{
+				"file":"flameball.png",
+				"unit_size":16
+			},
+			"textures":{
+				"flameball":{
+					"x":0, "y":0,
+					"width":1, "height":1
+				}
+			}
+		},
+		{
+			"meta":{
+				"file":"bobber.png",
+				"unit_size":1
+			},
+			"textures":{
+				"bobber":{
+					"x":0, "y":0,
+					"width":4, "height":10
+				}
+			}
+		},
+		{
+			"meta":{
+				"file":"enchantment_glint.png",
+				"unit_size":32
+			},
+			"textures":{
+				"enchantment_glint":{
+					"x":0, "y":0,
+					"width":7, "height":1
+				}
+			}
+		},
+		{
+			"meta":{
+				"file":"balloon.png",
+				"unit_size":1
+			},
+			"textures":{
+				"entity_balloon":{
+					"x":0, "y":0,
+					"width":14, "height":18
+				},
+				"entity_balloon[ghast]":{
+					"x":0, "y":18,
+					"width":16, "height":14
+				},
+				"entity_balloon[ghast_arm]":{
+					"x":14, "y":0,
+					"width":2, "height":8
+				}
+			}
+		},
+		{
+			"meta":{
+				"file":"particles.png",
+				"unit_size":1
+			},
+			"textures":{
+				"particle_torchtip[1]":{
+					"x":0, "y":0,
+					"width":16, "height":16
+				},
+				"particle_torchtip[2]":{
+					"x":16, "y":0,
+					"width":16, "height":16
+				},
+				"particle_torchtip[3]":{
+					"x":32, "y":0,
+					"width":16, "height":16
+				},
+				"particle_torchtip[4]":{
+					"x":48, "y":0,
+					"width":16, "height":16
+				},
+				"particle_torchtip[5]":{
+					"x":64, "y":0,
+					"width":16, "height":16
+				},
+				"particle_torchtip[6]":{
+					"x":80, "y":0,
+					"width":16, "height":16
+				},
+				"particle_torchtip[7]":{
+					"x":96, "y":0,
+					"width":16, "height":16
+				},
+				"particle_rain":{
+					"x":120, "y":0,
+					"width":1, "height":24
+				},
+				"particle_square":{
+					"x":112, "y":0,
+					"width":1, "height":1
+				},
+				"particle_lava_bubble":{
+					"x":112, "y":8,
+					"width":8, "height":8
+				},
+				"particle_effect[1]":{
+					"x":0, "y":16,
+					"width":8, "height":8
+				},
+				"particle_effect[2]":{
+					"x":8, "y":16,
+					"width":8, "height":8
+				},
+				"particle_effect[3]":{
+					"x":16, "y":16,
+					"width":8, "height":8
+				},
+				"particle_effect[4]":{
+					"x":24, "y":16,
+					"width":8, "height":8
+				},
+				"particle_effect[5]":{
+					"x":32, "y":16,
+					"width":8, "height":8
+				},
+				"particle_smoke[1]":{
+					"x":40, "y":16,
+					"width":5, "height":5
+				},
+				"particle_smoke[2]":{
+					"x":48, "y":16,
+					"width":5, "height":5
+				},
+				"particle_smoke[3]":{
+					"x":56, "y":16,
+					"width":5, "height":5
+				},
+				"particle_smoke[4]":{
+					"x":64, "y":16,
+					"width":5, "height":5
+				},
+				"particle_smoke[5]":{
+					"x":72, "y":16,
+					"width":5, "height":5
+				},
+				"particle_smoke_dark[1]":{
+					"x":80, "y":16,
+					"width":5, "height":5
+				},
+				"particle_smoke_dark[2]":{
+					"x":88, "y":16,
+					"width":5, "height":5
+				},
+				"particle_smoke_dark[3]":{
+					"x":96, "y":16,
+					"width":5, "height":5
+				},
+				"particle_smoke_dark[4]":{
+					"x":104, "y":16,
+					"width":5, "height":5
+				},
+				"particle_smoke_dark[5]":{
+					"x":112, "y":16,
+					"width":5, "height":5
+				},
+				"particle_snow[1]":{
+					"x":0, "y":24,
+					"width":5, "height":5
+				},
+				"particle_snow[2]":{
+					"x":8, "y":24,
+					"width":5, "height":5
+				},
+				"particle_snow[3]":{
+					"x":16, "y":24,
+					"width":5, "height":5
+				},
+				"particle_snow[4]":{
+					"x":24, "y":24,
+					"width":5, "height":5
+				},
+				"particle_snow[5]":{
+					"x":32, "y":24,
+					"width":5, "height":5
+				},
+				"particle_snow[6]":{
+					"x":40, "y":24,
+					"width":5, "height":5
+				},
+				"particle_snow[7]":{
+					"x":48, "y":24,
+					"width":5, "height":5
+				},
+				"particle_snow[8]":{
+					"x":56, "y":24,
+					"width":5, "height":5
+				},
+				"particle_snow[9]":{
+					"x":64, "y":24,
+					"width":5, "height":5
+				},
+				"particle_grow":{
+					"x":72, "y":24,
+					"width":7, "height":7
+				},
+				"particle_ender":{
+					"x":80, "y":24,
+					"width":5, "height":5
+				},
+				"particle_critical":{
+					"x":88, "y":24,
+					"width":5, "height":5
+				},
+				"particle_water":{
+					"x":96, "y":24,
+					"width":5, "height":5
+				},
+				"particle_bubble":{
+					"x":104, "y":24,
+					"width":5, "height":5
+				},
+				"particle_shockwave[1]":{
+					"x":0, "y":32,
+					"width":32, "height":32
+				},
+				"particle_shockwave[2]":{
+					"x":32, "y":32,
+					"width":32, "height":32
+				},
+				"particle_shockwave[3]":{
+					"x":64, "y":32,
+					"width":32, "height":32
+				},
+				"particle_shockwave[4]":{
+					"x":96, "y":32,
+					"width":32, "height":32
+				},
+				"particle_shockwave[5]":{
+					"x":0, "y":64,
+					"width":32, "height":32
+				},
+				"particle_shockwave[6]":{
+					"x":32, "y":64,
+					"width":32, "height":32
+				},
+				"particle_shockwave[7]":{
+					"x":64, "y":64,
+					"width":32, "height":32
+				},
+				"particle_dust":{
+					"x":96, "y":64,
+					"width":32, "height":32
+				},
+				"particle_heart":{
+					"x":0, "y":96,
+					"width":9, "height":9
+				},
+				"particle_xporb[1]":{
+					"x":9, "y":96,
+					"width":6, "height":6
+				},
+				"particle_xporb[2]":{
+					"x":15, "y":96,
+					"width":6, "height":6
+				},
+				"particle_xporb[3]":{
+					"x":9, "y":102,
+					"width":6, "height":6
+				}
+			}
+		},
+		{
+			"meta":{
+				"file":"blocks.png",
+				"unit_size":16
+			},
+			"textures":{
+				"missing":{
+					"x":7, "y":0
+				},
+				"bedrock":{
+					"x":0, "y":0
+				},
+				"stone":{
+					"x":1, "y":0
+				},
+				"cobblestone":{
+					"x":2, "y":0
+				},
+				"moss_stone":{
+					"x":3, "y":0
+				},
+				"stone_brick":{
+					"x":4, "y":0
+				},
+				"obsidian":{
+					"x":5, "y":0
+				},
+				"gravel":{
+					"x":6, "y":0
+				},
+				"diamond_ore":{
+					"x":0, "y":1
+				},
+				"gold_ore":{
+					"x":1, "y":1
+				},
+				"iron_ore":{
+					"x":2, "y":1
+				},
+				"coal_ore":{
+					"x":3, "y":1
+				},
+				"redstone_ore":{
+					"x":4, "y":1
+				},
+				"odd_rock_ore":{
+					"x":5, "y":1
+				},
+				"topaz_ore":{
+					"x":6, "y":1
+				},
+				"lapis_ore":{
+					"x":7, "y":1
+				},
+				"diamond_block":{
+					"x":0, "y":2
+				},
+				"gold_block":{
+					"x":1, "y":2
+				},
+				"iron_block":{
+					"x":2, "y":2
+				},
+				"coal_block":{
+					"x":3, "y":2
+				},
+				"topaz_block":{
+					"x":6, "y":2
+				},
+				"lapis_lazuli_block":{
+					"x":7, "y":2
+				},
+				"torch[floor]":{
+					"x":0, "y":3
+				},
+				"torch[wall]":{
+					"x":1, "y":3
+				},
+				"ladder":{
+					"x":2, "y":3
+				},
+				"rope[straight]":{
+					"x":3, "y":3
+				},
+				"rope[wall]":{
+					"x":4, "y":3
+				},
+				"sign":{
+					"x":5, "y":3
+				},
+				"stick":{
+					"x":6, "y":3
+				},
+				"bed[frame_left]":{
+					"x":7, "y":3
+				},
+				"bed[frame_right]":{
+					"x":8, "y":3
+				},
+				"bed[sheets_left]":{
+					"x":9, "y":3
+				},
+				"bed[sheets_right]":{
+					"x":10, "y":3
+				},
+				"barrier":{
+					"x":1, "y":28
+				},
+				"dirt":{
+					"x":0, "y":6
+				},
+				"dirt[grass]":{
+					"x":1, "y":6
+				},
+				"coarse_dirt":{
+					"x":4, "y":6
+				},
+				"farmland":{
+					"x":2, "y":6
+				},
+				"mycelium":{
+					"x":3, "y":6
+				},
+				"gold_soil":{
+					"x":5, "y":6
+				},
+				"wood":{
+					"x":0, "y":7
+				},
+				"tree_wood":{
+					"x":0, "y":7
+				},
+				"sapling":{
+					"x":0, "y":9
+				},
+				"leaves":{
+					"x":0, "y":10
+				},
+				"leaves_apple":{
+					"x":1, "y":10
+				},
+				"leaves_orange":{
+					"x":2, "y":10
+				},
+				"leaves_golden_apple":{
+					"x":3, "y":10
+				},
+				"leaves_lemon":{
+					"x":4, "y":10
+				},
+				"redstone[floor]":{
+					"x":0, "y":12
+				},
+				"redstone[wall]":{
+					"x":1, "y":12
+				},
+				"redstone[walls]":{
+					"x":2, "y":12
+				},
+				"sand":{
+					"x":1, "y":22
+				},
+				"soul_sand":{
+					"x":3, "y":23
+				},
+				"cactus":{
+					"x":4, "y":22
+				},
+				"cactus[top]":{
+					"x":5, "y":22
+				},
+				"dragon_scale_block":{
+					"x":5, "y":24
+				},
+				"wooden_planks":{
+					"x":0, "y":8
+				},
+				"fence":{
+					"x":0, "y":18
+				},
+				"fence[end]":{
+					"x":1, "y":18
+				},
+				"fence_gate[closed]":{
+					"x":2, "y":18
+				},
+				"fence_gate[open]":{
+					"x":3, "y":18
+				},
+				"nether_fence":{
+					"x":0, "y":19
+				},
+				"nether_fence_gate[closed]":{
+					"x":2, "y":19
+				},
+				"nether_fence_gate[open]":{
+					"x":3, "y":19
+				},
+				"iron_bars":{
+					"x":2, "y":17
+				},
+				"torch":{
+					"x":0, "y":3
+				},
+				"crafting_table":{
+					"x":0, "y":4
+				},
+				"wooden_door[open_top]":{
+					"x":0, "y":15
+				},
+				"wooden_door[open_bottom]":{
+					"x":0, "y":16
+				},
+				"wooden_door[closed_top]":{
+					"x":1, "y":15
+				},
+				"wooden_door[closed_bottom]":{
+					"x":1, "y":16
+				},
+				"iron_door[open_top]":{
+					"x":2, "y":15
+				},
+				"iron_door[open_bottom]":{
+					"x":2, "y":16
+				},
+				"iron_door[closed_top]":{
+					"x":3, "y":15
+				},
+				"iron_door[closed_bottom]":{
+					"x":3, "y":16
+				},
+				"bamboo_door[open_top]":{
+					"x":4, "y":15
+				},
+				"bamboo_door[open_bottom]":{
+					"x":4, "y":16
+				},
+				"bamboo_door[closed_top]":{
+					"x":5, "y":15
+				},
+				"bamboo_door[closed_bottom]":{
+					"x":5, "y":16
+				},
+				"trap_door[open]":{
+					"x":0, "y":17
+				},
+				"trap_door[closed]":{
+					"x":1, "y":17
+				},
+				"furnace[off]":{
+					"x":1, "y":4
+				},
+				"furnace[on]":{
+					"x":2, "y":4
+				},
+				"brewing_stand[0]":{
+					"x":10, "y":4
+				},
+				"brewing_stand[1]":{
+					"x":11, "y":4
+				},
+				"brewing_stand[2]":{
+					"x":12, "y":4
+				},
+				"brewing_stand[3]":{
+					"x":13, "y":4
+				},
+				"anvil[0]":{
+					"x":3, "y":5
+				},
+				"anvil[1]":{
+					"x":4, "y":5
+				},
+				"anvil[2]":{
+					"x":5, "y":5
+				},
+				"cauldron":{
+					"x":0, "y":5
+				},
+				"cauldron[background]":{
+					"x":1, "y":5
+				},
+				"cauldron[water]":{
+					"x":2, "y":5
+				},
+				"glass":{
+					"x":1, "y":25
+				},
+				"glass[stained]":{
+					"x":2, "y":25
+				},
+				"seaweed":{
+					"x":3, "y":11
+				},
+				"seaweed[item]":{
+					"x":3, "y":11
+				},
+				"yellow_flower":{
+					"x":7, "y":20
+				},
+				"red_flower":{
+					"x":8, "y":20
+				},
+				"brown_mushroom":{
+					"x":0, "y":21
+				},
+				"red_mushroom":{
+					"x":3, "y":21
+				},
+				"pumpkin":{
+					"x":7, "y":26
+				},
+				"pumpkin[face_1]":{
+					"x":0, "y":27
+				},
+				"pumpkin[face_2]":{
+					"x":1, "y":27
+				},
+				"pumpkin[face_3]":{
+					"x":2, "y":27
+				},
+				"pumpkin[face_4]":{
+					"x":3, "y":27
+				},
+				"pumpkin[face_5]":{
+					"x":4, "y":27
+				},
+				"pumpkin[face_6]":{
+					"x":5, "y":27
+				},
+				"pumpkin[face_7]":{
+					"x":6, "y":27
+				},
+				"pumpkin[face_8]":{
+					"x":7, "y":27
+				},
+				"pumpkin[face_9]":{
+					"x":8, "y":27
+				},
+				"pumpkin[face_10]":{
+					"x":9, "y":27
+				},
+				"jack_o_lantern":{
+					"x":8, "y":26
+				},
+				"coral":{
+					"x":4, "y":11
+				},
+				"chest":{
+					"x":3, "y":4
+				},
+				"snow":{
+					"x":0, "y":11
+				},
+				"snow_block":{
+					"x":1, "y":11
+				},
+				"ice":{
+					"x":2, "y":11
+				},
+				"frosted_ice":{
+					"x":2, "y":11
+				},
+				"carpet":{
+					"x":0, "y":25
+				},
+				"wool":{
+					"x":0, "y":25
+				},
+				"tnt":{
+					"x":11, "y":13
+				},
+				"bamboo":{
+					"x":4, "y":20
+				},
+				"sugarcane":{
+					"x":5, "y":20
+				},
+				"cake[0]":{
+					"x":0, "y":29
+				},
+				"cake[1]":{
+					"x":1, "y":29
+				},
+				"cake[2]":{
+					"x":2, "y":29
+				},
+				"cake[3]":{
+					"x":3, "y":29
+				},
+				"cake[4]":{
+					"x":4, "y":29
+				},
+				"cake[5]":{
+					"x":5, "y":29
+				},
+				"cake[6]":{
+					"x":6, "y":29
+				},
+				"cactus_cake[0]":{
+					"x":0, "y":30
+				},
+				"cactus_cake[1]":{
+					"x":1, "y":30
+				},
+				"cactus_cake[2]":{
+					"x":2, "y":30
+				},
+				"cactus_cake[3]":{
+					"x":3, "y":30
+				},
+				"cactus_cake[4]":{
+					"x":4, "y":30
+				},
+				"cactus_cake[5]":{
+					"x":5, "y":30
+				},
+				"cactus_cake[6]":{
+					"x":6, "y":30
+				},
+				"moss":{
+					"x":6, "y":20
+				},
+				"clay":{
+					"x":2, "y":22
+				},
+				"clay_block":{
+					"x":2, "y":22
+				},
+				"bricks":{
+					"x":3, "y":22
+				},
+				"redstone_torch[floor_off]":{
+					"x":5, "y":12
+				},
+				"redstone_torch[wall_off]":{
+					"x":6, "y":12
+				},
+				"redstone_torch[floor_on]":{
+					"x":3, "y":12
+				},
+				"redstone_torch[wall_on]":{
+					"x":4, "y":12
+				},
+				"button[off]":{
+					"x":7, "y":12
+				},
+				"button[on]":{
+					"x":8, "y":12
+				},
+				"pressure_plate[off]":{
+					"x":11, "y":12
+				},
+				"pressure_plate[on]":{
+					"x":12, "y":12
+				},
+				"pressure_plate_wooden[off]":{
+					"x":13, "y":12
+				},
+				"pressure_plate_wooden[on]":{
+					"x":14, "y":12
+				},
+				"lever[off]":{
+					"x":9, "y":12
+				},
+				"lever[on]":{
+					"x":10, "y":12
+				},
+				"water":{
+					"x":0, "y":34,
+					"width":4, "height":4
+				},
+				"lava":{
+					"x":4, "y":34,
+					"width":4, "height":4
+				},
+				"acid":{
+					"x":8, "y":34,
+					"width":4, "height":4
+				},
+				"monster_spawner":{
+					"x":10, "y":23
+				},
+				"odd_torch[floor]":{
+					"x":11, "y":23
+				},
+				"odd_torch[wall]":{
+					"x":12, "y":23
+				},
+				"netherrack":{
+					"x":0, "y":23
+				},
+				"magma_block[1]":{
+					"x":0, "y":38
+				},
+				"magma_block[2]":{
+					"x":1, "y":38
+				},
+				"magma_block[3]":{
+					"x":2, "y":38
+				},
+				"magma_block[4]":{
+					"x":3, "y":38
+				},
+				"nether_bricks":{
+					"x":1, "y":23
+				},
+				"nether_bricks_red":{
+					"x":2, "y":23
+				},
+				"portal":{
+					"x":5, "y":23
+				},
+				"portal[gradient]":{
+					"x":6, "y":23
+				},
+				"portal_stone":{
+					"x":4, "y":23
+				},
+				"glowstone":{
+					"x":7, "y":23
+				},
+				"note_block":{
+					"x":8, "y":13
+				},
+				"piston":{
+					"x":0, "y":13
+				},
+				"piston[base]":{
+					"x":1, "y":13
+				},
+				"piston[arm]":{
+					"x":2, "y":13
+				},
+				"piston_sticky":{
+					"x":3, "y":13
+				},
+				"piston_sticky[base]":{
+					"x":4, "y":13
+				},
+				"piston_sticky[arm]":{
+					"x":5, "y":13
+				},
+				"rail[off_straight]":{
+					"x":0, "y":14
+				},
+				"rail[off_slope]":{
+					"x":1, "y":14
+				},
+				"rail_powered[off_straight]":{
+					"x":2, "y":14
+				},
+				"rail_powered[off_slope]":{
+					"x":3, "y":14
+				},
+				"rail_powered[on_straight]":{
+					"x":4, "y":14
+				},
+				"rail_powered[on_slope]":{
+					"x":5, "y":14
+				},
+				"rail_activator[off_straight]":{
+					"x":6, "y":14
+				},
+				"rail_activator[off_slope]":{
+					"x":7, "y":14
+				},
+				"rail_activator[on_straight]":{
+					"x":8, "y":14
+				},
+				"rail_activator[on_slope]":{
+					"x":9, "y":14
+				},
+				"rail_detector[off_straight]":{
+					"x":10, "y":14
+				},
+				"rail_detector[off_slope]":{
+					"x":11, "y":14
+				},
+				"rail_detector[on_straight]":{
+					"x":12, "y":14
+				},
+				"rail_detector[on_slope]":{
+					"x":13, "y":14
+				},
+				"sandstone":{
+					"x":0, "y":22
+				},
+				"j":{
+					"x":0, "y":28
+				},
+				"long_grass":{
+					"x":0, "y":20
+				},
+				"shrub":{
+					"x":1, "y":20
+				},
+				"shrub[desert]":{
+					"x":2, "y":20
+				},
+				"dead_bush":{
+					"x":3, "y":20
+				},
+				"seeds[crop_0]":{
+					"x":0, "y":31
+				},
+				"seeds[crop_1]":{
+					"x":1, "y":31
+				},
+				"seeds[crop_2]":{
+					"x":2, "y":31
+				},
+				"seeds[crop_3]":{
+					"x":3, "y":31
+				},
+				"seeds[crop_4]":{
+					"x":4, "y":31
+				},
+				"seeds[crop_5]":{
+					"x":5, "y":31
+				},
+				"seeds[crop_6]":{
+					"x":6, "y":31
+				},
+				"golden_apple_seed":{
+					"x":1, "y":9
+				},
+				"bookshelf":{
+					"x":4, "y":25
+				},
+				"redstone_lamp[off]":{
+					"x":9, "y":13
+				},
+				"redstone_lamp[on]":{
+					"x":10, "y":13
+				},
+				"red_mushroom_cap":{
+					"x":4, "y":21
+				},
+				"red_mushroom_stem":{
+					"x":5, "y":21
+				},
+				"brown_mushroom_cap":{
+					"x":1, "y":21
+				},
+				"brown_mushroom_stem":{
+					"x":2, "y":21
+				},
+				"enderstone":{
+					"x":2, "y":24
+				},
+				"portal_frame":{
+					"x":0, "y":24
+				},
+				"portal_frame[eye]":{
+					"x":1, "y":24
+				},
+				"cobweb":{
+					"x":9, "y":23
+				},
+				"carrot[crop_0]":{
+					"x":0, "y":32
+				},
+				"carrot[crop_1]":{
+					"x":1, "y":32
+				},
+				"carrot[crop_2]":{
+					"x":2, "y":32
+				},
+				"carrot[crop_3]":{
+					"x":3, "y":32
+				},
+				"potato[crop_0]":{
+					"x":4, "y":32
+				},
+				"potato[crop_1]":{
+					"x":5, "y":32
+				},
+				"potato[crop_2]":{
+					"x":6, "y":32
+				},
+				"potato[crop_3]":{
+					"x":7, "y":32
+				},
+				"beetroot_seed[crop_0]":{
+					"x":8, "y":32
+				},
+				"beetroot_seed[crop_1]":{
+					"x":9, "y":32
+				},
+				"beetroot_seed[crop_2]":{
+					"x":10, "y":32
+				},
+				"beetroot_seed[crop_3]":{
+					"x":11, "y":32
+				},
+				"nether_wart[crop_0]":{
+					"x":12, "y":32
+				},
+				"nether_wart[crop_1]":{
+					"x":13, "y":32
+				},
+				"nether_wart[crop_2]":{
+					"x":14, "y":32
+				},
+				"nether_wart_block":{
+					"x":15, "y":32
+				},
+				"ender_gem_ore":{
+					"x":3, "y":24
+				},
+				"ender_dragon_egg":{
+					"x":6, "y":24
+				},
+				"healing_crystal":{
+					"x":4, "y":24
+				},
+				"bone_block":{
+					"x":8, "y":23
+				},
+				"bamboo_block":{
+					"x":3, "y":25
+				},
+				"lily_pad":{
+					"x":5, "y":11
+				},
+				"enchantment_table":{
+					"x":5, "y":4
+				},
+				"enchantment_table[book_1]":{
+					"x":6, "y":4
+				},
+				"enchantment_table[book_2]":{
+					"x":7, "y":4
+				},
+				"enchantment_table[book_3]":{
+					"x":8, "y":4
+				},
+				"enchantment_table[book_4]":{
+					"x":9, "y":4
+				},
+				"dispenser":{
+					"x":6, "y":13
+				},
+				"dropper":{
+					"x":7, "y":13
+				},
+				"lemon_block":{
+					"x":6, "y":25
+				},
+				"slime_block":{
+					"x":5, "y":25
+				},
+				"coral_lantern[floor]":{
+					"x":6, "y":11
+				},
+				"coral_lantern[wall]":{
+					"x":7, "y":11
+				},
+				"hay_bale":{
+					"x":7, "y":25
+				},
+				"melon_block":{
+					"x":7, "y":33
+				},
+				"pumpkin_seed[crop_0]":{
+					"x":0, "y":26
+				},
+				"pumpkin_seed[crop_1]":{
+					"x":1, "y":26
+				},
+				"pumpkin_seed[crop_2]":{
+					"x":2, "y":26
+				},
+				"pumpkin_seed[crop_3]":{
+					"x":3, "y":26
+				},
+				"pumpkin_seed[crop_4]":{
+					"x":4, "y":26
+				},
+				"pumpkin_seed[crop_5]":{
+					"x":5, "y":26
+				},
+				"pumpkin_seed[crop_attached]":{
+					"x":6, "y":26
+				},
+				"melon_seed[crop_0]":{
+					"x":0, "y":33
+				},
+				"melon_seed[crop_1]":{
+					"x":1, "y":33
+				},
+				"melon_seed[crop_2]":{
+					"x":2, "y":33
+				},
+				"melon_seed[crop_3]":{
+					"x":3, "y":33
+				},
+				"melon_seed[crop_4]":{
+					"x":4, "y":33
+				},
+				"melon_seed[crop_5]":{
+					"x":5, "y":33
+				},
+				"melon_seed[crop_attached]":{
+					"x":6, "y":33
+				},
+				"ender_chest":{
+					"x":4, "y":4
+				},
+				"fire[1]":{
+					"x":4, "y":38
+				},
+				"fire[2]":{
+					"x":5, "y":38
+				},
+				"fire[3]":{
+					"x":6, "y":38
+				},
+				"fire[4]":{
+					"x":7, "y":38
+				},
+				"mob_head[zombie]":{
+					"x":2, "y":28
+				},
+				"mob_head[skeleton]":{
+					"x":3, "y":28
+				},
+				"mob_head[creeper]":{
+					"x":4, "y":28
+				},
+				"mob_head[enderdragon_base]":{
+					"x":5, "y":28,
+					"width":2
+				},
+				"mob_head[enderdragon_jaw]":{
+					"x":7, "y":28
+				},
+				"mob_head[enderdragon_nose]":{
+					"x":8, "y":28
+				},
+				"mob_head[default]":{
+					"x":9, "y":28
+				},
+				"break[1]":{
+					"x":0, "y":39
+				},
+				"break[2]":{
+					"x":1, "y":39
+				},
+				"break[3]":{
+					"x":2, "y":39
+				},
+				"break[4]":{
+					"x":3, "y":39
+				},
+				"break[5]":{
+					"x":4, "y":39
+				},
+				"select[break]":{
+					"x":5, "y":39
+				},
+				"select[place]":{
+					"x":6, "y":39
+				},
+				"select[far]":{
+					"x":7, "y":39
+				},
+
+				"diamond":{
+					"x":16, "y":0
+				},
+				"gold_ingot":{
+					"x":17, "y":0
+				},
+				"iron_ingot":{
+					"x":18, "y":0
+				},
+				"coal":{
+					"x":19, "y":0
+				},
+				"charcoal":{
+					"x":20, "y":0
+				},
+				"redstone[item]":{
+					"x":21, "y":0
+				},
+				"odd_rock":{
+					"x":22, "y":0
+				},
+				"topaz":{
+					"x":23, "y":0
+				},
+				"lapis":{
+					"x":24, "y":0
+				},
+				"ender_gem":{
+					"x":25, "y":0
+				},
+				"flint":{
+					"x":26, "y":0
+				},
+				"wooden_pickaxe":{
+					"x":16, "y":1
+				},
+				"stone_pickaxe":{
+					"x":17, "y":1
+				},
+				"iron_pickaxe":{
+					"x":18, "y":1
+				},
+				"golden_pickaxe":{
+					"x":19, "y":1
+				},
+				"diamond_pickaxe":{
+					"x":20, "y":1
+				},
+				"obsidianpickaxe":{
+					"x":21, "y":1
+				},
+				"wooden_sword":{
+					"x":16, "y":2
+				},
+				"stone_sword":{
+					"x":17, "y":2
+				},
+				"iron_sword":{
+					"x":18, "y":2
+				},
+				"golden_sword":{
+					"x":19, "y":2
+				},
+				"diamond_sword":{
+					"x":20, "y":2
+				},
+				"wooden_axe":{
+					"x":16, "y":3
+				},
+				"stone_axe":{
+					"x":17, "y":3
+				},
+				"iron_axe":{
+					"x":18, "y":3
+				},
+				"golden_axe":{
+					"x":19, "y":3
+				},
+				"diamond_axe":{
+					"x":20, "y":3
+				},
+				"wooden_shovel":{
+					"x":16, "y":4
+				},
+				"stone_shovel":{
+					"x":17, "y":4
+				},
+				"iron_shovel":{
+					"x":18, "y":4
+				},
+				"golden_shovel":{
+					"x":19, "y":4
+				},
+				"diamond_shovel":{
+					"x":20, "y":4
+				},
+				"wooden_hoe":{
+					"x":16, "y":5
+				},
+				"stone_hoe":{
+					"x":17, "y":5
+				},
+				"iron_hoe":{
+					"x":18, "y":5
+				},
+				"golden_hoe":{
+					"x":19, "y":5
+				},
+				"diamond_hoe":{
+					"x":20, "y":5
+				},
+				"fishing_rod":{
+					"x":16, "y":6
+				},
+				"fishing_rod[using]":{
+					"x":17, "y":6
+				},
+				"carrot_on_a_stick":{
+					"x":18, "y":6
+				},
+				"shears":{
+					"x":19, "y":6
+				},
+				"flint_and_steel":{
+					"x":20, "y":6
+				},
+				"clock[frame]":{
+					"x":21, "y":6
+				},
+				"clock[dial]":{
+					"x":22, "y":6
+				},
+				"compass[frame]":{
+					"x":23, "y":6
+				},
+				"compass[dial]":{
+					"x":24, "y":6
+				},
+				"scepter":{
+					"x":25, "y":6
+				},
+				"scepter_stone":{
+					"x":26, "y":6
+				},
+				"bow":{
+					"x":16, "y":7
+				},
+				"bow[drawback_1]":{
+					"x":17, "y":7
+				},
+				"bow[drawback_2]":{
+					"x":18, "y":7
+				},
+				"bow[drawback_3]":{
+					"x":19, "y":7
+				},
+				"arrow":{
+					"x":20, "y":7
+				},
+				"spear":{
+					"x":21, "y":7
+				},
+				"bone_shuriken":{
+					"x":22, "y":7
+				},
+				"snow_ball":{
+					"x":23, "y":7
+				},
+				"bucket_empty":{
+					"x":16, "y":8
+				},
+				"bucket_water":{
+					"x":17, "y":8
+				},
+				"bucket_acid":{
+					"x":18, "y":8
+				},
+				"bucket_lava":{
+					"x":19, "y":8
+				},
+				"bucket_milk":{
+					"x":20, "y":8
+				},
+				"leather_cap[base]":{
+					"x":16, "y":9,
+					"width":0.5,"height":0.5
+				},
+				"leather_cap[color]":{
+					"x":17, "y":9,
+					"width":0.5,"height":0.5
+				},
+				"iron_helmet":{
+					"x":18, "y":9,
+					"width":0.5,"height":0.5
+				},
+				"gold_helmet":{
+					"x":19, "y":9,
+					"width":0.5,"height":0.5
+				},
+				"diamond_helmet":{
+					"x":20, "y":9,
+					"width":0.5,"height":0.5
+				},
+				"dragon_scale_helmet":{
+					"x":21, "y":9,
+					"width":0.5,"height":0.5
+				},
+				"leather_tunic[base]":{
+					"x":16, "y":10,
+					"width":0.5,"height":0.5
+				},
+				"leather_tunic[color]":{
+					"x":17, "y":10,
+					"width":0.5,"height":0.5
+				},
+				"iron_chestplate":{
+					"x":18, "y":10,
+					"width":0.5,"height":0.5
+				},
+				"gold_chestplate":{
+					"x":19, "y":10,
+					"width":0.5,"height":0.5
+				},
+				"diamond_chestplate":{
+					"x":20, "y":10,
+					"width":0.5,"height":0.5
+				},
+				"dragon_scale_chestplate":{
+					"x":21, "y":10,
+					"width":0.5,"height":0.5
+				},
+				"leather_pants[base]":{
+					"x":16, "y":11,
+					"width":0.5,"height":0.5
+				},
+				"leather_pants[color]":{
+					"x":17, "y":11,
+					"width":0.5,"height":0.5
+				},
+				"iron_leggings":{
+					"x":18, "y":11,
+					"width":0.5,"height":0.5
+				},
+				"gold_leggings":{
+					"x":19, "y":11,
+					"width":0.5,"height":0.5
+				},
+				"diamond_leggings":{
+					"x":20, "y":11,
+					"width":0.5,"height":0.5
+				},
+				"dragon_scale_leggings":{
+					"x":21, "y":11,
+					"width":0.5,"height":0.5
+				},
+				"leather_boots[base]":{
+					"x":16, "y":12,
+					"width":0.5,"height":0.5
+				},
+				"leather_boots[color]":{
+					"x":17, "y":12,
+					"width":0.5,"height":0.5
+				},
+				"iron_boots":{
+					"x":18, "y":12,
+					"width":0.5,"height":0.5
+				},
+				"gold_boots":{
+					"x":19, "y":12,
+					"width":0.5,"height":0.5
+				},
+				"diamond_boots":{
+					"x":20, "y":12,
+					"width":0.5,"height":0.5
+				},
+				"dragon_scale_boots":{
+					"x":21, "y":12,
+					"width":0.5,"height":0.5
+				},
+				"afro":{
+					"x":16, "y":13
+				},
+				"party_hat":{
+					"x":17, "y":13
+				},
+				"santa_hat":{
+					"x":18, "y":13
+				},
+				"shades":{
+					"x":19, "y":13
+				},
+				"mustache":{
+					"x":20, "y":13
+				},
+				"shades[armor]":{
+					"x":21, "y":13
+				},
+				"egg":{
+					"x":16, "y":14
+				},
+				"egg_fire":{
+					"x":17, "y":14
+				},
+				"cooked_egg":{
+					"x":18, "y":14
+				},
+				"orange":{
+					"x":19, "y":14
+				},
+				"lemon":{
+					"x":20, "y":14
+				},
+				"apple":{
+					"x":21, "y":14
+				},
+				"golden_apple":{
+					"x":22, "y":14
+				},
+				"golden_apple_seed[item]":{
+					"x":23, "y":14
+				},
+				"apple_candy":{
+					"x":24, "y":14
+				},
+				"caramel":{
+					"x":25, "y":14
+				},
+				"sugar":{
+					"x":26, "y":14
+				},
+				"ice_cream":{
+					"x":27, "y":14
+				},
+				"potato":{
+					"x":28, "y":14
+				},
+				"potato_baked":{
+					"x":29, "y":14
+				},
+				"poisonous_potato":{
+					"x":30, "y":14
+				},
+				"beetroot_seed":{
+					"x":31, "y":14
+				},
+				"beetroot":{
+					"x":16, "y":15
+				},
+				"melon_seed":{
+					"x":17, "y":15
+				},
+				"melon":{
+					"x":18, "y":15
+				},
+				"glistering_melon":{
+					"x":19, "y":15
+				},
+				"pumpkin_seed":{
+					"x":20, "y":15
+				},
+				"pumpkin_pie":{
+					"x":21, "y":15
+				},
+				"carrot":{
+					"x":22, "y":15
+				},
+				"carrot_golden":{
+					"x":23, "y":15
+				},
+				"wheat":{
+					"x":24, "y":15
+				},
+				"bread":{
+					"x":25, "y":15
+				},
+				"cocoa_bean":{
+					"x":26, "y":15
+				},
+				"cookie":{
+					"x":27, "y":15
+				},
+				"candy_cane":{
+					"x":28, "y":15
+				},
+				"seeds":{
+					"x":29, "y":15
+				},
+				"porkchop":{
+					"x":30, "y":15
+				},
+				"porkchop_cooked":{
+					"x":31, "y":15
+				},
+				"bacon":{
+					"x":16, "y":16
+				},
+				"bacon_cooked":{
+					"x":17, "y":16
+				},
+				"beef":{
+					"x":18, "y":16
+				},
+				"steak":{
+					"x":19, "y":16
+				},
+				"mutton":{
+					"x":20, "y":16
+				},
+				"cooked_mutton":{
+					"x":21, "y":16
+				},
+				"chicken":{
+					"x":22, "y":16
+				},
+				"chicken_cooked":{
+					"x":23, "y":16
+				},
+				"chicken_nugget":{
+					"x":24, "y":16
+				},
+				"rabbit":{
+					"x":25, "y":16
+				},
+				"rabbit_cooked":{
+					"x":26, "y":16
+				},
+				"fish":{
+					"x":27, "y":16
+				},
+				"fish_cooked":{
+					"x":28, "y":16
+				},
+				"salmon":{
+					"x":29, "y":16
+				},
+				"salmon_cooked":{
+					"x":30, "y":16
+				},
+				"clownfish":{
+					"x":31, "y":16
+				},
+				"pufferfish":{
+					"x":16, "y":17
+				},
+				"spider_eye":{
+					"x":17, "y":17
+				},
+				"fermented_spider_eye":{
+					"x":18, "y":17
+				},
+				"rotten_flesh":{
+					"x":19, "y":17
+				},
+				"bowl":{
+					"x":20, "y":17
+				},
+				"soup":{
+					"x":21, "y":17
+				},
+				"rabbit_stew":{
+					"x":22, "y":17
+				},
+				"beet_soup":{
+					"x":23, "y":17
+				},
+				"feather":{
+					"x":16, "y":18
+				},
+				"leather":{
+					"x":17, "y":18
+				},
+				"rabbit_hide":{
+					"x":18, "y":18
+				},
+				"bone":{
+					"x":19, "y":18
+				},
+				"bone_meal":{
+					"x":20, "y":18
+				},
+				"rabbits_foot":{
+					"x":21, "y":18
+				},
+				"ink_sac":{
+					"x":22, "y":18
+				},
+				"string":{
+					"x":23, "y":18
+				},
+				"gunpowder":{
+					"x":24, "y":18
+				},
+				"blaze_rod":{
+					"x":25, "y":18
+				},
+				"blaze_powder":{
+					"x":26, "y":18
+				},
+				"slimeball":{
+					"x":27, "y":18
+				},
+				"magma_cream":{
+					"x":28, "y":18
+				},
+				"ender_pearl":{
+					"x":29, "y":18
+				},
+				"eye_of_ender":{
+					"x":30, "y":18
+				},
+				"teleporter":{
+					"x":31, "y":18
+				},
+				"ghast_tear":{
+					"x":16, "y":19
+				},
+				"dragon_scale":{
+					"x":17, "y":19
+				},
+				"nether_wart":{
+					"x":18, "y":19
+				},
+				"fireball":{
+					"x":19, "y":19
+				},
+				"clay[item]":{
+					"x":16, "y":20
+				},
+				"brick":{
+					"x":17, "y":20
+				},
+				"nether_brick":{
+					"x":18, "y":20
+				},
+				"rail[item]":{
+					"x":16, "y":21
+				},
+				"rail_powered[item]":{
+					"x":17, "y":21
+				},
+				"rail_activator[item]":{
+					"x":18, "y":21
+				},
+				"rail_detector[item]":{
+					"x":19, "y":21
+				},
+				"minecart":{
+					"x":20, "y":21,
+					"width":2
+				},
+				"raft":{
+					"x":22, "y":21,
+					"width":2
+				},
+				"saddle":{
+					"x":24, "y":21
+				},
+				"stick[item]":{
+					"x":16, "y":22
+				},
+				"dye":{
+					"x":17, "y":22
+				},
+				"glowstone_dust":{
+					"x":18, "y":22
+				},
+				"lily_pad[item]":{
+					"x":19, "y":22
+				},
+				"glass_shard":{
+					"x":20, "y":22
+				},
+				"moss[item]":{
+					"x":21, "y":22
+				},
+				"gold_nugget":{
+					"x":22, "y":22
+				},
+				"iron_nugget":{
+					"x":23, "y":22
+				},
+				"name_tag":{
+					"x":16, "y":23
+				},
+				"paper":{
+					"x":17, "y":23
+				},
+				"book":{
+					"x":18, "y":23
+				},
+				"book[enchanted]":{
+					"x":19, "y":23
+				},
+				"command_book":{
+					"x":20, "y":23
+				},
+				"spawn_egg":{
+					"x":16, "y":24
+				},
+				"spawn_egg[magmacube]":{
+					"x":17, "y":24
+				},
+				"spawn_egg[slime]":{
+					"x":18, "y":24
+				},
+				"spawn_egg[ghast]":{
+					"x":19, "y":24
+				},
+				"spawn_egg[bat]":{
+					"x":20, "y":24
+				},
+				"spawn_egg[blaze]":{
+					"x":21, "y":24
+				},
+				"spawn_egg[chicken]":{
+					"x":22, "y":24
+				},
+				"spawn_egg[cow]":{
+					"x":23, "y":24
+				},
+				"spawn_egg[creeper]":{
+					"x":24, "y":24
+				},
+				"spawn_egg[enderman]":{
+					"x":25, "y":24
+				},
+				"spawn_egg[mooshroom]":{
+					"x":26, "y":24
+				},
+				"spawn_egg[nethereye]":{
+					"x":27, "y":24
+				},
+				"spawn_egg[pig]":{
+					"x":28, "y":24
+				},
+				"spawn_egg[sheep]":{
+					"x":29, "y":24
+				},
+				"spawn_egg[skeleton]":{
+					"x":30, "y":24
+				},
+				"spawn_egg[spider]":{
+					"x":31, "y":24
+				},
+				"spawn_egg[squid]":{
+					"x":16, "y":25
+				},
+				"spawn_egg[wolf]":{
+					"x":17, "y":25
+				},
+				"spawn_egg[zombie]":{
+					"x":18, "y":25
+				},
+				"spawn_egg[zombiepigman]":{
+					"x":19, "y":25
+				},
+				"spawn_egg[rabbit]":{
+					"x":20, "y":25
+				},
+				"spawn_egg[cowctus]":{
+					"x":21, "y":25
+				},
+				"potion":{
+					"x":16, "y":26
+				},
+				"potion[contents]":{
+					"x":17, "y":26
+				},
+				"potion[splash]":{
+					"x":18, "y":26
+				},
+				"potion[splash_contents]":{
+					"x":19, "y":26
+				},
+				"orange_juice":{
+					"x":20, "y":26
+				},
+				"lemonade":{
+					"x":21, "y":26
+				},
+				"apple_juice":{
+					"x":22, "y":26
+				},
+				"bottle_of_enchanting":{
+					"x":23, "y":26
+				},
+				"balloon":{
+					"x":16, "y":27
+				},
+				"balloon[ghast]":{
+					"x":17, "y":27
+				},
+				"torch[item]":{
+					"x":16, "y":28
+				},
+				"redstone_torch":{
+					"x":17, "y":28
+				},
+				"odd_torch":{
+					"x":18, "y":28
+				}
+			}
+		}
+	]
+}
