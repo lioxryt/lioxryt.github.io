@@ -10,6 +10,16 @@
   font-size: 16px;
 }
 
+#prevButton {
+  position: fixed;
+  bottom: 0;
+  left: 45%;
+  transform: translateX(-50%);
+  width: 65px;
+  height: 20;
+  font-size: 16px;
+}
+
 #playButton {
   position: fixed;
   bottom: 0;
@@ -20,6 +30,15 @@
   font-size: 16px;
 }
 
+#nextButton {
+  position: fixed;
+  bottom: 0;
+  left: 55%;
+  transform: translateX(-50%);
+  width: 65px;
+  height: 20;
+  font-size: 16px;
+}
 
 #songTitle {
   position: fixed;
