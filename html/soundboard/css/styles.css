@@ -9,6 +9,9 @@ body {
   width: 100px;
   height: 170px;
 }
+#section{
+  font-size: large;
+}
 .download {
   cursor: pointer;
 }
