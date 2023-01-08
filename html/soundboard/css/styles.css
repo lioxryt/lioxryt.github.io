@@ -89,3 +89,13 @@ div.control {
 .woah {
   cursor: pointer;
 }
+#playAllButton {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+#stopAllButton {
+  position: absolute;
+  bottom: 10px;
+  right: 70px;
+}

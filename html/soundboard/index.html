@@ -5,6 +5,35 @@
     <title>Soundboard | lioxryt</title>
   </head>
   <body>
+    <script>var audioObjects = [];</script>
+    <button id="playAllButton" class="button">Chaos</button>
+    <button id="stopAllButton" onclick="stopAll()">Stop all</button>
+    <script>
+      function playAll() {
+        playFart();
+        playFartRe();
+        playSlopFart();
+        playTaco();
+        playVine();
+        playCs();
+        playCr();
+        playCc();
+        playCsl();
+        playCra();
+        playGent();
+        playCoc();
+        playNi();
+        playWa();
+      }
+      document.getElementById("playAllButton").onclick = playAll;
+    </script>
+    <script>
+      function stopAll() {
+        audioObjects.forEach(function(audioObject) {
+        audioObject.pause();
+       });
+      }
+    </script>
     <h1>Soundboard</h1>
     <h2>
       Just click a button<br />
@@ -23,6 +52,7 @@
           <script>
             function playFart() {
               const audioElement = new Audio("sounds/fart.mp3");
+              audioObjects.push(audioElement);
               audioElement.play();
             }
           </script>
@@ -48,6 +78,7 @@
           <script>
             function playFartRe() {
               const audioElement = new Audio("sounds/fart-with-reverb.mp3");
+              audioObjects.push(audioElement);
               audioElement.play();
             }
           </script>
@@ -72,6 +103,7 @@
           <script>
             function playSlopFart() {
               const audioElement = new Audio("sounds/sloppy-fart.mp3");
+              audioObjects.push(audioElement);
               audioElement.play();
             }
           </script>
@@ -94,6 +126,7 @@
           <script>
             function playTaco() {
               const audioElement = new Audio("sounds/taco-bell.mp3");
+              audioObjects.push(audioElement);
               audioElement.play();
             }
           </script>
@@ -119,6 +152,7 @@
           <script>
             function playVine() {
               const audioElement = new Audio("sounds/vine.mp3");
+              audioObjects.push(audioElement);
               audioElement.play();
             }
           </script>
@@ -132,31 +166,26 @@
           </p>
         </div>
       </div>
-    </div>
-    <h3 id="section">User Submitted</h3>
-    <div class="flex-container">
       <div>
         <div class="sound">
           <div
             class="circle small-button-background"
-            style="background-color: #d4ff00"
+            style="background-color: #00842a"
           ></div>
           <script>
-            function playGent() {
-              const audioElement = new Audio("sounds/gentleman.mp3");
+            function playCs() {
+              const audioElement = new Audio("sounds/csneak.mp3");
+              audioObjects.push(audioElement);
               audioElement.play();
             }
           </script>
-          <button class="small-button" onclick="playGent()"></button>
+          <button class="small-button" onclick="playCs()"></button>
           <div class="small-button-shadow"></div>
           <p class="name">
-            <button
-              class="download"
-              onclick="window.location.href='sounds/gentleman.mp3'"
-            >
+            <button onclick="window.location.href='sounds/csneak.mp3'">
               Download</button
             ><br />
-            Gentlemen!
+            Cartoon Sneak<br />
           </p>
         </div>
       </div>
@@ -164,24 +193,22 @@
         <div class="sound">
           <div
             class="circle small-button-background"
-            style="background-color: #336a00"
+            style="background-color: #afa1ff"
           ></div>
           <script>
-            function playCoc() {
-              const audioElement = new Audio("sounds/plsgivmecoc.mp3");
+            function playCr() {
+              const audioElement = new Audio("sounds/crace.mp3");
+              audioObjects.push(audioElement);
               audioElement.play();
             }
           </script>
-          <button class="small-button" onclick="playCoc()"></button>
+          <button class="small-button" onclick="playCr()"></button>
           <div class="small-button-shadow"></div>
           <p class="name">
-            <button
-              class="download"
-              onclick="window.location.href='sounds/plsgivmecoc.mp3'"
-            >
+            <button onclick="window.location.href='sounds/crace.mp3'">
               Download</button
             ><br />
-            Please give me Coc<br />
+            Cartoon Race Start<br />
           </p>
         </div>
       </div>
@@ -189,25 +216,186 @@
         <div class="sound">
           <div
             class="circle small-button-background"
-            style="background-color: #ffffff"
+            style="background-color: #00594a"
           ></div>
           <script>
-            function playNi() {
-              const audioElement = new Audio("sounds/you-stupid-ni.mp3");
+            function playCc() {
+              const audioElement = new Audio("sounds/ccrash.mp3");
+              audioObjects.push(audioElement);
               audioElement.play();
             }
           </script>
-          <button class="small-button" onclick="playNi()"></button>
+          <button class="small-button" onclick="playCc()"></button>
           <div class="small-button-shadow"></div>
           <p class="name">
             <button
               class="download"
-              onclick="window.location.href='sounds/you-stupid-ni.mp3'"
+              onclick="window.location.href='sounds/ccrash.mp3'"
             >
               Download</button
             ><br />
-            You Stupid Ni
+            Cartoon Crash<br />
           </p>
+        </div>
+      </div>
+      <div>
+        <div class="sound">
+          <div
+            class="circle small-button-background"
+            style="background-color: #7700ff"
+          ></div>
+          <script>
+            function playCsl() {
+              const audioElement = new Audio("sounds/cslip.mp3");
+              audioObjects.push(audioElement);
+              audioElement.play();
+            }
+          </script>
+          <button class="small-button" onclick="playCsl()"></button>
+          <div class="small-button-shadow"></div>
+          <p class="name">
+            <button
+              class="download"
+              onclick="window.location.href='sounds/cslip.mp3'"
+            >
+              Download</button
+            ><br />
+            Cartoon Slip<br />
+          </p>
+        </div>
+      </div>
+      <div>
+        <div class="sound">
+          <div
+            class="circle small-button-background"
+            style="background-color: #55ff9f"
+          ></div>
+          <script>
+            function playCra() {
+              const audioElement = new Audio("sounds/crun.mp3");
+              audioObjects.push(audioElement);
+              audioElement.play();
+            }
+          </script>
+          <button class="small-button" onclick="playCra()"></button>
+          <div class="small-button-shadow"></div>
+          <p class="name">
+            <button
+              class="download"
+              onclick="window.location.href='sounds/crun.mp3'"
+            >
+              Download</button
+            ><br />
+            Cartoon Run<br />
+          </p>
+        </div>
+      </div>
+      </div>
+
+      <h3 id="section">User Submitted</h3>
+      <div class="flex-container">
+        <div>
+          <div class="sound">
+            <div
+              class="circle small-button-background"
+              style="background-color: #d4ff00"
+            ></div>
+            <script>
+              function playGent() {
+                const audioElement = new Audio("sounds/gentleman.mp3");
+                audioObjects.push(audioElement);
+                audioElement.play();
+              }
+            </script>
+            <button class="small-button" onclick="playGent()"></button>
+            <div class="small-button-shadow"></div>
+            <p class="name">
+              <button
+                class="download"
+                onclick="window.location.href='sounds/gentleman.mp3'"
+              >
+                Download</button
+              ><br />
+              Gentlemen!
+            </p>
+          </div>
+        </div>
+        <div>
+          <div class="sound">
+            <div
+              class="circle small-button-background"
+              style="background-color: #336a00"
+            ></div>
+            <script>
+              function playCoc() {
+                const audioElement = new Audio("sounds/plsgivmecoc.mp3");
+                audioObjects.push(audioElement);
+                audioElement.play();
+              }
+            </script>
+            <button class="small-button" onclick="playCoc()"></button>
+            <div class="small-button-shadow"></div>
+            <p class="name">
+              <button
+                class="download"
+                onclick="window.location.href='sounds/plsgivmecoc.mp3'"
+              >
+                Download</button
+              ><br />
+              Please give me Coc<br />
+            </p>
+          </div>
+        </div>
+        <div>
+          <div class="sound">
+            <div
+              class="circle small-button-background"
+              style="background-color: #ffffff"
+            ></div>
+            <script>
+              function playNi() {
+                const audioElement = new Audio("sounds/you-stupid-ni.mp3");
+                audioObjects.push(audioElement);
+                audioElement.play();
+              }
+            </script>
+            <button class="small-button" onclick="playNi()"></button>
+            <div class="small-button-shadow"></div>
+            <p class="name">
+              <button
+                class="download"
+                onclick="window.location.href='sounds/you-stupid-ni.mp3'"
+              >
+                Download</button
+              ><br />
+              You Stupid Ni
+            </p>
+          </div>
+        </div>
+        <div>
+          <div class="sound">
+            <div
+              class="circle small-button-background"
+              style="background-color: #f9ff46"
+            ></div>
+            <script>
+              function playWa() {
+                const audioElement = new Audio("sounds/wawa.mp3");
+                audioObjects.push(audioElement);
+                audioElement.play();
+              }
+            </script>
+            <button class="small-button" onclick="playWa()"></button>
+            <div class="small-button-shadow"></div>
+            <p class="name">
+              <button
+                class="download"
+                onclick="window.location.href='sounds/wawa.mp3'"
+              >
+                Download</button
+              ><br />
+              Spongebob Disgusting
+            </p>
           </div>
         </div>
       </div>
@@ -221,6 +409,7 @@
           <script>
             function playNAME() {
             const audioElement = new Audio("sounds/SOUND.mp3");
+            audioObjects.push(audioElement);
             audioElement.play();
             }
           </script>
