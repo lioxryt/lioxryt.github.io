@@ -24,6 +24,7 @@
         playCoc();
         playNi();
         playWa();
+        playLa();
       }
       document.getElementById("playAllButton").onclick = playAll;
     </script>
@@ -261,6 +262,32 @@
               Download</button
             ><br />
             Cartoon Slip<br />
+          </p>
+        </div>
+      </div>
+      <div>
+        <div class="sound">
+          <div
+            class="circle small-button-background"
+            style="background-color: #e0c4ff"
+          ></div>
+          <script>
+            function playLa() {
+              const audioElement = new Audio("sounds/funny-laugh.mp3");
+              audioObjects.push(audioElement);
+              audioElement.play();
+            }
+          </script>
+          <button class="small-button" onclick="playLa()"></button>
+          <div class="small-button-shadow"></div>
+          <p class="name">
+            <button
+              class="download"
+              onclick="window.location.href='sounds/funny-laugh.mp3'"
+            >
+              Download</button
+            ><br />
+            Emoji Laugh<br />
           </p>
         </div>
       </div>
