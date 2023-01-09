@@ -25,6 +25,7 @@
         playNi();
         playWa();
         playLa();
+        playLil();
       }
       document.getElementById("playAllButton").onclick = playAll;
     </script>
@@ -396,6 +397,32 @@
                 Download</button
               ><br />
               You Stupid Ni
+            </p>
+          </div>
+        </div>
+        <div>
+          <div class="sound">
+            <div
+              class="circle small-button-background"
+              style="background-color: #383838"
+            ></div>
+            <script>
+              function playLil() {
+                const audioElement = new Audio("sounds/lbwstahb.mp3");
+                audioObjects.push(audioElement);
+                audioElement.play();
+              }
+            </script>
+            <button class="small-button" onclick="playLil()"></button>
+            <div class="small-button-shadow"></div>
+            <p class="name">
+              <button
+                class="download"
+                onclick="window.location.href='sounds/lbwstahb.mp3'"
+              >
+                Download</button
+              ><br />
+              Lil Buddy was sick, Took all his bands
             </p>
           </div>
         </div>
