@@ -30,4 +30,4 @@ If you want to play this locally, some of this code is dependent on Google Tag M
 
 ### Credits
 
-Most code written by [Lioxryt](https://github.com/lioxryt), with some by [kurbus](https://github.com/kurbus).
+Most code written by [lioxryt](https://github.com/lioxryt), with some by [kurbus](https://github.com/kurbus).
