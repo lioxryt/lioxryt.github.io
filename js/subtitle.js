@@ -53,7 +53,11 @@ var say = [
   "👹I like to creep around my home and act like a goblin👹",
   "Among Us VR?",
   "If you ain’t in the <a href='https://discord.com/invite/Qf5wmbGzk9'>discord server</a> then where the hell you atttt", 
-  "<img src='/img/bingchilling.jpg'/>  ", 
+  "<img src='/img/bingchilling.jpg'/>",
+  "i lost my v card two days ago thanks to this site",
+  "error = ran out of subtitles",
+  "your either a smart fella or a fart smella",
+  "Welcome to your final test, I’m Mr. Beast",
 ];
 // pick a random greeting
 var howmany = say.length;
