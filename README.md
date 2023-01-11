@@ -28,7 +28,8 @@ A game website made for students, by students. We offer a wide range of games wi
 
 If you want to play this locally, some of this code is dependent on Google Tag Manager, so you will have to be online. Other than that, this site works fine offline (It clocks in at about 4gb though, so be wary.)
 
-###Deploy to other sites
+### Deploy to other sites
+
 [![Deploy to Heroku](https://binbashbanana.github.io/deploy-buttons/buttons/remade/heroku.svg)](https://heroku.com/deploy/?template=https://github.com/lioxryt/lioxryt.github.io)
 [![Run on Replit](https://binbashbanana.github.io/deploy-buttons/buttons/remade/replit.svg)](https://github.com/lioxryt/lioxryt.github.io-replit)
 [![Remix on Glitch](https://binbashbanana.github.io/deploy-buttons/buttons/remade/glitch.svg)](https://glitch.com/edit/#!/import/github/lioxryt/lioxryt.github.io)
